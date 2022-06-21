@@ -182,22 +182,18 @@ def process_stock():
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Unexpected Error")
             pass
             
-        altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/"
+        altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
+        newStock.altman_z_score = "Not Found!"
         try:
             altman_page = urlopen(altman_url)
             parsed_html = BeautifulSoup(altman_page, 'html.parser')
             
-            newStock.altman_z_score = "Not Found!"
-            for h1 in parsed_html.find_all('h1'):
-                if  " Altman Z-Score" in h1.text:
-                    try:
-                        a = h1.nextSibling.text
-                        a = a[2:]
-                        a = a.split("(", 1)[0]
-                        newStock.altman_z_score = a
-                    except Exception:
-                        print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Altman Z-Score not found")
-                        pass 
+            for tag in parsed_html.find_all('meta'):
+                if "Altman Z-Score as of today" in (tag.get("content", None)):
+                    my_string = tag.get("content", None)
+                    my_substring = my_string.partition("is ")[2]
+                    my_value = my_substring.partition(". ")[0]
+                    newStock.altman_z_score = my_value
 
         except Exception:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": GuruFocus Altman Z-Score not found")

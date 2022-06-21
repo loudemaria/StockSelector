@@ -7,6 +7,7 @@ import sys
 import csv
 import time
 import threading
+from datetime import datetime
 
 class Stock:
     ticker_symbol = ""
@@ -84,14 +85,23 @@ def process_stock():
 
         stock_start_time = time.time()
 
+        print("Going to grab a ticker...")
         all_ticker_symbols_lock.acquire(blocking=True, timeout=-1)
+        print("Acquired all_ticker_symbols_lock...")
         i=len(all_ticker_symbols)
+        print("Grabbed i...")
         if(len(all_ticker_symbols) == 0):
+            print("Length of all_ticker_symbols is 0...")
             all_ticker_symbols_lock.release()
+            print("Releasing all_ticker_symbols_lock...")
             break
+        print("Just before grabbing symbol...")
         symbol = all_ticker_symbols[0]
+        print("Grabbed " + symbol)
         all_ticker_symbols.remove(symbol)
+        print("Removing " + symbol)
         all_ticker_symbols_lock.release()
+        print("Relaasing lock for " + symbol)
 
         newStock = Stock(aaa_corporate_bond_yield)
         newStock.ticker_symbol = symbol
@@ -109,9 +119,12 @@ def process_stock():
         except:
             pass
 
+        print("Gonna try and populate stuff for " + symbol)
         temp_symbol = yf.Ticker(symbol)
         try:
+            print("created temp_symbol  " + symbol)
             temp_info = temp_symbol.get_info()
+            print("got info for  " + symbol)
             newStock.EPS_TTM = str(temp_info['trailingEps'])
             newStock.list_price = str(temp_info['previousClose'])
             newStock.day_low = str(temp_info['dayLow'])
@@ -121,6 +134,7 @@ def process_stock():
             newStock.debt_yfinance = str(temp_info['totalDebt'])
             newStock.market_cap = str(temp_info['marketCap'])
             newStock.totalCash = str(temp_info['totalCash'])
+            print("calculating total cash minut market cap for   " + symbol)
             newStock.total_cash_minus_market_cap = str(temp_info['totalCash']-temp_info['marketCap'])
 
             if (temp_info['fiftyTwoWeekLow'] != 0):
@@ -129,6 +143,7 @@ def process_stock():
             if(temp_info['dayLow'] != 0):
                 newStock.day_low_over_fifty_two_week_low = str(temp_info['dayLow']/temp_info['fiftyTwoWeekLow'])
 
+            print("JUST before name for  " + symbol)
             newStock.name = str(temp_info['shortName'])
             newStock.short_of_float = str(temp_info['shortPercentOfFloat'])
             newStock.EV2 = str(temp_info['enterpriseValue'])
@@ -138,12 +153,14 @@ def process_stock():
             newStock.currency = str(temp_info['currency'])
             newStock.shares_outstanding = str(temp_info['sharesOutstanding'])
             newStock.recommendation_key = str(temp_info['recommendationKey'])
+            print("JUST before sector and industry for  " + symbol)
             newStock.sector = str(temp_info['sector'])
             newStock.industry = str(temp_info['industry'])
             newStock.calculate_cash_flow_per_share()
             newStock.calculate_intrinsic_value()
             newStock.calculate_intrinsic_value_with_cash_flow_per_share()
 
+            print("Populated ALLLLLL the things for  " + symbol)
         except IndexError:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Index Error")
             pass
@@ -157,32 +174,32 @@ def process_stock():
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Unexpected Error")
             pass
             
-        altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/"
+        altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
+        newStock.altman_z_score = "Not Found!"
         try:
             altman_page = urlopen(altman_url)
             parsed_html = BeautifulSoup(altman_page, 'html.parser')
             
-            newStock.altman_z_score = "Not Found!"
-            for h1 in parsed_html.find_all('h1'):
-                if  " Altman Z-Score" in h1.text:
-                    try:
-                        a = h1.nextSibling.text
-                        a = a[2:]
-                        a = a.split("(", 1)[0]
-                        newStock.altman_z_score = a
-                    except Exception:
-                        print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Altman Z-Score not found")
-                        pass 
+            for tag in parsed_html.find_all('meta'):
+                if "Altman Z-Score as of today" in (tag.get("content", None)):
+                    my_string = tag.get("content", None)
+                    my_substring = my_string.partition("is ")[2]
+                    my_value = my_substring.partition(". ")[0]
+                    newStock.altman_z_score = my_value
 
         except Exception:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": GuruFocus Altman Z-Score not found")
             pass
 
+        print("Through exceptions for " + symbol)
         lock.acquire(blocking=True, timeout=-1)
         allStocks.append(newStock)
         lock.release()
 
-        print("* " + str(i+len(allStocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+
+        print("* " + current_time + ": " + str(i+len(allStocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
 
 start_time = time.time()
 
