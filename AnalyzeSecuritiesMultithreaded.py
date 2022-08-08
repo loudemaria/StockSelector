@@ -234,7 +234,7 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
 threads = list()
-for i in range (5):
+for i in range (4):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()
