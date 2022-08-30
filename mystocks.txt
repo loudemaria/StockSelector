@@ -1,4 +1,12 @@
-Symbol|Price Paid|Number Of SHares Held
-ITIC|199.5|8|
-AMKR|25|63|
+Symbol|Price Paid|Number Of SHares Held|
+ASO|199.5|69|
+SAH|53.03|48|
+OXY|63.20|25|
 IMKTA|87.22|18|
+RS|167.14|9|
+F|21.62|74|
+GEO|7.78|128|
+HZO|57.81|17|
+AAL|1.14|8|
+HA|1.20|8|
+UAL|0.86|10|

@@ -43,6 +43,10 @@ class Stock:
     shares_outstanding = ""
     recommendation_key = ""
     cash_flow_per_share = ""
+    intrinsic_value_cash_flow = ""
+    margin_of_safety_cash_flow = ""
+    sector = ""
+    industry = ""
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -67,6 +71,18 @@ class Stock:
                 self.cash_flow_per_share = (function_cash_flow/function_shares_outstanding)
         except:
             self.cash_flow_per_share = "undefined"
+
+    def calculate_intrinsic_value_with_cash_flow_per_share(self):
+        try:
+            cash_flow_float = float(self.cash_flow_per_share)
+            GE_N5Y_float = float(self.GE_N5Y)
+            list_price_float = float(self.list_price)
+            self.intrinsic_value_cash_flow = str((cash_flow_float)*(8.5+GE_N5Y_float)*(4.4)/(self.corporate_bond_yield))
+            if list_price_float != 0:
+                self.margin_of_safety_cash_flow = ((float(self.intrinsic_value_cash_flow))/(list_price_float))
+        except (ValueError, TypeError):
+            self.intrinsic_value_cash_flow = "undefined"
+            self.margin_of_safety_cash_flow = "undefined"
 
     def calculate_market_value(self):
         try:
@@ -162,12 +178,15 @@ def process_stock():
             newStock.shares_outstanding = str(temp_info['sharesOutstanding'])
             newStock.recommendation_key = str(temp_info['recommendationKey'])
             newStock.sector = str(temp_info['sector'])
+            newStock.industry = str(temp_info['industry'])
             newStock.calculate_cash_flow_per_share()
             newStock.calculate_intrinsic_value()
             newStock.calculate_market_value()
             newStock.calculate_full_price_paid()
             newStock.calculate_intrinsic_market_value()
             newStock.calculate_percent_ownership()
+            newStock.calculate_intrinsic_value_with_cash_flow_per_share()
+
 
         except IndexError:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Index Error")
@@ -235,7 +254,7 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
 threads = list()
-for i in range (5):
+for i in range (2):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()
@@ -245,9 +264,9 @@ for i, thread in enumerate(threads):
 
 f = open("my_stocks.csv", "w", newline='')
 writer = csv.writer(f)
-writer.writerow(['TICKER SYMBOL', 'NAME', 'SECTOR', 'SHARES HELD', 'PAID PRICE', 'LIST PRICE', 'INTRINSIC VALUE', 'PAID VALUE', 'MARKET VALUE', 'INTRINSIC VALUE POSITION', 'PERCENT OWNERSHIP', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA'])
+writer.writerow(['TICKER SYMBOL', 'NAME', 'SHARES HELD', 'PAID PRICE', 'LIST PRICE', 'INTRINSIC VALUE', 'PAID VALUE', 'MARKET VALUE', 'INTRINSIC VALUE POSITION', 'PERCENT OWNERSHIP', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY'])
 for currentStock in allStocks:
-    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.sector, currentStock.shares_held,  currentStock.price_paid, currentStock.list_price, currentStock.intrinsic_value, currentStock.market_price_paid, currentStock.market_value, currentStock.intrinsic_market_value, currentStock.percent_ownership, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.recommendation_key ,currentStock.EV_EBITDA2])
+    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.shares_held,  currentStock.price_paid, currentStock.list_price, currentStock.intrinsic_value, currentStock.market_price_paid, currentStock.market_value, currentStock.intrinsic_market_value, currentStock.percent_ownership, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry])
 writer.writerow(['STARTING BALANCE', starting_balance])
 f.close()
 
