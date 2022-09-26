@@ -3,8 +3,8 @@ import urllib.request
 from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 
-EPS_TTM = 0.4200
-GE_N5Y = 2.00
+EPS_TTM = 1.08
+GE_N5Y = 33.25
 
 yield_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
 aaa_corporate_bond_yield = 0

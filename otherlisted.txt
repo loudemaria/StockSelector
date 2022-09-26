@@ -647,6 +647,7 @@ BHR$B|Braemar Hotels & Resorts Inc. 5.50% Series B Cumulative Convertible Prefer
 BHR$D|Braemar Hotels & Resorts Inc. 8.25% Series D Cumulative Preferred Stock,  par value $0.01 per share|N|BHRpD|N|100|N|BHR-D
 BHV|BlackRock Virginia Municipal Bond Trust|N|BHV|N|100|N|BHV
 BHVN|Biohaven Pharmaceutical Holding Company Ltd. Common Shares|N|BHVN|N|100|N|BHVN
+BHVN.V|Biohaven Ltd. Common Shares When Issued|N|BHVNw|N|100|N|BHVN#
 BIBL|Inspire 100 ETF|P|BIBL|Y|100|N|BIBL
 BIDS|Amplify Digital & Online Trading ETF|P|BIDS|Y|100|N|BIDS
 BIG|Big Lots, Inc. Common Stock|N|BIG|N|100|N|BIG
@@ -1825,8 +1826,6 @@ EPWR.W|Empowerment & Inclusion Capital I Corp. Redeemable warrants, each whole w
 EQAL|Invesco Russell 1000 Equal Weight ETF|P|EQAL|Y|100|N|EQAL
 EQC|Equity Commonwealth Common Shares of Beneficial Interest|N|EQC|N|100|N|EQC
 EQC$D|Equity Commonwealth 6.50% Pfd Conv Shs Ser D|N|EQCpD|N|100|N|EQC-D
-EQD|Equity Distribution Acquisition Corp. Class A Common Stock|N|EQD|N|100|N|EQD
-EQD.U|Equity Distribution Acquisition Corp. Units|N|EQD.U|N|100|N|EQD=
 EQH|Equitable Holdings, Inc. Common Stock|N|EQH|N|100|N|EQH
 EQH$A|Equitable Holdings, Inc. Depositary Shares|N|EQHpA|N|100|N|EQH-A
 EQH$C|Equitable Holdings, Inc. Depositary Shares, each representing a 1/1,000th interest in a share of Fixed Rate Noncumulative Perpetual Preferred Stock, Series C|N|EQHpC|N|100|N|EQH-C
@@ -2810,7 +2809,6 @@ HTPA.W|Highland Transcend Partners I Corp. Redeemable warrants, each whole warra
 HTRB|Hartford Total Return Bond ETF|P|HTRB|Y|100|N|HTRB
 HTUS|Hull Tactical US ETF|P|HTUS|Y|100|N|HTUS
 HTY|John Hancock Tax-Advantaged Global Shareholder Yield Fund Common Shares of Beneficial Interest|N|HTY|N|100|N|HTY
-HTY.V|Blackrock Corporate High Yield Fund, Inc. Rights (expiring October 13, 2022)|N|HYTrw|N|100|N|HYT^#
 HUBB|Hubbell Inc Common Stock|N|HUBB|N|100|N|HUBB
 HUBS|HubSpot, Inc. Common Stock|N|HUBS|N|100|N|HUBS
 HUGS|USHG Acquisition Corp. Class A Common Stock|N|HUGS|N|100|N|HUGS
@@ -2855,6 +2853,7 @@ HYMU|BlackRock High Yield Muni Income Bond ETF|Z|HYMU|Y|100|N|HYMU
 HYRM|DBX ETF Trust Xtrackers Risk Managed USD High Yield Strategy ETF|P|HYRM|Y|100|N|HYRM
 HYS|PIMCO 0-5 Year High Yield Corporat Bond Index Exchange-Traded Fund|P|HYS|Y|100|N|HYS
 HYT|Blackrock Corporate High Yield Fund, Inc. Common Stock|N|HYT|N|100|N|HYT
+HYT.R|Blackrock Corporate High Yield Fund, Inc. Rights (expiring October 13, 2022)|N|HYTr|N|100|N|HYT^
 HYTR|CP High Yield Trend ETF|P|HYTR|Y|100|N|HYTR
 HYUP|Xtrackers High Beta High Yield Bond ETF|P|HYUP|Y|100|N|HYUP
 HYXU|iShares International High Yield Bond ETF|Z|HYXU|Y|100|N|HYXU
@@ -3082,10 +3081,8 @@ IPI|Intrepid Potash, Inc Common Stock|N|IPI|N|100|N|IPI
 IPO|Renaissance IPO ETF|P|IPO|Y|100|N|IPO
 IPOD|Social Capital Hedosophia Holdings Corp. IV Class A Ordinary Shares|N|IPOD|N|100|N|IPOD
 IPOD.U|Social Capital Hedosophia Holdings Corp. IV Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|IPOD.U|N|100|N|IPOD=
-IPOD.W|Social Capital Hedosophia Holdings Corp. IV Redeemable Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|IPOD.WS|N|100|N|IPOD+
 IPOF|Social Capital Hedosophia Holdings Corp. VI Class A Ordinary Shares|N|IPOF|N|100|N|IPOF
 IPOF.U|Social Capital Hedosophia Holdings Corp. VI Units, each consisting of one Class A ordinary share and one-fourth of one redeemable warrant|N|IPOF.U|N|100|N|IPOF=
-IPOF.W|Social Capital Hedosophia Holdings Corp. VI Redeemable warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50|N|IPOF.WS|N|100|N|IPOF+
 IPOS|Renaissance Capital Greenwich Fund|P|IPOS|Y|100|N|IPOS
 IPPP|Listed Funds Trust Preferred-Plus ETF|Z|IPPP|Y|100|N|IPPP
 IPVA|InterPrivate II Acquisition Corp. Class A Common Stock|N|IPVA|N|100|N|IPVA
@@ -3583,6 +3580,7 @@ LOW|Lowe's Companies, Inc. Common Stock|N|LOW|N|100|N|LOW
 LPG|Dorian LPG Ltd. Common Stock|N|LPG|N|100|N|LPG
 LPI|Laredo Petroleum, Inc. Common Stock|N|LPI|N|100|N|LPI
 LPL|LG Display Co, Ltd AMERICAN DEPOSITORY SHARES|N|LPL|N|100|N|LPL
+LPTV|Loop Media, Inc. Common Stock|A|LPTV|N|100|N|LPTV
 LPX|Louisiana-Pacific Corporation Common Stock|N|LPX|N|100|N|LPX
 LQD|iShares iBoxx $ Investment Grade Corporate Bond ETF|P|LQD|Y|100|N|LQD
 LQDB|iShares Trust iShares BBB Rated Corporate Bond ETF|P|LQDB|Y|100|N|LQDB
@@ -4288,7 +4286,6 @@ OPFI.W|OppFi Inc. Warrants|N|OPFI.WS|N|100|N|OPFI+
 OPP|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. Common Stock|N|OPP|N|100|N|OPP
 OPP$A|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. 4.375% Series A Cumulative Preferred Stock|N|OPPpA|N|100|N|OPP-A
 OPP$B|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. 4.75% Series B Cumulative Preferred Stock|N|OPPpB|N|100|N|OPP-B
-OPP.R|RiverNorth/DoubleLine Strategic Opportunity Fund, Inc. Rights|N|OPPr|N|100|N|OPP^
 OPPX|Corbett Road Tactical Opportunity ETF|P|OPPX|Y|100|N|OPPX
 OPTT|Ocean Power Technologies, Inc. Common Stock|A|OPTT|N|100|N|OPTT
 OPY|Oppenheimer Holdings, Inc. Class A Common Stock (DE)|N|OPY|N|100|N|OPY
@@ -6324,6 +6321,7 @@ XBJA|Innovator ETFs Trust Innovator U.S. Equity Accelerated 9 Buffer ETF - Janua
 XBJL|Innovator U.S. Equity Accelerated 9 Buffer ETF - July|Z|XBJL|Y|100|N|XBJL
 XBOC|Innovator U.S. Equity Accelerated 9 Buffer ETF - October|Z|XBOC|Y|100|N|XBOC
 XBTF|VanEck ETF Trust VanEck Bitcoin Strategy ETF|Z|XBTF|Y|100|N|XBTF
+XC|WisdomTree Trust WisdomTree Emerging Markets Ex-China Fund|P|XC|Y|100|N|XC
 XCCC|BondBloxx ETF Trust BondBloxx CCC-Rated USD High Yield Corporate Bond ETF|P|XCCC|Y|100|N|XCCC
 XCEM|Columbia EM Core ex-China ETF|P|XCEM|Y|100|N|XCEM
 XCLR|Global X Funds Global X S&P 500 Collar 95-110 ETF|P|XCLR|Y|100|N|XCLR
@@ -6382,6 +6380,7 @@ XOM|Exxon Mobil Corporation Common Stock|N|XOM|N|100|N|XOM
 XONE|BondBloxx ETF Trust BondBloxx Bloomberg One Year Target Duration US Treasury ETF|P|XONE|Y|100|N|XONE
 XOP|SPDR S&P Oil & Gas Explor & Product|P|XOP|Y|100|N|XOP
 XOUT|GraniteShares XOUT U.S. Large Cap ETF|P|XOUT|Y|100|N|XOUT
+XPER.V|Xperi Inc. Common Stock When Issued|N|XPERw|N|100|N|XPER#
 XPEV|XPeng Inc. American depositary shares, each representing two Class A ordinary shares|N|XPEV|N|100|N|XPEV
 XPH|SPDR S&P Pharmaceuticals ETF|P|XPH|Y|100|N|XPH
 XPL|Solitario Zinc Corp. Common Stock|A|XPL|N|100|N|XPL
@@ -6394,6 +6393,7 @@ XRLV|Invesco S&P 500 ex-Rate Sensitive Low Volatility ETF|P|XRLV|Y|100|N|XRLV
 XRMI|Global X Funds Global X S&P 500 Risk Managed Income ETF|P|XRMI|Y|100|N|XRMI
 XRT|SPDR S&P Retail ETF|P|XRT|Y|100|N|XRT
 XSD|SPDR S&P Semiconductor ETF|P|XSD|Y|100|N|XSD
+XSEP|First Trust Exchange-Traded Fund VIII FT Cboe Vest U.S. Equity Enhance & Moderate Buffer ETF - September|Z|XSEP|Y|100|N|XSEP
 XSHD|Invesco S&P SmallCap High Dividend Low Volatility ETF|Z|XSHD|Y|100|N|XSHD
 XSHQ|Invesco S&P SmallCap Quality ETF|Z|XSHQ|Y|100|N|XSHQ
 XSLV|Invesco S&P SmallCap Low Volatility ETF|P|XSLV|Y|100|N|XSLV
@@ -6484,4 +6484,4 @@ ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Elkay Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0916202218:01||||||
+File Creation Time: 0923202218:01||||||
