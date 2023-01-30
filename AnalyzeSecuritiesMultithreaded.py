@@ -135,22 +135,22 @@ def process_stock():
             temp_info = temp_symbol.get_info()
             print("got info for  " + symbol)
             newStock.EPS_TTM = str(temp_info['trailingEps'])
-            newStock.list_price = str(temp_info['previousClose'])
-            newStock.day_low = str(temp_info['dayLow'])
-            newStock.fifty_two_week_low = str(temp_info['fiftyTwoWeekLow'])
+            newStock.list_price = str(temp_symbol.fast_info.previous_close)
+            newStock.day_low = str(temp_symbol.fast_info.day_low)
+            newStock.fifty_two_week_low = str(temp_symbol.fast_info.year_low)
             newStock.price_to_book = str(temp_info['priceToBook'])
             newStock.free_cash_flow_yfinance = str(temp_info['freeCashflow'])
             newStock.debt_yfinance = str(temp_info['totalDebt'])
-            newStock.market_cap = str(temp_info['marketCap'])
+            newStock.market_cap = str(temp_symbol.fast_info.market_cap)
             newStock.totalCash = str(temp_info['totalCash'])
             print("calculating total cash minut market cap for   " + symbol)
-            newStock.total_cash_minus_market_cap = str(temp_info['totalCash']-temp_info['marketCap'])
+            newStock.total_cash_minus_market_cap = str(temp_info['totalCash']-temp_symbol.fast_info.market_cap)
 
-            if (temp_info['fiftyTwoWeekLow'] != 0):
-                newStock.current_price_over_fifty_two_week_low = str(temp_info['previousClose']/temp_info['fiftyTwoWeekLow'])
+            if (temp_symbol.fast_info.year_low != 0):
+                newStock.current_price_over_fifty_two_week_low = str(temp_symbol.fast_info.previous_close/temp_symbol.fast_info.year_low)
             
-            if(temp_info['dayLow'] != 0):
-                newStock.day_low_over_fifty_two_week_low = str(temp_info['dayLow']/temp_info['fiftyTwoWeekLow'])
+            if(temp_symbol.fast_info.day_low != 0):
+                newStock.day_low_over_fifty_two_week_low = str(temp_symbol.fast_info.day_low/temp_symbol.fast_info.year_low)
 
             print("JUST before name for  " + symbol)
             newStock.name = str(temp_info['shortName'])
@@ -159,7 +159,7 @@ def process_stock():
             newStock.EV_EBITDA2 = str(temp_info['enterpriseToEbitda'])
             newStock.total_cash_per_share = str(temp_info['totalCashPerShare'])
             newStock.country = str(temp_info['country'])
-            newStock.currency = str(temp_info['currency'])
+            newStock.currency = str(temp_symbol.fast_info.currency)
             newStock.shares_outstanding = str(temp_info['sharesOutstanding'])
             newStock.recommendation_key = str(temp_info['recommendationKey'])
             print("JUST before sector and industry for  " + symbol)
@@ -210,6 +210,7 @@ def process_stock():
         current_time = now.strftime("%H:%M:%S")
 
         print("* " + current_time + ": " + str(i+len(allStocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
+        del newStock
 
 start_time = time.time()
 
@@ -244,12 +245,13 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
 threads = list()
-for i in range (4):
+for i in range (3):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()
 
 for i, thread in enumerate(threads):
+    print("Joining thread " + str(i))
     thread.join()
 
 f = open("stock_selector.csv", "w", newline='')
