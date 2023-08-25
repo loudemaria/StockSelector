@@ -95,7 +95,7 @@ def process_stock():
         stock_start_time = time.time()
 
         print("Going to grab a ticker...")
-        all_ticker_symbols_lock.acquire(blocking=True, timeout=-1)
+        all_ticker_symbols_lock.acquire(blocking=True, timeout=60)
         print("Acquired all_ticker_symbols_lock...")
         i=len(all_ticker_symbols)
         print("Grabbed i...")
@@ -132,7 +132,8 @@ def process_stock():
         temp_symbol = yf.Ticker(symbol)
         try:
             print("created temp_symbol  " + symbol)
-            temp_info = temp_symbol.get_info()
+            temp_info = temp_symbol.info
+            temp_fast_info = temp_symbol.fast_info
             print("got info for  " + symbol)
             newStock.EPS_TTM = str(temp_info['trailingEps'])
             newStock.list_price = str(temp_symbol.fast_info.previous_close)
@@ -143,7 +144,6 @@ def process_stock():
             newStock.debt_yfinance = str(temp_info['totalDebt'])
             newStock.market_cap = str(temp_symbol.fast_info.market_cap)
             newStock.totalCash = str(temp_info['totalCash'])
-            print("calculating total cash minut market cap for   " + symbol)
             newStock.total_cash_minus_market_cap = str(temp_info['totalCash']-temp_symbol.fast_info.market_cap)
 
             if (temp_symbol.fast_info.year_low != 0):
@@ -152,7 +152,6 @@ def process_stock():
             if(temp_symbol.fast_info.day_low != 0):
                 newStock.day_low_over_fifty_two_week_low = str(temp_symbol.fast_info.day_low/temp_symbol.fast_info.year_low)
 
-            print("JUST before name for  " + symbol)
             newStock.name = str(temp_info['shortName'])
             newStock.short_of_float = str(temp_info['shortPercentOfFloat'])
             newStock.EV2 = str(temp_info['enterpriseValue'])
@@ -183,7 +182,7 @@ def process_stock():
         except:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Unexpected Error")
             pass
-            
+
         altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
         newStock.altman_z_score = "Not Found!"
         try:
@@ -202,7 +201,7 @@ def process_stock():
             pass
 
         print("Through exceptions for " + symbol)
-        lock.acquire(blocking=True, timeout=-1)
+        lock.acquire(blocking=True, timeout=60)
         allStocks.append(newStock)
         lock.release()
 
@@ -245,7 +244,7 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
 threads = list()
-for i in range (3):
+for i in range (5):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()

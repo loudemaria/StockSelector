@@ -1,0 +1,10 @@
+from yahooquery import Ticker
+aapl = Ticker('aapl')
+print(aapl.summary_detail)
+print("**********")
+print(aapl.key_stats)
+print("##########")
+print(aapl.financial_data)
+print("%%%%%%%%%%")
+print(aapl.asset_profile)
+print("*")

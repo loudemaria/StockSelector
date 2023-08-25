@@ -2,22 +2,14 @@ from urllib.request import urlopen, Request
 import urllib.request
 from urllib.error import HTTPError
 from bs4 import BeautifulSoup
-import yfinance as yf
-from yahooquery import Ticker
-import sys
-import csv
 import time
 import threading
+from datetime import datetime
+import csv
+from yahooquery import Ticker
 
 class Stock:
     ticker_symbol = ""
-    sector = ""
-    shares_held = ""
-    price_paid = ""
-    market_price_paid = ""
-    market_value = ""
-    intrinsic_market_value = ""
-    percent_ownership = ""
     EPS_TTM = ""
     EV_EBITDA2 = ""
     EV2 = ""
@@ -49,7 +41,6 @@ class Stock:
     sector = ""
     industry = ""
     price_to_cash_flow = ""
-
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -96,56 +87,32 @@ class Stock:
         except:
             self.price_to_cash_flow = "undefined"
 
-    def calculate_market_value(self):
-        try:
-            self.market_value = float(self.shares_held) * float(self.list_price)
-        except:
-            self.market_value = "undefined"
-
-    def calculate_full_price_paid(self):
-        try:
-            self.market_price_paid = float(self.shares_held) * float(self.price_paid)
-        except:
-            self.market_price_paid = "undefined"
-
-    def calculate_intrinsic_market_value(self):
-        try:
-            self.intrinsic_market_value = float(self.shares_held) * float(self.intrinsic_value)
-        except:
-            self.intrinsic_market_value = "undefined"
-
-    def calculate_percent_ownership(self):
-        try:
-            float_shares_held = float(self.shares_held)
-            float_shares_outstanding = float(self.shares_outstanding)
-            if float_shares_outstanding != 0:
-                self.percent_ownership = (float_shares_held/float_shares_outstanding)
-        except:
-            self.percent_ownership = "undefined"
-
 def process_stock():
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
     while(1):
 
         stock_start_time = time.time()
 
-        all_ticker_symbols_lock.acquire(blocking=True, timeout=-1)
-        i=len(all_ticker_symbols)
-        if(len(all_ticker_symbols) == 0):
-            all_ticker_symbols_lock.release()
-            break
-        symbol = all_ticker_symbols[0]
-        price_paid = all_ticker_symbols[1]
-        number_of_shares = all_ticker_symbols[2]
-        all_ticker_symbols.remove(symbol)
-        all_ticker_symbols.remove(price_paid)
-        all_ticker_symbols.remove(number_of_shares)
-        all_ticker_symbols_lock.release()
+        print("Going to grab a ticker...")
+        all_bad_tickers_lock.acquire(blocking=True, timeout=-1)
+        print("Acquired all_ticker_symbols_lock...")
+        i=len(all_bad_tickers)
+        print("Grabbed i...")
+        if(len(all_bad_tickers) == 0):
+            print("Length of all_ticker_symbols is 0...")
+            all_bad_tickers_lock.release()
+            print("Releasing all_ticker_symbols_lock...")
+            return
+        print("Just before grabbing symbol...")
+        symbol = all_bad_tickers[0]
+        print("Grabbed " + symbol)
+        all_bad_tickers.remove(symbol)
+        print("Removing " + symbol)
+        all_bad_tickers_lock.release()
+        print("Releasing lock for " + symbol)
 
         newStock = Stock(aaa_corporate_bond_yield)
         newStock.ticker_symbol = symbol
-        newStock.price_paid = price_paid;
-        newStock.shares_held = number_of_shares
         analysis_url = "https://finance.yahoo.com/quote/" + symbol + "/analysis"
         req = urllib.request.Request(url=analysis_url, headers=headers)
 
@@ -160,8 +127,10 @@ def process_stock():
         except:
             pass
 
+        print("Gonna try and populate stuff for " + symbol)
         temp_symbol = Ticker(symbol)
         try:
+            print("created temp_symbol  " + symbol)
             newStock.EPS_TTM = str(temp_symbol.key_stats[symbol]['trailingEps'])
             newStock.list_price = str(temp_symbol.summary_detail[symbol]['previousClose'])
             newStock.day_low = str(temp_symbol.summary_detail[symbol]['dayLow'])
@@ -192,13 +161,10 @@ def process_stock():
             newStock.industry = str(temp_symbol.asset_profile[symbol]['industry'])
             newStock.calculate_cash_flow_per_share()
             newStock.calculate_intrinsic_value()
-            newStock.calculate_market_value()
-            newStock.calculate_full_price_paid()
-            newStock.calculate_intrinsic_market_value()
-            newStock.calculate_percent_ownership()
             newStock.calculate_intrinsic_value_with_cash_flow_per_share()
             newStock.calculate_price_to_cash_flow()
 
+            print("Populated ALLLLLL the things for  " + symbol)
         except IndexError:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Index Error")
             pass
@@ -211,7 +177,7 @@ def process_stock():
         except:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Unexpected Error")
             pass
-            
+
         altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
         newStock.altman_z_score = "Not Found!"
         try:
@@ -229,29 +195,39 @@ def process_stock():
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": GuruFocus Altman Z-Score not found")
             pass
 
+        print("Through exceptions for " + symbol)
         lock.acquire(blocking=True, timeout=-1)
-        allStocks.append(newStock)
+        all_bad_stocks.append(newStock)
         lock.release()
 
-        print("* " + str(i+len(allStocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
 
-start_time = time.time()
+        print("* " + current_time + ": " + str(i+len(all_bad_stocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
+        del newStock
 
-starting_balance = 31081.46
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
+worst_stock_url = "https://www.investing.com/equities/top-stock-losers"
+#worst_stock_url = "https://www.investing.com/equities/52-week-low"
+req = urllib.request.Request(url=worst_stock_url, headers=headers)
 
+all_bad_tickers = []
 lock = threading.Lock()
-all_ticker_symbols_lock = threading.Lock()
-allStocks = []
-all_ticker_symbols = []
+all_bad_tickers_lock = threading.Lock()
 
-with open ('mystocks.txt') as my_file:
-    for my_line in my_file:
-        my_line = my_line.split("|")
-        if (len(my_line[0]) < 6):
-            my_line[0] = my_line[0].replace(".","-")
-            all_ticker_symbols.append(my_line[0])
-            all_ticker_symbols.append(my_line[1])
-            all_ticker_symbols.append(my_line[2])
+try:
+    worst_stock_page = urlopen(req)
+    parsed_html = BeautifulSoup(worst_stock_page, 'html.parser')
+    skipped_first = False
+    for h4 in parsed_html.find_all('h4'):
+        if (skipped_first):
+            print(h4.next_element)
+            all_bad_tickers.append(h4.next_element)
+        else:
+            skipped_first = True
+
+except:
+    pass
 
 yield_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
 aaa_corporate_bond_yield = 0
@@ -264,23 +240,25 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = td.nextSibling.nextSibling.text
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
+all_bad_stocks = []
+
+start_time = time.time()
 threads = list()
-for i in range (2):
+for i in range (4):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()
 
-for i, thread in enumerate(threads):
+for thread in threads:
+    print("Joining thread")
     thread.join()
 
-f = open("my_stocks.csv", "w", newline='')
+f = open("worst_stock_selector.csv", "w", newline='')
 writer = csv.writer(f)
-writer.writerow(['TICKER SYMBOL', 'NAME', 'SHARES HELD', 'PAID PRICE', 'LIST PRICE', 'INTRINSIC VALUE', 'PAID VALUE', 'MARKET VALUE', 'INTRINSIC VALUE POSITION', 'PERCENT OWNERSHIP', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY'])
-for currentStock in allStocks:
-    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.shares_held,  currentStock.price_paid, currentStock.list_price, currentStock.intrinsic_value, currentStock.market_price_paid, currentStock.market_value, currentStock.intrinsic_market_value, currentStock.percent_ownership, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry])
-writer.writerow(['STARTING BALANCE', starting_balance])
+writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY'])
+for currentStock in all_bad_stocks:
+    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry])
 f.close()
 
 exe_time = time.time() - start_time
-
-print("-------- Analyze my securities program took %s seconds to complete --------" % exe_time)
+print("-------- Get worst stoch data program took %s seconds to complete --------" % exe_time)
