@@ -242,6 +242,7 @@ AMRC|Ameresco, Inc. Class A Common Stock|N|AMRC|N|100|N|AMRC
 AMRX|Amneal Pharmaceuticals, Inc. Class A Common Stock|N|AMRX|N|100|N|AMRX
 AMS|American Shared Hospital Services Common Stock|A|AMS|N|100|N|AMS
 AMT|American Tower Corporation (REIT) Common Stock|N|AMT|N|100|N|AMT
+AMTB|Amerant Bancorp Inc. Class A Common Stock|N|AMTB|N|100|N|AMTB
 AMTD|AMTD IDEA Group American Depositary Shares, each representing two Class A Ordinary Shares|N|AMTD|N|100|N|AMTD
 AMTR|ETRACS Alerian Midstream Energy Total Return Index ETN|P|AMTR|N|100|N|AMTR
 AMUB|ETRACS Alerian MLP Index ETN Series B due July 18, 2042|P|AMUB|N|100|N|AMUB
@@ -282,6 +283,7 @@ APLY|Tidal ETF Trust II YieldMax AAPL Option Income Strategy ETF|P|APLY|Y|100|N|
 APMU|Trust for Professional Managers ActivePassive Intermediate Municipal Bond ETF|P|APMU|Y|100|N|APMU
 APO|Apollo Global Management, Inc. (New) Common Stock|N|APO|N|100|N|APO
 APO$A|Apollo Global Management, Inc. 6.75% Series A Mandatory Convertible Preferred Stock|N|APOpA|N|100|N|APO-A
+APOS|Apollo Global Management, Inc. 7.625% Fixed-Rate Resettable Junior Subordinated Notes due 2053|N|APOS|N|100|N|APOS
 APRD|Innovator ETFs Trust Innovator Premium Income 10 Barrier ETF - April|Z|APRD|Y|100|N|APRD
 APRH|Innovator ETFs Trust Innovator Premium Income 20 Barrier ETF - April|Z|APRH|Y|100|N|APRH
 APRJ|Innovator ETFs Trust Innovator Premium Income 30 Barrier ETF - April|Z|APRJ|Y|100|N|APRJ
@@ -550,6 +552,7 @@ BE|Bloom Energy Corporation Class A Common Stock|N|BE|N|100|N|BE
 BECO|BlackRock Future Climate and Sustainable Economy ETF|P|BECO|Y|100|N|BECO
 BEDU|Bright Scholar Education Holdings Limited American Depositary Shares, each  representing four Class A Ordinary Share|N|BEDU|N|100|N|BEDU
 BEDZ|AdvisorShares Hotel ETF|P|BEDZ|Y|100|N|BEDZ
+BEEP|Mobile Infrastructure Corporation Common Stock|A|BEEP|N|100|N|BEEP
 BEKE|KE Holdings Inc American Depositary Shares (each representing three Class A Ordinary Shares)|N|BEKE|N|100|N|BEKE
 BEMB|iShares Trust iShares J.P. Morgan Broad USD Emerging Markets Bond ETF|Z|BEMB|Y|100|N|BEMB
 BEN|Franklin Resources, Inc. Common Stock|N|BEN|N|100|N|BEN
@@ -705,6 +708,7 @@ BMN|BlackRock 2037 Municipal Target Term Trust Common Shares of Beneficial Inter
 BMO|Bank Of Montreal Common Stock|N|BMO|N|100|N|BMO
 BMTX|BM Technologies, Inc. Common Stock|A|BMTX|N|100|N|BMTX
 BMTX.W|BM Technologies, Inc. Warrants|A|BMTX.WS|N|100|N|BMTX+
+BMVP|Invesco Bloomberg MVP Multi-factor ETF|P|BMVP|Y|100|N|BMVP
 BMY|Bristol-Myers Squibb Company Common Stock|N|BMY|N|100|N|BMY
 BN|Brookfield Corporation Class A Limited Voting Shares|N|BN|N|100|N|BN
 BNDC|FlexShares Core Select Bond Fund|P|BNDC|Y|100|N|BNDC
@@ -886,7 +890,6 @@ CATX|Perspective Therapeutics, Inc. Common Stock|A|CATX|N|100|N|CATX
 CAVA|CAVA Group, Inc. Common Stock|N|CAVA|N|100|N|CAVA
 CB|Chubb Limited  Common Stock|N|CB|N|100|N|CB
 CBD|Companhia Brasileira de Distribuicao American Depsitary Shares; each representing one Common Share|N|CBD|N|100|N|CBD
-CBD.V|Companhia Brasileira de Distribuicao American Depositary Shares (Each representing one Common Share) When-Issued|N|CBDw|N|100|N|CBD#
 CBH|Virtus Convertible & Income 2024 Target Term Fund Common Shares of Beneficial Interest|N|CBH|N|100|N|CBH
 CBL|CBL & Associates Properties, Inc. Common Stock|N|CBL|N|100|N|CBL
 CBLS|Changebridge Long/Short Equity ETF|P|CBLS|Y|100|N|CBLS
@@ -1036,7 +1039,6 @@ CLOZ|Series Portfolios Trust Panagram BBB-B CLO ETF|P|CLOZ|Y|100|N|CLOZ
 CLPR|Clipper Realty Inc. Common Stock|N|CLPR|N|100|N|CLPR
 CLS|Celestica, Inc. Common Stock|N|CLS|N|100|N|CLS
 CLSE|Trust for Professional Managers Convergence Long/Short Equity ETF|Z|CLSE|Y|100|N|CLSE
-CLTL|Invesco Treasury Collateral ETF|P|CLTL|Y|100|N|CLTL
 CLVT|Clarivate Plc Ordinary Shares|N|CLVT|N|100|N|CLVT
 CLVT$A|Clarivate Plc 5.25% Series A Mandatory Convertible Preferred Shares|N|CLVTpA|N|100|N|CLVT-A
 CLW|Clearwater Paper Corporation Common Stock|N|CLW|N|100|N|CLW
@@ -1209,7 +1211,6 @@ CUBE|CubeSmart Common Shares|N|CUBE|N|100|N|CUBE
 CUBI|Customers Bancorp, Inc Common Stock|N|CUBI|N|100|N|CUBI
 CUBI$E|Customers Bancorp, Inc Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock, Series E|N|CUBIpE|N|100|N|CUBI-E
 CUBI$F|Customers Bancorp, Inc Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock, Series F|N|CUBIpF|N|100|N|CUBI-F
-CUBS|Asian Growth Cubs ETF|P|CUBS|Y|100|N|CUBS
 CUK|Carnival Plc ADS ADS|N|CUK|N|100|N|CUK
 CULP|Culp, Inc. Common Stock|N|CULP|N|100|N|CULP
 CURE|Direxion Daily Healthcare Bull 3X Shares|P|CURE|Y|100|N|CURE
@@ -1273,6 +1274,7 @@ DAN|Dana Incorporated Common Stock |N|DAN|N|100|N|DAN
 DAO|Youdao, Inc. American Depositary Shares, each representing one Class A Ordinary Share|N|DAO|N|100|N|DAO
 DAPR|FT Cboe Vest U.S. Equity Deep Buffer ETF - April|Z|DAPR|Y|100|N|DAPR
 DAR|Darling Ingredients Inc. Common Stock|N|DAR|N|100|N|DAR
+DARP|Return Stacked Bonds & Managed Futures ETF Grizzle Growth ETF|P|DARP|Y|100|N|DARP
 DASH|DoorDash, Inc. Class A Common Stock|N|DASH|N|100|N|DASH
 DAT|ProShares Big Data Refiners ETF|P|DAT|Y|100|N|DAT
 DAUG|FT Cboe Vest U.S. Equity Deep Buffer ETF - August|Z|DAUG|Y|100|N|DAUG
@@ -1328,7 +1330,6 @@ DECZ|TrueShares Structured Outcome (December) ETF|Z|DECZ|Y|100|N|DECZ
 DEED|First Trust TCW Securitized Plus ETF|P|DEED|Y|100|N|DEED
 DEEF|Xtrackers FTSE Developed ex US Multifactor ETF|P|DEEF|Y|100|N|DEEF
 DEEP|Roundhill Acquirers Deep Value ETF|P|DEEP|Y|100|N|DEEP
-DEF|Invesco Defensive Equity ETF|P|DEF|Y|100|N|DEF
 DEFI|Teucrium Corn Fund Hashdex Bitcoin Futures ETF|P|DEFI|Y|100|N|DEFI
 DEHP|Dimensional ETF Trust Dimensional Emerging Markets High Profitability ETF|P|DEHP|Y|100|N|DEHP
 DEI|Douglas Emmett, Inc. Common Stock|N|DEI|N|100|N|DEI
@@ -1883,7 +1884,6 @@ EWJ|iShares MSCI Japan Index Fund|P|EWJ|Y|100|N|EWJ
 EWK|iShares Inc iShares MSCI Belgium ETF|P|EWK|Y|100|N|EWK
 EWL|iShares Inc iShares MSCI Switzerland ETF|P|EWL|Y|100|N|EWL
 EWM|iShares MSCI Malaysia Index Fund|P|EWM|Y|100|N|EWM
-EWMC|Invesco S&P MidCap 400 Equal Weight ETF|P|EWMC|Y|100|N|EWMC
 EWN|iShares MSCI Netherlands Index Fund|P|EWN|Y|100|N|EWN
 EWO|iShares Inc iShares MSCI Austria ETF|P|EWO|Y|100|N|EWO
 EWP|iShares Inc iShares MSCI Spain ETF|P|EWP|Y|100|N|EWP
@@ -1903,7 +1903,7 @@ EXK|Endeavour Silver Corporation Ordinary Shares (Canada)|N|EXK|N|100|N|EXK
 EXP|Eagle Materials Inc Common Stock|N|EXP|N|100|N|EXP
 EXPR|Express, Inc. Common Stock|N|EXPR|N|100|N|EXPR
 EXR|Extra Space Storage Inc Common Stock|N|EXR|N|100|N|EXR
-EXTO.V|Almacenes Exito S.A. American Depositary Share, each representing eight (8) Common Shares When-Issued|N|EXTOw|N|100|N|EXTO#
+EXTO|Almacenes Exito S.A. American Depositary Share, each representing eight (8) Common Shares|N|EXTO|N|100|N|EXTO
 EYLD|Cambria ETF Trust Cambria Emerging Shareholder Yield ETF|Z|EYLD|Y|100|N|EYLD
 EZA|iShares MSCI South Africa Index Fund|P|EZA|Y|100|N|EZA
 EZJ|ProShares Ultra MSCI Japan|P|EZJ|Y|100|N|EZJ
@@ -2239,7 +2239,6 @@ FXG|First Trust Cons. Staples AlphaDEX|P|FXG|Y|100|N|FXG
 FXH|First Trust Health Care AlphaDEX|P|FXH|Y|100|N|FXH
 FXI|iShares China Large-Cap ETF|P|FXI|Y|100|N|FXI
 FXL|First Trust Technology AlphaDEX|P|FXL|Y|100|N|FXL
-FXLV|F45 Training Holdings Inc. Common Stock|N|FXLV|N|100|N|FXLV
 FXN|First Trust Energy AlphaDEX Fund|P|FXN|Y|100|N|FXN
 FXO|First Trust Financials AlphaDEX|P|FXO|Y|100|N|FXO
 FXP|ProShares Ultrashort FTSE China 50|P|FXP|Y|100|N|FXP
@@ -2338,6 +2337,7 @@ GFOR.U|Graf Acquisition Corp. IV Units|N|GFOR.U|N|100|N|GFOR=
 GFOR.W|Graf Acquisition Corp. IV Warrants|N|GFOR.WS|N|100|N|GFOR+
 GGB|Gerdau S.A. Common Stock|N|GGB|N|100|N|GGB
 GGG|Graco Inc. Common Stock|N|GGG|N|100|N|GGG
+GGME|Invesco Next Gen Media and Gaming ETF|P|GGME|Y|100|N|GGME
 GGN|GAMCO Global Gold, Natural Resources & Income Trust|A|GGN|N|100|N|GGN
 GGN$B|GAMCO Global Gold, Natural Reources & Income Trust 5.00% Series B Cumulative 25.00 Liquidation Preference|A|GGNpB|N|100|N|GGN-B
 GGRW|Gabelli Growth Innovators ETF|P|GGRW|Y|100|N|GGRW
@@ -2472,8 +2472,8 @@ GROV|Grove Collaborative Holdings, Inc. Class A Common Stock|N|GROV|N|100|N|GROV
 GROY|Gold Royalty Corp. Common Shares|A|GROY|N|100|N|GROY
 GROY.W|Gold Royalty Corp. Warrants, each warrant exercisable for one common share at an exercise price of $7.50|A|GROY.WS|N|100|N|GROY+
 GRP.U|Granite Real Estate Inc. Stapled Units, each consisting of one unit of Granite Real Estate Trust and one common share of Granite REIT Inc.|N|GRP.U|N|100|N|GRP=
+GRPM|Invesco S&P MidCap 400? GARP ETF|P|GRPM|Y|100|N|GRPM
 GRX|The Gabelli Healthcare & Wellness Trust Common Shares of Beneficial Interest|N|GRX|N|100|N|GRX
-GRZZ|Listed Funds Trust Grizzle Growth ETF|P|GRZZ|Y|100|N|GRZZ
 GS|Goldman Sachs Group, Inc. (The) Common Stock|N|GS|N|100|N|GS
 GS$A|Goldman Sachs Group, Inc. (The) Depositary Shares each representing 1/1000th Interest in a Share of Floating Rate Non-Cumulative Preferred Stock Series A|N|GSpA|N|100|N|GS-A
 GS$C|Goldman Sachs Group, Inc. (The) Depositary Share repstg 1/1000th Preferred Series C|N|GSpC|N|100|N|GS-C
@@ -2718,7 +2718,6 @@ HYHG|ProShares High Yield Interest Rate Hedged|Z|HYHG|Y|100|N|HYHG
 HYI|Western Asset High Yield Defined Opportunity Fund Inc. Common Stock|N|HYI|N|100|N|HYI
 HYIN|WisdomTree Alternative Income Fund|Z|HYIN|Y|100|N|HYIN
 HYLB|Xtrackers USD High Yield Corporate Bond ETF|P|HYLB|Y|100|N|HYLB
-HYLD|High Yield ETF|P|HYLD|Y|100|N|HYLD
 HYLG|Global X Funds Global X Health Care Covered Call & Growth ETF|P|HYLG|Y|100|N|HYLG
 HYLN|Hyliion Holdings Corp. Class A Common Stock|N|HYLN|N|100|N|HYLN
 HYMB|SPDR Nuveen Bloomberg High Yield Municipal Bond ETF|P|HYMB|Y|100|N|HYMB
@@ -2840,6 +2839,7 @@ IGLB|iShares 10  Year Investment Grade Corporate Bond ETF|P|IGLB|Y|100|N|IGLB
 IGLD|FT Cboe Vest Gold Strategy Target Income ETF|Z|IGLD|Y|100|N|IGLD
 IGM|iShares Expanded Tech Sector ETF|P|IGM|Y|100|N|IGM
 IGN|iShares North American Tech-Multimedia Networking ETF|P|IGN|Y|100|N|IGN
+IGPT|Invesco AI and Next Gen Software ETF|P|IGPT|Y|100|N|IGPT
 IGR|CBRE Global Real Estate Income Fund Common Shares of Beneficial Interest|N|IGR|N|100|N|IGR
 IGRO|iShares International Dividend Growth ETF|Z|IGRO|Y|100|N|IGRO
 IGT|International Game Technology Ordinary Shares|N|IGT|N|100|N|IGT
@@ -3258,6 +3258,7 @@ KMPR|Kemper Corporation|N|KMPR|N|100|N|KMPR
 KMT|Kennametal Inc. Common Stock|N|KMT|N|100|N|KMT
 KMX|CarMax Inc|N|KMX|N|100|N|KMX
 KN|Knowles Corporation Common Stock|N|KN|N|100|N|KN
+KNCT|Invesco Next Gen Connectivity ETF|P|KNCT|Y|100|N|KNCT
 KNF|Knife Riv Holding Co. Common Stock|N|KNF|N|100|N|KNF
 KNG|FT Cboe Vest S&P 500 Dividend Aristocrats Target Income ETF|Z|KNG|Y|100|N|KNG
 KNOP|KNOT Offshore Partners LP Common Units representing Limited Partner Interests|N|KNOP|N|100|N|KNOP
@@ -3460,6 +3461,7 @@ MAA$I|Mid-America Apartment Communities, Inc. 8.50% Series I Cumulative Redeemab
 MAC|Macerich Company (The) Common Stock|N|MAC|N|100|N|MAC
 MAG|MAG Silver Corporation Ordinary Shares|A|MAG|N|100|N|MAG
 MAGA|Point Bridge America First ETF|Z|MAGA|Y|100|N|MAGA
+MAGG|Madison ETFs Trust Madison Aggregate Bond ETF|P|MAGG|Y|100|N|MAGG
 MAIA|MAIA Biotechnology, Inc. Common Stock|A|MAIA|N|100|N|MAIA
 MAIN|Main Street Capital Corporation Common Stock|N|MAIN|N|100|N|MAIN
 MAKX|ProShares S&P Kensho Smart Factories ETF|P|MAKX|Y|100|N|MAKX
@@ -3628,7 +3630,6 @@ MMTM|SPDR S&P 1500 Momentum Tilt ETF|P|MMTM|Y|100|N|MMTM
 MMU|Western Asset Managed Municipals Fund, Inc. Common Stock|N|MMU|N|100|N|MMU
 MNA|IQ Merger Arbitrage ETF|P|MNA|Y|100|N|MNA
 MNBD|ALPS ETF Trust ALPS Intermediate Municipal Bond ETF|P|MNBD|Y|100|N|MNBD
-MNK|Mallinckrodt plc Ordinary Shares|A|MNK|N|100|N|MNK
 MNP|Western Asset Municipal Partners Fund, Inc. Common Stock|N|MNP|N|100|N|MNP
 MNSO|MINISO Group Holding Limited American Depositary Shares, each representing four Ordinary Shares|N|MNSO|N|100|N|MNSO
 MNTN|Everest Consolidator Acquisition Corporation Class A Common Stock|N|MNTN|N|100|N|MNTN
@@ -4178,20 +4179,19 @@ PB|Prosperity Bancshares, Inc. Common Stock|N|PB|N|100|N|PB
 PBA|Pembina Pipeline Corp. Ordinary Shares (Canada)|N|PBA|N|100|N|PBA
 PBD|Invesco Global Clean Energy ETF|P|PBD|Y|100|N|PBD
 PBDC|Putnam ETF Trust Putnam BDC Income ETF|P|PBDC|Y|100|N|PBDC
-PBE|Invesco Dynamic Biotech & Genome ETF|P|PBE|Y|100|N|PBE
+PBE|Invesco Biotechnology & Genome ETF|P|PBE|Y|100|N|PBE
 PBF|PBF Energy Inc. Class A Common Stock|N|PBF|N|100|N|PBF
 PBH|Prestige Consumer Healthcare Inc. Common Stock|N|PBH|N|100|N|PBH
 PBI|Pitney Bowes Inc. Common Stock|N|PBI|N|100|N|PBI
 PBI$B|Pitney Bowes Inc 6.70% Notes Due 2043|N|PBIpB|N|100|N|PBI-B
-PBJ|Invesco Dynamic Food & Beverage ETF|P|PBJ|Y|100|N|PBJ
+PBJ|Invesco Food & Beverage ETF|P|PBJ|Y|100|N|PBJ
 PBL|PGIM ETF Trust PGIM Portfolio Ballast ETF|Z|PBL|Y|100|N|PBL
 PBP|Invesco S&P 500 BuyWrite ETF|P|PBP|Y|100|N|PBP
 PBR|Petroleo Brasileiro S.A.- Petrobras Common Stock|N|PBR|N|100|N|PBR
 PBR.A|Petroleo Brasileiro S.A.- Petrobras American Depositary Shares|N|PBR.A|N|100|N|PBR.A
-PBS|Invesco Dynamic Media ETF|P|PBS|Y|100|N|PBS
 PBT|Permian Basin Royalty Trust Common Stock|N|PBT|N|100|N|PBT
-PBTP|Invesco PureBeta 0-5 Yr US TIPS ETF|Z|PBTP|Y|100|N|PBTP
-PBUS|Invesco PureBeta MSCI USA ETF|Z|PBUS|Y|100|N|PBUS
+PBTP|Invesco 0-5 Yr US TIPS ETF|Z|PBTP|Y|100|N|PBTP
+PBUS|Invesco MSCI USA ETF|Z|PBUS|Y|100|N|PBUS
 PBW|Invesco WilderHill Clean Energy ETF|P|PBW|Y|100|N|PBW
 PCEF|Invesco CEF Income Composite ETF|P|PCEF|Y|100|N|PCEF
 PCF|High Income Securities Fund Common Stock|N|PCF|N|100|N|PCF
@@ -4227,7 +4227,7 @@ PEB$G|Pebblebrook Hotel Trust 6.375% Series G Cumulative Redeemable Preferred Sh
 PEB$H|Pebblebrook Hotel Trust 5.700% Series H Cumulative Redeemable Preferred Shares of Beneficial Interest|N|PEBpH|N|100|N|PEB-H
 PED|Pedevco Corp. Common Stock|A|PED|N|100|N|PED
 PEG|Public Service Enterprise Group Incorporated Common Stock|N|PEG|N|100|N|PEG
-PEJ|Invesco Dynamic Leisure and Entertainment ETF|P|PEJ|Y|100|N|PEJ
+PEJ|Invesco Leisure and Entertainment ETF|P|PEJ|Y|100|N|PEJ
 PEMX|Putnam ETF Trust Putnam Emerging Markets ex-China ETF|P|PEMX|Y|100|N|PEMX
 PEN|Penumbra, Inc. Common Stock|N|PEN|N|100|N|PEN
 PEO|Adams Natural Resources Fund, Inc. Common Stock|N|PEO|N|100|N|PEO
@@ -4260,7 +4260,7 @@ PFXF|VanEck Preferred Securities ex Financials ETF|P|PFXF|Y|100|N|PFXF
 PG|Procter & Gamble Company (The) Common Stock|N|PG|N|100|N|PG
 PGAL|Global X MSCI Portugal ETF|P|PGAL|Y|100|N|PGAL
 PGF|Invesco Financial Preferred ETF|P|PGF|Y|100|N|PGF
-PGHY|Invesco Global Short Term High Yield Bond ETF|P|PGHY|Y|100|N|PGHY
+PGHY|Invesco Global ex-US High Yield Corporate Bond ETF|P|PGHY|Y|100|N|PGHY
 PGP|Pimco Global StocksPlus & Income Fund Common Shares of Beneficial Interest|N|PGP|N|100|N|PGP
 PGR|Progressive Corporation (The) Common Stock|N|PGR|N|100|N|PGR
 PGRE|Paramount Group, Inc. Common Stock|N|PGRE|N|100|N|PGRE
@@ -4310,12 +4310,12 @@ PIT|VanEck ETF Trust VanEck Commodity Strategy ETF|Z|PIT|Y|100|N|PIT
 PJAN|Innovator U.S. Equity Power Buffer ETF - January|Z|PJAN|Y|100|N|PJAN
 PJFG|PGIM ETF Trust PGIM Jennison Focused Growth ETF|P|PJFG|Y|100|N|PJFG
 PJFV|PGIM ETF Trust PGIM Jennison Focused Value ETF|P|PJFV|Y|100|N|PJFV
-PJP|Invesco Dynamic Pharmaceuticals ETF|P|PJP|Y|100|N|PJP
+PJP|Invesco Pharmaceuticals ETF|P|PJP|Y|100|N|PJP
 PJT|PJT Partners Inc. Class A Common Stock|N|PJT|N|100|N|PJT
 PJUL|Innovator U.S. Equity Power Buffer ETF - July|Z|PJUL|Y|100|N|PJUL
 PJUN|Innovator U.S. Equity Power Buffer ETF - June|Z|PJUN|Y|100|N|PJUN
 PK|Park Hotels & Resorts Inc. Common Stock |N|PK|N|100|N|PK
-PKB|Invesco Dynamic Building & Construction ETF|P|PKB|Y|100|N|PKB
+PKB|Invesco Building & Construction ETF|P|PKB|Y|100|N|PKB
 PKE|Park Aerospace Corp. Common Stock|N|PKE|N|100|N|PKE
 PKG|Packaging Corporation of America Common Stock|N|PKG|N|100|N|PKG
 PKST|Peakstone Realty Trust Common Shares|N|PKST|N|100|N|PKST
@@ -4364,6 +4364,7 @@ PORT|Southport Acquisition Corporation Class A Common Stock|N|PORT|N|100|N|PORT
 PORT.U|Southport Acquisition Corporation Units, each consisting of one share of Class A common stock, and one-half of one warrant|N|PORT.U|N|100|N|PORT=
 PORT.W|Southport Acquisition Corporation Warrants, each exercisable for one share of Class A common stock at an exercise price of $11.50|N|PORT.WS|N|100|N|PORT+
 POST|Post Holdings, Inc. Common Stock|N|POST|N|100|N|POST
+POWA|Invesco Bloomberg Pricing Power ETF|P|POWA|Y|100|N|POWA
 PP|Tidal ETF Trust II The Meet Kevin Pricing Power ETF|P|PP|Y|100|N|PP
 PPA|Invesco Aerospace & Defense ETF |P|PPA|Y|100|N|PPA
 PPEM|Putnam ETF Trust Putnam PanAgora ESG Emerging Markets Equity ETF|P|PPEM|Y|100|N|PPEM
@@ -4427,7 +4428,6 @@ PSCQ|Pacer Swan SOS Conservative (October) ETF|Z|PSCQ|Y|100|N|PSCQ
 PSCW|Pacer Swan SOS Conservative (April) ETF|Z|PSCW|Y|100|N|PSCW
 PSCX|Pacer Swan SOS Conservative (January) ETF|Z|PSCX|Y|100|N|PSCX
 PSDM|PGIM ETF Trust PGIM Short Duration Multi-Sector Bond ETF|Z|PSDM|Y|100|N|PSDM
-PSDN|AdvisorShares Poseidon Dynamic Cannabis ETF|P|PSDN|Y|100|N|PSDN
 PSEC$A|Prospect Capital Corporation 5.35% Series A Fixed Rate Cumulative Perpetual Preferred Stock|N|PSECpA|N|100|N|PSEC-A
 PSEP|Innovator U.S. Equity Power Buffer ETF - September|Z|PSEP|Y|100|N|PSEP
 PSF|Cohen & Steers Select Preferred and Income Fund, Inc. Common Stock|N|PSF|N|100|N|PSF
@@ -4438,9 +4438,8 @@ PSFF|Pacer Swan SOS Fund of Funds ETF|Z|PSFF|Y|100|N|PSFF
 PSFJ|Pacer Swan SOS Flex (July) ETF|Z|PSFJ|Y|100|N|PSFJ
 PSFM|Pacer Swan SOS Flex (April) ETF|Z|PSFM|Y|100|N|PSFM
 PSFO|Pacer Swan SOS Flex (October) ETF|Z|PSFO|Y|100|N|PSFO
-PSI|Invesco Dynamic Semiconductors ETF|P|PSI|Y|100|N|PSI
+PSI|Invesco Semiconductors ETF|P|PSI|Y|100|N|PSI
 PSIL|AdvisorShares Psychedelics ETF|P|PSIL|Y|100|N|PSIL
-PSJ|Invesco Dynamic Software ETF|P|PSJ|Y|100|N|PSJ
 PSK|SPDR ICE Preferred Securities ETF|P|PSK|Y|100|N|PSK
 PSLV|Sprott Physical Silver Trust ETV|P|PSLV|Y|100|N|PSLV
 PSMD|Pacer Swan SOS Moderate (January) ETF|Z|PSMD|Y|100|N|PSMD
@@ -4476,24 +4475,22 @@ PUTD|Return Stacked Bonds & Managed Futures ETF Cboe Validus S&P 500 Dynamic Put
 PUTW|WisdomTree PutWrite Strategy Fund|P|PUTW|Y|100|N|PUTW
 PVAL|Putnam Focused Large Cap Value ETF|P|PVAL|Y|100|N|PVAL
 PVH|PVH Corp. Common Stock|N|PVH|N|100|N|PVH
-PVI|Invesco VRDO Tax-Free ETF|P|PVI|Y|100|N|PVI
+PVI|Invesco Floating Rate Municipal Income ETF|P|PVI|Y|100|N|PVI
 PVL|Permianville Royalty Trust Trust Units |N|PVL|N|100|N|PVL
 PW|Power REIT (MD) Common Stock|A|PW|N|100|N|PW
 PW$A|Power REIT 7.75% Series A Cumulative Perpetual Preferred Stock|A|PWpA|N|100|N|PW-A
-PWB|Invesco Dynamic Large Cap Growth ETF|P|PWB|Y|100|N|PWB
-PWC|Invesco Dynamic Market ETF|P|PWC|Y|100|N|PWC
+PWB|Invesco Large Cap Growth ETF|P|PWB|Y|100|N|PWB
 PWR|Quanta Services, Inc. Common Stock|N|PWR|N|100|N|PWR
 PWS|Pacer WealthShield ETF |Z|PWS|Y|100|N|PWS
 PWSC|PowerSchool Holdings, Inc. Class A Common Stock|N|PWSC|N|100|N|PWSC
-PWV|Invesco Dynamic Large Cap Value ETF|P|PWV|Y|100|N|PWV
+PWV|Invesco Large Cap Value ETF|P|PWV|Y|100|N|PWV
 PWZ|Invesco California AMT-Free Municipal Bond Portfolio|P|PWZ|Y|100|N|PWZ
 PX|P10, Inc. Class A Common Stock|N|PX|N|100|N|PX
 PXD|Pioneer Natural Resources Company Common Stock|N|PXD|N|100|N|PXD
-PXE|Invesco Dynamic Energy Exploration &Production ETF|P|PXE|Y|100|N|PXE
+PXE|Invesco Energy Exploration & Production ETF|P|PXE|Y|100|N|PXE
 PXF|Invesco FTSE RAFI Developed Markets ex-U.S. ETF|P|PXF|Y|100|N|PXF
 PXH|Invesco FTSE RAFI Emerging Markets ETF|P|PXH|Y|100|N|PXH
-PXJ|Invesco Dynamic Oil & Gas Services ETF|P|PXJ|Y|100|N|PXJ
-PXQ|Invesco Dynamic Networking ETF|P|PXQ|Y|100|N|PXQ
+PXJ|Invesco Oil & Gas Services ETF|P|PXJ|Y|100|N|PXJ
 PXUS|Principal International Adaptive Multi-Factor ETF|Z|PXUS|Y|100|N|PXUS
 PYLD|PIMCO U.S. Treasury Index Fund PIMCO Multisector Bond Active Exchange-Traded Fund|P|PYLD|Y|100|N|PYLD
 PYN|PIMCO New York Municipal Income Fund III Common Shares of Beneficial Interest|N|PYN|N|100|N|PYN
@@ -5301,6 +5298,7 @@ TBC|AT&T Inc. 5.625% Global Notes due 2067|N|TBC|N|100|N|TBC
 TBF|ProShares Short 20+ Year Treasury|P|TBF|Y|100|N|TBF
 TBI|TrueBlue, Inc. Common Stock|N|TBI|N|100|N|TBI
 TBJL|Innovator 20  Year Treasury Bond 9 Buffer ETF - July|Z|TBJL|Y|100|N|TBJL
+TBLL|Invesco Short Term Treasury ETF|P|TBLL|Y|100|N|TBLL
 TBT|ProShares UltraShort Lehman 20  Year Treasury|P|TBT|Y|100|N|TBT
 TBUX|T. Rowe Price Ultra Short-Term Bond ETF|P|TBUX|Y|100|N|TBUX
 TBX|ProShares Short 7 10 Year Treasury|P|TBX|Y|100|N|TBX
@@ -5704,7 +5702,6 @@ VAL|Valaris Limited Common Shares|N|VAL|N|100|N|VAL
 VAL.W|Valaris Limited Warrants|N|VAL.WS|N|100|N|VAL+
 VALE|VALE S.A.  American Depositary Shares Each Representing one common share|N|VALE|N|100|N|VALE
 VALQ|American Century U.S. Quality Value ETF|P|VALQ|Y|100|N|VALQ
-VALT|ETFMG Sit Ultra Short ETF|P|VALT|Y|100|N|VALT
 VAMO|Cambria ETF Trust Cambria Value and Momentum ETF|Z|VAMO|Y|100|N|VAMO
 VAPO|Vapotherm, Inc. Common Stock|N|VAPO|N|100|N|VAPO
 VATE|INNOVATE Corp. Common Stock|N|VATE|N|100|N|VATE
@@ -6169,4 +6166,4 @@ ZVIA|Zevia PBC Class A Common Stock|N|ZVIA|N|100|N|ZVIA
 ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Elkay Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
-File Creation Time: 0825202321:31||||||
+File Creation Time: 0829202321:31||||||
