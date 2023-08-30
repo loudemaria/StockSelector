@@ -1,1 +1,9 @@
-APT|Alpha Pro Tech, Ltd. Common Stock|A|APT|N|100|N|
+DINO|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+ZEUS|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+CALM|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+CCRN|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+MCFT|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+BXC|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+CCS|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+MDC|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+RLGT|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
