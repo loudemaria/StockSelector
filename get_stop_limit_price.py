@@ -5,7 +5,7 @@ def get_date_difference(date1, date2):
     return difference.days
 
 date_bought = date(2023, 7, 31)
-date_to_sell = date(2023, 8, 14)
+date_to_sell = date(2023, 9, 11)
 price_paid = 52.31
 
 number_of_days_held = get_date_difference(date_bought, date_to_sell)

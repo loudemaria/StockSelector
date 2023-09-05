@@ -22,7 +22,6 @@ AAT|American Assets Trust, Inc. Common Stock|N|AAT|N|100|N|AAT
 AAU|Almaden Minerals, Ltd. Common Shares|A|AAU|N|100|N|AAU
 AB|AllianceBernstein Holding L.P.  Units|N|AB|N|100|N|AB
 ABBV|AbbVie Inc. Common Stock|N|ABBV|N|100|N|ABBV
-ABC|AmerisourceBergen Corporation Common Stock|N|ABC|N|100|N|ABC
 ABEQ|Absolute Select Value ETF|P|ABEQ|Y|100|N|ABEQ
 ABEV|Ambev S.A. American Depositary Shares (Each representing 1 Common Share)|N|ABEV|N|100|N|ABEV
 ABG|Asbury Automotive Group Inc Common Stock|N|ABG|N|100|N|ABG
@@ -145,6 +144,7 @@ AHH$A|Armada Hoffler Properties, Inc. 6.75% Series A Cumulative Redeemable Perpe
 AHL$C|Aspen Insurance Holdings Limited 5.95% Fixed-to-Floating Rate Perpetual Non-Cumulative Preference Shares|N|AHLpC|N|100|N|AHL-C
 AHL$D|Aspen Insurance Holdings Limited 5.625% Perpetual Non-Cumulative Preference Shares|N|AHLpD|N|100|N|AHL-D
 AHL$E|Aspen Insurance Holdings Limited Depositary Shares, each representing a 1/1000th interest in a share of 5.625% Perpetual Non-Cumulative Preference Shares|N|AHLpE|N|100|N|AHL-E
+AHLT|American Beacon Select Funds American Beacon AHL Trend ETF|P|AHLT|Y|100|N|AHLT
 AHOY|Tidal ETF Trust Newday Ocean Health ETF|P|AHOY|Y|100|N|AHOY
 AHT|Ashford Hospitality Trust Inc Common Stock|N|AHT|N|100|N|AHT
 AHT$D|Ashford Hospitality Trust Inc 8.45% Series D Cumulative Preferred Stock|N|AHTpD|N|100|N|AHT-D
@@ -1118,6 +1118,7 @@ COO|The Cooper Companies, Inc. Common Stock|N|COO|N|100|N|COO
 COOK|Traeger, Inc. Common Stock|N|COOK|N|100|N|COOK
 COP|ConocoPhillips Common Stock|N|COP|N|100|N|COP
 COPX|Global X Copper Miners ETF|P|COPX|Y|100|N|COPX
+COR|Cencora, Inc. Common Stock|N|COR|N|100|N|COR
 CORN|Teucrium Corn Fund ETV|P|CORN|Y|100|N|CORN
 CORP|Pimco Investment Grade Corporate Bond Index Exchange-Traded Fund|P|CORP|Y|100|N|CORP
 CORR|CorEnergy Infrastructure Trust, Inc. Common Stock|N|CORR|N|100|N|CORR
@@ -2216,6 +2217,7 @@ FTLS|First Trust Long/Short Equity|P|FTLS|Y|100|N|FTLS
 FTS|Fortis Inc. Common Shares|N|FTS|N|100|N|FTS
 FTSD|Franklin Short Duration U.S. Government ETF|P|FTSD|Y|100|N|FTSD
 FTV|Fortive Corporation Common Stock |N|FTV|N|100|N|FTV
+FTWO|EA Series Trust Strive FAANG 2.0 ETF|P|FTWO|Y|100|N|FTWO
 FUBO|fuboTV Inc. Common Stock|N|FUBO|N|100|N|FUBO
 FUL|H. B. Fuller Company Common Stock|N|FUL|N|100|N|FUL
 FUMB|First Trust Ultra Short Duration Municipal ETF|P|FUMB|Y|100|N|FUMB
@@ -2948,9 +2950,9 @@ IQIN|IQ 500 International ETF|P|IQIN|Y|100|N|IQIN
 IQLT|iShares MSCI Intl Quality Factor ETF|P|IQLT|Y|100|N|IQLT
 IQM|Franklin Intelligent Machines ETF|Z|IQM|Y|100|N|IQM
 IQRA|IQ MacKay Municipal Insured ETF IQ CBRE Real Assets ETF|P|IQRA|Y|100|N|IQRA
-IQSI|IQ Candriam ESG International Equity ETF|P|IQSI|Y|100|N|IQSI
-IQSM|IndexIQ ETF Trust IQ Candriam ESG U.S. Mid Cap Equity ETF|P|IQSM|Y|100|N|IQSM
-IQSU|IQ Candriam ESG U.S. Large Cap Equity ETF|P|IQSU|Y|100|N|IQSU
+IQSI|IQ Candriam International Equity ETF|P|IQSI|Y|100|N|IQSI
+IQSM|IQ Candriam U.S. Mid Cap Equity ETF|P|IQSM|Y|100|N|IQSM
+IQSU|IQ Candriam U.S. Large Cap Equity ETF|P|IQSU|Y|100|N|IQSU
 IQV|IQVIA Holdings, Inc. Common Stock|N|IQV|N|100|N|IQV
 IR|Ingersoll Rand Inc. Common Stock|N|IR|N|100|N|IR
 IRBA|Litman Gregory Funds Trust iMGP RBA Responsible Global Allocation ETF|P|IRBA|Y|100|N|IRBA
@@ -2970,6 +2972,7 @@ ISCV|iShares Morningstar Small-Cap Value ETF|P|ISCV|Y|100|N|ISCV
 ISD|PGIM High Yield Bond Fund, Inc.|N|ISD|N|100|N|ISD
 ISDB|Invesco Actively Managed Exchange-Traded Fund Trus Invesco Short Duration Bond ETF|Z|ISDB|Y|100|N|ISDB
 ISDR|Issuer Direct Corporation Common Stock|A|ISDR|N|100|N|ISDR
+ISEP|Innovator ETFs Trust Innovator International Developed Power Buffer ETF  September|P|ISEP|Y|100|N|ISEP
 ISMD|Inspire Small/Mid Cap ETF|P|ISMD|Y|100|N|ISMD
 ISRA|VanEck Israel ETF|P|ISRA|Y|100|N|ISRA
 ISVL|iShares Trust iShares International Developed Small Cap Value Factor ETF|Z|ISVL|Y|100|N|ISVL
@@ -3810,7 +3813,6 @@ NEA|Nuveen AMT-Free Quality Municipal Income Fund Common Shares of Beneficial In
 NEAR|BlackRock Short Maturity Bond ETF|Z|NEAR|Y|100|N|NEAR
 NEE|NextEra Energy, Inc. Common Stock|N|NEE|N|100|N|NEE
 NEE$N|NextEra Energy, Inc. Series N Junior Subordinated Debentures due March 1, 2079|N|NEEpN|N|100|N|NEE-N
-NEE$Q|NextEra Energy, Inc. 6.219% Corporate Units|N|NEEpQ|N|100|N|NEE-Q
 NEE$R|NextEra Energy, Inc. 6.926% Corporate Units|N|NEEpR|N|100|N|NEE-R
 NEM|Newmont Corporation|N|NEM|N|100|N|NEM
 NEN|New England Realty Associates Limited Partnership Class A Depositary Receipts Evidencing Units of Limited Partnership|A|NEN|N|100|N|NEN
@@ -3826,7 +3828,6 @@ NETZ|Engine No. 1 ETF Trust Engine No. 1 Transform Climate ETF|Z|NETZ|Y|100|N|NE
 NEU|NewMarket Corp Common Stock|N|NEU|N|100|N|NEU
 NEWP|New Pacific Metals Corp. Common Shares|A|NEWP|N|100|N|NEWP
 NEWR|New Relic, Inc. Common Stock|N|NEWR|N|100|N|NEWR
-NEX|NexTier Oilfield Solutions Inc. Common Stock|N|NEX|N|100|N|NEX
 NEXA|Nexa Resources S.A. Common Shares|N|NEXA|N|100|N|NEXA
 NFG|National Fuel Gas Company Common Stock|N|NFG|N|100|N|NFG
 NFGC|New Found Gold Corp Common Shares|A|NFGC|N|100|N|NFGC
@@ -3943,7 +3944,6 @@ NSC|Norfolk Southern Corporation Common Stock|N|NSC|N|100|N|NSC
 NSCS|Nuveen Small Cap Select ETF|P|NSCS|Y|100|N|NSCS
 NSP|Insperity, Inc. Common Stock|N|NSP|N|100|N|NSP
 NSPI|ETF Series Solutions Nationwide S&P 500 Risk-Managed Income ETF|P|NSPI|Y|100|N|NSPI
-NSPL|Unified Series Trust NightShares 500 1x/1.5x ETF|P|NSPL|Y|100|N|NSPL
 NSS|NuStar Logistics, L.P. 7.625% Fixed-to-Floating Rate Subordinated Notes due 2043|N|NSS|N|100|N|NSS
 NSTB|Northern Star Investment Corp. II Class A Common stock|A|NSTB|N|100|N|NSTB
 NSTB.U|Northern Star Investment Corp. II Units, each consisting of one share of Class A common stock and one-fifth of one redeemable warrant|A|NSTB.U|N|100|N|NSTB=
@@ -4204,6 +4204,7 @@ PCG$E|Pacific Gas & Electric Co. 5% 1st A Preferred Stock|A|PCGpE|N|100|N|PCG-E
 PCG$G|Pacific Gas & Electric Co. 4.80% 1st Preferred Stock|A|PCGpG|N|100|N|PCG-G
 PCG$H|Pacific Gas & Electric Co. 4.50% 1st Preferred Stock|A|PCGpH|N|100|N|PCG-H
 PCG$I|Pacific Gas & Electric Co. 4.36% 1st Preferred Stock|A|PCGpI|N|100|N|PCG-I
+PCGG|Litman Gregory Funds Trust Polen Capital Global Growth ETF|P|PCGG|Y|100|N|PCGG
 PCK|Pimco California Municipal Income Fund II Common Shares of Beneficial Interest|N|PCK|N|100|N|PCK
 PCM|PCM Fund, Inc. Common Stock|N|PCM|N|100|N|PCM
 PCN|Pimco Corporate & Income Strategy Fund Common Stock|N|PCN|N|100|N|PCN
@@ -4913,6 +4914,8 @@ SEMI|Columbia ETF Trust I Columbia Seligman Semiconductor and Technology ETF|P|S
 SEMR|SEMrush Holdings, Inc. Class A Common Stock|N|SEMR|N|100|N|SEMR
 SENS|Senseonics Holdings, Inc. Common Stock|A|SENS|N|100|N|SENS
 SENT|AdvisorShares Alpha DNA Equity Sentiment ETF|P|SENT|Y|100|N|SENT
+SEPT|AIM ETF Products Trust AllianzIM U.S. Large Cap Buffer10 Sep ETF|P|SEPT|Y|100|N|SEPT
+SEPW|AIM ETF Products Trust AllianzIM U.S. Large Cap Buffer20 Sep ETF|P|SEPW|Y|100|N|SEPW
 SEPZ|Listed Funds Trust TrueShares Structured Outcome (September) ETF|Z|SEPZ|Y|100|N|SEPZ
 SES|SES AI Corporation Class A Common Stock|N|SES|N|100|N|SES
 SES.W|SES AI Corporation Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50 per share|N|SES.WS|N|100|N|SES+
@@ -5667,6 +5670,7 @@ USO|United States Oil Fund|P|USO|Y|100|N|USO
 USPH|U.S. Physical Therapy, Inc. Common Stock|N|USPH|N|100|N|USPH
 USPX|Franklin U.S. Equity Index ETF|P|USPX|Y|100|N|USPX
 USRT|iShares Core U.S. REIT ETF|P|USRT|Y|100|N|USRT
+USSE|Segall Bryant & Hamill Trust Segall Bryant & Hamill Select Equity ETF|P|USSE|Y|100|N|USSE
 USSG|Xtrackers MSCI USA ESG Leaders Equity ETF|P|USSG|Y|100|N|USSG
 UST|ProShares Ultra 7-10 Year Treasury|P|UST|Y|100|N|UST
 USVT|US Value ETF|P|USVT|Y|100|N|USVT
@@ -6059,6 +6063,7 @@ XMVM|Invesco S&P MidCap Value with Momentum ETF|P|XMVM|Y|100|N|XMVM
 XNAV|FundX Investment Trust FundX Aggressive ETF|P|XNAV|Y|100|N|XNAV
 XNTK|SPDR NYSE Technology ETF|P|XNTK|Y|100|N|XNTK
 XOM|Exxon Mobil Corporation Common Stock|N|XOM|N|100|N|XOM
+XOMO|Tidal ETF Trust II YieldMax XOM Option Income Strategy ETF|P|XOMO|Y|100|N|XOMO
 XONE|BondBloxx ETF Trust BondBloxx Bloomberg One Year Target Duration US Treasury ETF|P|XONE|Y|100|N|XONE
 XOP|SPDR S&P Oil & Gas Explor & Product|P|XOP|Y|100|N|XOP
 XPER|Xperi Inc. Common Stock |N|XPER|N|100|N|XPER
@@ -6166,4 +6171,4 @@ ZVIA|Zevia PBC Class A Common Stock|N|ZVIA|N|100|N|ZVIA
 ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Elkay Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
-File Creation Time: 0829202321:31||||||
+File Creation Time: 0901202321:31||||||
