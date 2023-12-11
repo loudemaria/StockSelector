@@ -7,6 +7,7 @@ import threading
 from datetime import datetime
 import csv
 from yahooquery import Ticker
+import operator
 
 class Stock:
     ticker_symbol = ""
@@ -207,8 +208,7 @@ def process_stock():
         del newStock
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
-worst_stock_url = "https://www.investing.com/equities/top-stock-losers"
-#worst_stock_url = "https://www.investing.com/equities/52-week-low"
+worst_stock_url = "https://fintel.io/i/scion-asset-management-llc"
 req = urllib.request.Request(url=worst_stock_url, headers=headers)
 
 all_bad_tickers = []
@@ -218,13 +218,14 @@ all_bad_tickers_lock = threading.Lock()
 try:
     worst_stock_page = urlopen(req)
     parsed_html = BeautifulSoup(worst_stock_page, 'html.parser')
-    skipped_first = False
-    for h4 in parsed_html.find_all('h4'):
-        if (skipped_first):
-            print(h4.next_element.text)
-            all_bad_tickers.append(h4.next_element.text)
-        else:
-            skipped_first = True
+    for td in parsed_html.find_all('td'):
+        if " / " in td.text:
+            temp_text = td.text.split(" / ")
+            temp_text[0] = " ".join(temp_text[0].split())
+            #if not operator.contains(all_bad_tickers, temp_text[0]):
+            print(temp_text[0])
+            print(td.next.next.next.next.next.next.next.next.next.text)
+            all_bad_tickers.append(temp_text[0])
 
 except:
     pass
@@ -253,7 +254,7 @@ for thread in threads:
     print("Joining thread")
     thread.join()
 
-f = open("worst_stock_selector.csv", "w", newline='')
+f = open("burry_stock_selector.csv", "w", newline='')
 writer = csv.writer(f)
 writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY'])
 for currentStock in all_bad_stocks:
