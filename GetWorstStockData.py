@@ -215,19 +215,21 @@ all_bad_tickers = []
 lock = threading.Lock()
 all_bad_tickers_lock = threading.Lock()
 
-try:
-    worst_stock_page = urlopen(req)
-    parsed_html = BeautifulSoup(worst_stock_page, 'html.parser')
-    skipped_first = False
-    for h4 in parsed_html.find_all('h4'):
-        if (skipped_first):
-            print(h4.next_element.text)
-            all_bad_tickers.append(h4.next_element.text)
-        else:
-            skipped_first = True
 
-except:
-    pass
+worst_stock_page = urlopen(req)
+parsed_html = BeautifulSoup(worst_stock_page, 'html.parser')
+working_text = parsed_html.text
+skipped_first = False
+rough_tickers = working_text.split("|")
+rough_tickers.pop(0)
+for rough_ticker in rough_tickers:
+    ticker = ""
+    for character in rough_ticker:
+        if character.isalpha():
+            ticker += character
+        else:
+            all_bad_tickers.append(ticker)
+            break
 
 yield_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
 aaa_corporate_bond_yield = 0

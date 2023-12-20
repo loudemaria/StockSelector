@@ -1,0 +1,91 @@
+TICKER SYMBOL,NAME,LIST PRICE,INTRINSIC VALUE,EPS TTM,GROWTH ESTIMATES NEXT 5 YEARS,MARGIN OF SAFETY,PRICE TO BOOK,PRICE TO CASH FLOW,ALTMAN Z-SCORE,ENTERPRISE VALUE,FREE CASH_FLOW,TOTAL CASH,TOTAL CASH MINUS MARKET CAP,TOTAL CASH PER SHARE,TOTAL LIABILITIES,PRICE/52 WEEK LOW,DAY LOW/52 WEEK LOW,DAY LOW,52 WEEK LOW,PERCENT SHORT OF FLOAT,CASH FLOW PER SHARE,SHARES OUTSTANDING,CURRENCY,COUNTRY,MARKET CAP,RECOMMENDATION KEY,ENTERPRISE VALUE/EBITDA,INTRINSIC_VALUE_BY_CASH_FLOW,MARGIN_OF_SAFETY_BY_CASH_FLOW,SECTOR,INDUSTRY
+MULN,"Mullen Automotive, Inc.",0.0906,undefined,-319.08,N/A,undefined,0.028399998,-0.536690788,-10.23,-92580576,-69736016,214012128,178816180,1.162,13232782,1.087635054,1,0.0833,0.0833,0.12060001,-0.168812288,413097984,USD,United States,35195948,none,0.428,undefined,undefined,Consumer Cyclical,Auto Manufacturers
+LIDR,"AEye, Inc.",0.0704,undefined,-0.49,N/A,undefined,0.22552446,-0.469076953,-7.81,-17162724,-28236876,45892000,33756777,0.244,15484000,1.252669039,1,0.0562,0.0562,0.0322,-0.150081984,188143008,USD,United States,12135223,hold,0.214,undefined,undefined,Technology,Software - Infrastructure
+BLUE,"bluebird bio, Inc.",2.43,-32.36980645,-0.63,45.8,-13.320908,0.63973063,-2.279818418,-9.44,395100992,-116616248,174292992,28779024,1.594,303707008,1.928571429,1,1.26,1.26,0.2251,-1.065874361,109409000,USD,United States,145513968,hold,-2.998,-54.76531235,-22.53716557,Healthcare,Biotechnology
+BETS,Bit Brother Limited,0.0066,undefined,-0.68,,undefined,0.002425763,-0.319346196,-14.74,-3539502,-4347971,5368284,4142976,0.025,998755,1.2,1,0.0055,0.0055,0.0016,-0.020667226,210380000,USD,China,1225308,none,0.093,undefined,undefined,Financial Services,Capital Markets
+MNKD,,3.91,,-0.12,35.6,,,,-12.17,,,,,,,,,3.3001,3.3001,,,,,,,,,,,,
+NCL,,1.8,,-0.13,,,,,0.85,,,,,,,,,1.32,1.32,,,,,,,,,,,,
+GGE,Green Giant Inc.,0.051,undefined,-4.67,N/A,undefined,0.075953566,-0.078747899,-3.54,109046808,-55458912,105659,-3816323,0.002,106307008,1.159090909,1,0.044,0.044,0.0017,-0.647636326,85632800,USD,China,3921982,none,-0.902,undefined,undefined,Real Estate,Real Estate - Development
+CNEY,CN Energy Group Inc.,0.0861,undefined,-0.04,,undefined,0.036288995,-0.243593446,1.18,12581222,-19958312,676349,-4088061,0.011,8135754,1.4045677,1,0.0613,0.0613,0.0036,-0.353457786,56465900,USD,China,4764410,none,-10.003,undefined,undefined,Basic Materials,Specialty Chemicals
+VLCN,,0.0759,,-9.18,N/A,,,,-20.52,,,,,,,,,0.067,0.067,,,,,,,,,,,,
+NVAX,,5.23,,-6.23,-69.6,,,,-4.5,,,,,,,,,5.02,5.02,,,,,,,,,,,,
+KULR,"KULR Technology Group, Inc.",0.2959,undefined,-0.2,N/A,undefined,24.366669,-4.292947804,-10.74,42717924,-8814729,1167315,-26877865,0.009,6082974,1.443414634,1,0.205,0.205,0.0319,-0.068926997,127885000,USD,United States,28045180,buy,-2.16,undefined,undefined,Technology,Electronic Components
+LU,Lufax Holding Ltd,3,-0.010408602,0.22,-8.55,-0.003469534,0.018206336,0.016451614,,-16759629824,1.04516E+11,64912334848,61052235264,55.375,43106365440,1.048951049,1,2.86,2.86,0.0471,182.3529293,573153024,CNY,China,3860099584,hold,-0.77,-8.627450419,-2.875816806,Financial Services,Credit Services
+JAGX,"Jaguar Health, Inc.",0.162,-39.92645161,-0.87,40,-246.4595779,2.7618182,-0.459262558,-10.96,40595404,-17903500,3226000,-4483775,0.064,35543000,1.08,1.000666667,0.1501,0.15,0.0085,-0.352739402,50755600,USD,United States,7709775,strong_buy,-1.309,-16.18808353,-99.92644155,Healthcare,Biotechnology
+BHIL,"Benson Hill, Inc.",0.15,undefined,-0.55,N/A,undefined,0.23229706,-0.352460435,-0.98,161991856,-88681872,65565000,37538024,0.315,196300000,1.189532117,1,0.1261,0.1261,0.0388,-0.425579682,208379008,USD,United States,28026976,buy,-2.305,undefined,undefined,Basic Materials,Agricultural Inputs
+CAMP,CalAmp Corp.,0.204,-11.05677419,-0.57,12,-54.1998735,0.67892855,0.713956776,0.23,212362336,10855000,38562000,31340063,1.017,243192000,1.073684211,1,0.19,0.19,0.0114,0.285731583,37990200,USD,United States,7221937,hold,19.314,5.542578242,27.16950118,Technology,Communication Equipment
+EAF,GrafTech International Ltd.,2.22,0.124430108,0.05,-5.87,0.056049598,1.9155555,10.8303257,0.94,1321808512,52640500,172807008,-380614240,0.673,924502016,1.03723777,1,2.1403,2.1403,0.052399997,0.204979985,256808000,USD,United States,553421248,hold,10.664,0.510113632,0.229780915,Industrials,Electrical Equipment & Parts
+AGRI,AgriFORCE  Growing Systems Ltd.,0.5798,undefined,-19.01,N/A,undefined,0.06048105,-0.384420554,N/A,6345587,-2131918,586565,100,0.415,6112599,1.567027027,1,0.37,0.37,0.0212,-1.508244017,1413510,USD,Canada,586465,buy,-0.681,undefined,undefined,Consumer Defensive,Farm Products
+UXIN,,0.6199,,-3.67,N/A,,,,-32.53,,,,,,,,,0.52,0.52,,,,,,,,,,,,
+HCDI,,0.319,,-37.38,N/A,,,,0.12,,,,,,,,,0.1781,0.1781,,,,,,,,,,,,
+KTRA,,0.1836,,-7.71,N/A,,,,N/A,,,,,,,,,0.1629,0.1629,,,,,,,,,,,,
+HSY,The Hershey Company,182.55,147.8893935,9.27,8.36,0.810130888,9.399578,22.79831677,4.94,42091937792,1200154624,471252000,-36825093088,2.304,5232045056,1.011525461,1,180.47,180.47,0.0176,8.007170084,149884992,USD,United States,37296345088,hold,14.03,127.7427754,0.699768696,Consumer Defensive,Confectioners
+HTHT,H World Group Limited,33.72,,0.48,26.05,,0.750544,,1.54,,4456750080,7861000192,-2913561600,,38371000320,1.009580838,1,33.4,33.4,,,,,,10774561792,,,,,,
+FOXO,,0.285,,-17.37,,,,,-122.9,,,,,,,,,0.2584,0.2584,,,,,,,,,,,,
+DPRO,Draganfly Inc.,0.499,undefined,-0.72,,undefined,5.061111,-3.254095074,-23.78,20029338,-7382040,2827341,-19100429,0.064,975408,1.175500589,1,0.4245,0.4245,0.013300001,-0.153345243,48140000,CAD,Canada,21927770,none,-0.774,undefined,undefined,Industrials,Aerospace & Defense
+MSAI,,,,,,,,,Not Found!,,,,,,,,,,,,,,,,,,,,,,
+OTRK,,0.447,,-8.03,30,,,,-34.17,,,,,,,,,0.3718,0.3718,,,,,,,,,,,,
+CELU,Celularity Inc.,0.1884,undefined,-0.47,N/A,undefined,0.27496183,-2.35441663,-5.4,94835640,-15279625,3084000,-31305732,0.016,61945000,1.046666667,1,0.18,0.18,0.0128,-0.080019822,190948000,USD,United States,34389732,buy,-0.859,undefined,undefined,Healthcare,Biotechnology
+TPHS,,0.1146,,-1.01,,,,,-0.65,,,,,,,,,0.1166,0.1146,,,,,,,,,,,,
+HUBC,Hub Cyber Security Ltd.,2.07,undefined,-9.6,,undefined,2.554184,1.853171589,-4.43,38417888,10978250,3994000,-14306294,0.411,19884000,1.143646409,1,1.81,1.81,0.0175,1.117003958,9828300,USD,Israel,18300294,none,-1.088,undefined,undefined,Technology,Software - Infrastructure
+SJT,,5.24,,1.65,N/A,,88.46667,,95.1,,,,,,,,,5.1197,5.1197,,,,,,,,,,,,
+RBT,,1.59,,-3.86,N/A,,,,-0.38,,,,,,,,,1.51,1.51,,,,,,,,,,,,
+INHD,,,,,,,,,-0.38,,,,,,,,,,,,,,,,,,,,,,
+SING,,2.62,,31.34,N/A,,,,-7.83,,,,,,,,,2.0001,2.0001,,,,,,,,,,,,
+CSSE,Chicken Soup for the Soul Enter,0.2495,undefined,-8.22,N/A,undefined,0.39232054,-2.536801774,-0.73,539010880,-2333681,3517111,-3857729,0.112,534585120,1.122862286,1,0.2222,0.2222,0.113900006,-0.098352186,23727800,USD,United States,7374840,buy,-5.872,undefined,undefined,Communication Services,Entertainment
+RELI,"Reliance Global Group, Inc.",0.59,undefined,-19.05,N/A,undefined,0.089727394,-11.54175329,-2.74,14197803,-186632,1777348,-193434,0.718,14515574,1.241843822,1,0.4751,0.4751,0.030299999,-0.05111875,3650950,USD,United States,1970782,buy,-7.209,undefined,undefined,Financial Services,Insurance Brokers
+KTTA,Pasithea Therapeutics Corp.,0.3241,undefined,-0.65,N/A,undefined,0.2129956,-0.665206788,-0.79,-12446252,-10151944,19584690,13539992,0.94,385288,1.233726684,1,0.2627,0.2627,0.0019,-0.487216916,20836600,USD,United States,6044698,buy,0.751,undefined,undefined,Healthcare,Biotechnology
+AHT,,1.86,,-6.47,5,,,,-0.42,,,,,,,,,1.8,1.8,,,,,,,,,,,,
+LGCB,,,,,,,,,N/A,,,,,,,,,,,,,,,,,,,,,,
+MIMO,,0.0833,,-0.75,N/A,,,,-23.52,,,,,,,,,0.0833,0.083,,,,,,,,,,,,
+ATAK,,5.19,,0.06,,,,,N/A,,,,,,,,,4.14,4.14,,,,,,,,,,,,
+XLO,"Xilio Therapeutics, Inc.",0.601,undefined,-2.96,N/A,undefined,0.3099633,-0.355989267,N/A,-28773116,-46475752,59772000,43499668,2.171,14454000,1.026823851,1,0.5853,0.5853,0.0025,-1.688253145,27528900,USD,United States,16272332,buy,0.35,undefined,undefined,Healthcare,Biotechnology
+LYT,Lytus Technologies Holdings PTV,0.1186,undefined,-0.06,,undefined,0.50412846,1.575012901,-0.19,8476386,3058620,2841386,-1622598,0.071,4020297,1.132760267,1,0.1047,0.1047,0.0028,0.07530097,40618600,USD,India,4463984,none,5.535,undefined,undefined,Technology,Software - Application
+IVP,"Inspire Veterinary Partners, In",0.3609,,-1.48,,,1.0846394,,-0.77,,3287788,1956385,-1124655,,15601628,1.141366224,1,0.3162,0.3162,,,,,,3081040,,,,,,
+LKCO,Luokung Technology Corp,0.595,undefined,-3.72,N/A,undefined,0.08391598,-1.209305306,-1.93,82704312,-8077263,1264881,-8310922,0.077,54254584,1.074589128,1,0.5537,0.5537,0.033299997,-0.492018018,16416600,USD,China,9575803,none,-1.991,undefined,undefined,Technology,Software - Application
+FORD,"Forward Industries, Inc.",0.7,undefined,-0.26,N/A,undefined,1.4237667,4.054980404,0.99,8770662,1736837,2821163,-3567699,0.28,4548995,1.187648456,1,0.5894,0.5894,0.0152,0.172627221,10061200,USD,United States,6388862,none,-3.868,undefined,undefined,Consumer Cyclical,Footwear & Accessories
+ULY,,,,,,,,,-11.02,,,,,,,,,,,,,,,,,,,,,,
+BIVI,BioVie Inc.,1.36,undefined,-1.46,N/A,undefined,6.629268,-1.936512217,N/A,42469516,-26506454,21214670,-30077658,0.562,12385239,1.02355686,1,1.3287,1.3287,0.1753,-0.70229353,37742700,USD,United States,51292328,strong_buy,-0.906,undefined,undefined,Healthcare,Biotechnology
+MIRA,,1.17,,-0.51,N/A,,2.100182,,N/A,,,,,,,,,1.1,1.1,,,,,,,,,,,,
+MNR,,,,,N/A,,,,5.47,,,,,,,,,,,,,,,,,,,,,,
+MGAM,Mobile Global Esports Inc.,0.2819,,-0.21,N/A,,1.0428058,,N/A,1572692,-2457271,4514459,-1405763,,220509,1.101171875,1,0.256,0.256,0.003,,,,,5920222,,,,,,
+BNR,Burning Rock Biotech Limited,0.7623,-12.48275269,-0.97,5.1,-16.37511831,0.08419492,0.869483353,-4.24,-539225792,90018000,636292992,563383472,6.218,19095000,1.106707317,1,0.6888,0.6888,0.0053,0.876727538,102675000,CNY,China,72909520,buy,0.994,11.28244643,14.80053316,Healthcare,Diagnostics & Research
+CTDD,,,,,,,,,Not Found!,,,,,,,,,,,,,,,,,,,,,,
+GPAK,,0.4295,,-0.02,,,,,N/A,,,,,,,,,0.38,0.38,,,,,,,,,,,,
+THMO,"ThermoGenesis Holdings, Inc.",0.5441,undefined,-7.22,N/A,undefined,0.3686689,2.360400622,"Holdings)  Altman Z-Score as of today (December 20, 2023) is -25.11",5238398,723000,4018000,2323977,1.281,8895000,1.066653597,1,0.5101,0.5101,0.0013,0.230511717,3136500,USD,United States,1694023,none,-1.095,undefined,undefined,Healthcare,Medical Devices
+RGS,,6.43,,-0.18,8,,,,"(RGS)  Altman Z-Score as of today (December 20, 2023) is 0.05",,,,,,,,,5.87,5.87,,,,,,,,,,,,
+ATPC,Agape ATP Corporation,0.66,undefined,-0.02,,undefined,106.333336,-157.498584,15.78,50797272,-323097,311659,-48879417,0.004,374663,1.039370079,1,0.635,0.635,0.0006,-0.004190514,77102000,USD,Malaysia,49191076,none,-27.919,undefined,undefined,Consumer Defensive,Packaged Foods
+IMNN,"Imunon, Inc.",0.9167,undefined,-3.25,N/A,undefined,0.43027475,-0.601900381,-24.14,-9023757,-14315208,19376874,11575464,2.062,1736789,1.144587339,1,0.8009,0.8009,0.0006,-1.523009504,9399290,USD,United States,7801410,buy,0.426,undefined,undefined,Healthcare,Biotechnology
+PVL,,1.74,,0.42,-34.1,,0.9878613,,0,,,,,,,,,1.7,1.7,,,,,,,,,,,,
+SGN,,,,,N/A,,,,-84.94,,,,,,,,,,,,,,,,,,,,,,
+ALZN,,0.96,,-2.28,N/A,,,,N/A,,,,,,,,,0.9327,0.92,,,,,,,,,,,,
+QLGN,,0.58,,-4.07,N/A,,,,-51.45,,,,,,,,,0.5401,0.5401,,,,,,,,,,,,
+BFI,BurgerFi International Inc,0.869,undefined,-1.97,N/A,undefined,0.3328447,-93.02538813,-1.14,188422496,-250625,9746000,-12793126,0.363,174854000,1.03452381,1,0.84,0.84,0.02,-0.009341536,26829100,USD,United States,22539126,strong_buy,-89.131,undefined,undefined,Consumer Cyclical,Restaurants
+RAYA,Erayak Power Solution Group Inc,0.57,undefined,0.15,,undefined,0.30695054,-0.991535105,1.93,11123228,-6323528,5773428,-108972,0.481,10056656,1.1875,1,0.48,0.48,0.0003,-0.574866182,11000000,USD,China,5882400,none,4.559,undefined,undefined,Industrials,Electrical Equipment & Parts
+BNZI,,,,,,,,,N/A,,,,,,,,,,,,,,,,,,,,,,
+SOAR,,,,,,,,,2.93,,,,,,,,,,,,,,,,,,,,,,
+DTI,Drilling Tools International Co,3.25,,0.6,,,1.115398,,3.11,,-2495625,4984000,-89680152,,19693000,1.022012579,1,3.18,3.18,,,,,,94664152,,,,,,
+SLND,"Southland Holdings, Inc.",4.8,3.236129032,0.12,20,0.674193548,0.95642334,-62.59539823,1.51,538449536,-3672500,32211000,-210601448,0.673,328296992,1.0041841,1,4.78,4.78,0.008,-0.076682953,47892000,USD,United States,242812448,buy,22.748,-2.067966096,-0.43082627,Industrials,Engineering & Construction
+AVGR,,2.7,,-30.21,N/A,,,,-35.17,,,,,,,,,2.61,2.61,,,,,,,,,,,,
+GENE,Genetic Technologies Ltd,2.73,,-0.18,N/A,,26.701029,,-13.83,,-5812274,7868637,-6766339,,532846,1.079051383,1,2.53,2.53,,,,,,14634976,,,,,,
+CYCC,"Cyclacel Pharmaceuticals, Inc.",3.37,undefined,-29.85,N/A,undefined,0.63946646,-0.207492593,-54.49,-3051578,-13689250,5944000,3196296,7.052,52000,1.034376918,1.000613874,3.26,3.258,0.045700002,-16.24154361,842854,USD,United States,2747704,buy,0.106,undefined,undefined,Healthcare,Biotechnology
+LEE,"Lee Enterprises, Incorporated",7.96,-9.793548387,-0.9,3,-1.230345275,2.252355,2.753294832,0.65,536253440,17527876,14548000,-33287016,2.4,500076000,1.032425422,1,7.71,7.71,0.012,2.89108159,6062740,USD,United States,47835016,none,6.571,31.4599416,3.95225397,Communication Services,Publishing
+EGGF,,9.9,,0.06,,,,,N/A,,,,,,,,,9.35,9.35,,,,,,,,,,,,
+RMCO,,,,,,,,,N/A,,,,,,,,,,,,,,,,,,,,,,
+WAVE,,1.2,,-0.28,,,0.7693306,,0.26,,,,,,,,,1.1263,1.1263,,,,,,,,,,,,
+STIX,"Semantix, Inc.",0.685,undefined,-0.85,N/A,undefined,0.19573979,-1.270134201,-1.66,65158096,-42305876,111434000,58092080,1.417,119840000,1.02238806,1,0.67,0.67,0.0029,-0.53931309,78444000,BRL,Brazil,53341920,hold,-0.367,undefined,undefined,Technology,Software—Application
+MDBH,,8.11,,-0.21,,,1.810386,,11.39,,,,,,,,,7.4601,7.4601,,,,,,,,,,,,
+WORX,SCWorx Corp.,1.68,,-1.65,,,0.32364342,,-4.34,2427969,-31976,72429,-1950007,,477930,1.030674847,1.012269939,1.65,1.63,0.004,,,,,2022436,,,,,,
+LTRY,"Lottery.com, Inc.",1.44,undefined,-5.7,N/A,undefined,0.06781175,0.120791969,-4.61,10962229,34265576,63735,-3754786,0.022,4626652,1.180327869,1,1.22,1.22,0.0165,11.92132233,2874310,USD,United States,3818521,buy,-1.332,undefined,undefined,Consumer Cyclical,Gambling
+ABIO,"ARCA biopharma, Inc.",1.77,undefined,-0.37,N/A,undefined,0.6622391,-6.559310017,N/A,-12680047,-3888500,38487000,13341376,2.671,301000,1.035087719,1,1.71,1.71,0.0198,-0.269845456,14410100,USD,United States,25145624,none,2.005,undefined,undefined,Healthcare,Biotechnology
+RUMBW,,,,,,,,,N/A,,,,,,,,,,,,,,,,,,,,,,
+GFR,,5.2,,-0.67,,,0.4980673,,2.96,,,,,,,,,4.72,4.72,,,,,,,,,,,,
+AIMD,"Ainos, Inc.",2.65,undefined,-1.95,N/A,undefined,0.36438417,-23.77729282,-1.04,13263787,-521346,2370963,-9253863,0.584,5042000,1.101871102,1,2.405,2.405,0.0054,-0.111450871,4677810,USD,United States,11624826,none,-2.791,undefined,undefined,Healthcare,Medical Devices
+CPOP,"Pop Culture Group Co., Ltd",1.24,undefined,-10.1,,undefined,0.107043274,-0.248992736,-1.33,3926584,-9106995,3637133,775183,1.512,5234864,4.862745098,4.431372549,1.13,0.255,0.0043,-4.980064965,1828690,USD,China,2861950,none,-0.185,undefined,undefined,Communication Services,Entertainment
+MDIA,Mediaco Holding Inc.,0.517,undefined,-0.31,,undefined,0.29954427,-2.484482354,0.28,56773548,-4358625,6413000,-5714730,0.243,21432000,1.202325581,1,0.43,0.43,0.0083,-0.208091637,20945700,USD,United States,12127730,none,-18.988,undefined,undefined,Communication Services,Broadcasting
+MCOM,,0.22,,2382,N/A,,,,-68.83,,,,,,,,,0.071,0.071,,,,,,,,,,,,
+NIR,,0.033,,-2.01,N/A,,0.4230769,,-4.64,,,,,,,,,0.033,0.032,,,,,,,,,,,,
+NVFY,"Nova Lifestyle, Inc",1.69,undefined,-8.34,,undefined,0.6543161,1.213123073,-9.16,4300016,2277340,749009,-1964642,0.458,2286337,1.024242424,1.006060606,1.66,1.65,0.0009,1.393098555,1634730,USD,United States,2713651,none,-0.38,undefined,undefined,Consumer Cyclical,"Furnishings, Fixtures & Appliances"
+BYTSU,,10.05,,0.276,,,,,N/A,,,,,,,,,10.05,8.73,,,,,,,,,,,,
+CLOEU,,11.44,,-0.052,,,,,N/A,,,,,,,,,11.44,10.51,,,,,,,,,,,,
+RGC,Regencell Bioscience Holdings L,9.74,undefined,-0.45,N/A,undefined,10.541125,-55.6921758,N/A,115603288,-2275825,11564795,-115180845,0.889,463669,1,1,9.74,9.74,0.0016,-0.174889917,13012900,USD,Hong Kong,126745640,none,-19.33,undefined,undefined,Healthcare,Drug Manufacturers—Specialty & Generic
