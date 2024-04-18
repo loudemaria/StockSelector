@@ -41,6 +41,9 @@ class Stock:
     sector = ""
     industry = ""
     price_to_cash_flow = ""
+    RSI = ""
+    insider_ownership = ""
+
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -127,42 +130,85 @@ def process_stock():
         except:
             pass
 
+        rsi_url = "https://www.gurufocus.com/term/rsi_14/" + symbol + "/14-Day-RSI/"
+        req = urllib.request.Request(url=rsi_url, headers=headers)
+        newStock.RSI = "Not Found!"
+
+        try:
+            rsi_page = urlopen(req)
+            rsi_html = BeautifulSoup(rsi_page, 'html.parser')
+
+            for tag in rsi_html.find_all('meta'):
+                if "14-Day RSI as of today" in (tag.get("content", None)):
+                    my_string = tag.get("content", None)
+                    my_substring = my_string.partition("is ")[2]
+                    my_value = my_substring.partition(". ")[0]
+                    newStock.RSI = my_value
+        except:
+                newStock.RSI = "N/A"
+                pass
+
         print("Gonna try and populate stuff for " + symbol)
         temp_symbol = Ticker(symbol)
         try:
             print("created temp_symbol  " + symbol)
             newStock.EPS_TTM = str(temp_symbol.key_stats[symbol]['trailingEps'])
             newStock.list_price = str(temp_symbol.summary_detail[symbol]['previousClose'])
+            newStock.calculate_intrinsic_value()
+
+            try:
+                newStock.free_cash_flow_yfinance = str(temp_symbol.financial_data[symbol]['freeCashflow'])
+            except:
+                pass
+
+            newStock.shares_outstanding = str(temp_symbol.key_stats[symbol]['sharesOutstanding'])
+            newStock.calculate_cash_flow_per_share()
+            newStock.calculate_intrinsic_value_with_cash_flow_per_share()
+            newStock.calculate_price_to_cash_flow()
+            newStock.totalCash = str(temp_symbol.financial_data[symbol]['totalCash'])
+            newStock.total_cash_per_share = str(temp_symbol.financial_data[symbol]['totalCashPerShare'])
+            newStock.country = str(temp_symbol.asset_profile[symbol]['country'])
+
+            try:
+                newStock.price_to_book = str(temp_symbol.key_stats[symbol]['priceToBook'])
+            except:
+                pass
+
+            try:
+                newStock.short_of_float = str(temp_symbol.key_stats[symbol]['shortPercentOfFloat'])
+            except:
+                pass
+
+            newStock.EV2 = str(temp_symbol.key_stats[symbol]['enterpriseValue'])
             newStock.day_low = str(temp_symbol.summary_detail[symbol]['dayLow'])
             newStock.fifty_two_week_low = str(temp_symbol.summary_detail[symbol]['fiftyTwoWeekLow'])
-            newStock.price_to_book = str(temp_symbol.key_stats[symbol]['priceToBook'])
-            newStock.free_cash_flow_yfinance = str(temp_symbol.financial_data[symbol]['freeCashflow'])
             newStock.debt_yfinance = str(temp_symbol.financial_data[symbol]['totalDebt'])
             newStock.market_cap = str(temp_symbol.summary_detail[symbol]['marketCap'])
-            newStock.totalCash = str(temp_symbol.financial_data[symbol]['totalCash'])
+            newStock.name = str(temp_symbol.quote_type[symbol]['shortName'])
+
+            try:
+                newStock.EV_EBITDA2 = str(temp_symbol.key_stats[symbol]['enterpriseToEbitda'])
+            except:
+                pass
+
+            newStock.currency = str(temp_symbol.financial_data[symbol]['financialCurrency'])
+            newStock.recommendation_key = str(temp_symbol.financial_data[symbol]['recommendationKey'])
+            newStock.sector = str(temp_symbol.asset_profile[symbol]['sector'])
+            newStock.industry = str(temp_symbol.asset_profile[symbol]['industry'])
+
             newStock.total_cash_minus_market_cap = str(temp_symbol.financial_data[symbol]['totalCash']-temp_symbol.summary_detail[symbol]['marketCap'])
+
+            try:    
+                newStock.insider_ownership = str(temp_symbol.key_stats[symbol]['heldPercentInsiders'])
+            except:
+                newStock.insider_ownership = "N/A"
+                pass
 
             if (temp_symbol.summary_detail[symbol]['fiftyTwoWeekLow'] != 0):
                 newStock.current_price_over_fifty_two_week_low = str(temp_symbol.summary_detail[symbol]['previousClose']/temp_symbol.summary_detail[symbol]['fiftyTwoWeekLow'])
             
             if(temp_symbol.summary_detail[symbol]['fiftyTwoWeekLow'] != 0):
                 newStock.day_low_over_fifty_two_week_low = str(temp_symbol.summary_detail[symbol]['dayLow']/temp_symbol.summary_detail[symbol]['fiftyTwoWeekLow'])
-
-            newStock.name = str(temp_symbol.quote_type[symbol]['shortName'])
-            newStock.short_of_float = str(temp_symbol.key_stats[symbol]['shortPercentOfFloat'])
-            newStock.EV2 = str(temp_symbol.key_stats[symbol]['enterpriseValue'])
-            newStock.EV_EBITDA2 = str(temp_symbol.key_stats[symbol]['enterpriseToEbitda'])
-            newStock.total_cash_per_share = str(temp_symbol.financial_data[symbol]['totalCashPerShare'])
-            newStock.country = str(temp_symbol.asset_profile[symbol]['country'])
-            newStock.currency = str(temp_symbol.financial_data[symbol]['financialCurrency'])
-            newStock.shares_outstanding = str(temp_symbol.key_stats[symbol]['sharesOutstanding'])
-            newStock.recommendation_key = str(temp_symbol.financial_data[symbol]['recommendationKey'])
-            newStock.sector = str(temp_symbol.asset_profile[symbol]['sector'])
-            newStock.industry = str(temp_symbol.asset_profile[symbol]['industry'])
-            newStock.calculate_cash_flow_per_share()
-            newStock.calculate_intrinsic_value()
-            newStock.calculate_intrinsic_value_with_cash_flow_per_share()
-            newStock.calculate_price_to_cash_flow()
 
             print("Populated ALLLLLL the things for  " + symbol)
         except IndexError:
@@ -179,9 +225,11 @@ def process_stock():
             pass
 
         altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
+        req = urllib.request.Request(url=altman_url, headers=headers)
+
         newStock.altman_z_score = "Not Found!"
         try:
-            altman_page = urlopen(altman_url)
+            altman_page = urlopen(req)
             parsed_html = BeautifulSoup(altman_page, 'html.parser')
             
             for tag in parsed_html.find_all('meta'):
@@ -257,9 +305,9 @@ for thread in threads:
 
 f = open("worst_stock_selector.csv", "w", newline='')
 writer = csv.writer(f)
-writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY'])
+writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
 for currentStock in all_bad_stocks:
-    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry])
+    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
 f.close()
 
 exe_time = time.time() - start_time
