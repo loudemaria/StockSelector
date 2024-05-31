@@ -155,7 +155,7 @@ def process_stock():
 
             for td in parsed_html.find_all('td'):
                 if td.text == "Next 5 Years (per annum)":
-                    tempString = td.nextSibling.text
+                    tempString = td.previous_element.contents[2].text
                     newStock.GE_N5Y = tempString.replace("%", "")
         except:
             pass
@@ -213,20 +213,23 @@ def process_stock():
             pass
             
         altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
+        req = urllib.request.Request(url=altman_url, headers=headers)
+
         newStock.altman_z_score = "Not Found!"
         try:
-            altman_page = urlopen(altman_url)
+            altman_page = urlopen(req)
             parsed_html = BeautifulSoup(altman_page, 'html.parser')
             
             for tag in parsed_html.find_all('meta'):
                 if "Altman Z-Score as of today" in (tag.get("content", None)):
                     my_string = tag.get("content", None)
-                    my_substring = my_string.partition("is ")[2]
+                    my_substring = my_string.partition(" is ")[2]
                     my_value = my_substring.partition(". ")[0]
                     newStock.altman_z_score = my_value
 
         except Exception:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": GuruFocus Altman Z-Score not found")
+            newStock.altman_z_score = "N/A"
             pass
 
         lock.acquire(blocking=True, timeout=-1)

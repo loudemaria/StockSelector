@@ -202,7 +202,11 @@ def process_stock():
                 newStock.RSI = "N/A"
                 pass
 
-        temp_symbol = Ticker(symbol)
+        try:
+            temp_symbol = Ticker(symbol)
+        except:
+            continue
+        
         try:
             try:
                 newStock.EPS_TTM = str(temp_symbol.key_stats[symbol]['trailingEps'])
