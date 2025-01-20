@@ -1,5 +1,6 @@
 Symbol|Price Paid|Number Of SHares Held|
-PRG|25.38|79|
-JAKK|51.76|77|
-MDC|19.88|176|
-RLGT|0|0|
+REVG|21.89|230|
+VST|60.54|84|
+THC|124.50|40|
+BRK-B|408.71|12|
+BLBD|56.45|88|

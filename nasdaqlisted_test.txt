@@ -1,1 +1,11 @@
-MHO|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+BABA|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+FOUR|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+MOH|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+BIDU|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+JD|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+HPP|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+REAL|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+ACIC|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+OLPX|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+BCAB|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+PLTR|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N

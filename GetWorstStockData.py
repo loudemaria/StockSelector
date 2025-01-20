@@ -8,6 +8,21 @@ from datetime import datetime
 import csv
 from yahooquery import Ticker
 
+def get_headers():
+    # Creating headers.
+    headers = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,'
+                '*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'accept-language': 'en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+    'dpr': '1',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'}
+    return headers
+
 class Stock:
     ticker_symbol = ""
     EPS_TTM = ""
@@ -43,7 +58,6 @@ class Stock:
     price_to_cash_flow = ""
     RSI = ""
     insider_ownership = ""
-
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -255,9 +269,9 @@ def process_stock():
         del newStock
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
-worst_stock_url = "https://www.investing.com/equities/top-stock-losers"
-#worst_stock_url = "https://www.investing.com/equities/52-week-low"
-req = urllib.request.Request(url=worst_stock_url, headers=headers)
+#worst_stock_url = "https://www.investing.com/equities/top-stock-losers"
+worst_stock_url = "https://www.investing.com/equities/52-week-low"
+req = urllib.request.Request(url=worst_stock_url, headers=get_headers())
 
 all_bad_tickers = []
 lock = threading.Lock()

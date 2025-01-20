@@ -11,7 +11,7 @@ def get_stop_limit_price(arg1):
     date_bought = datetime.strptime(input_string_split[1], '%m/%d/%Y').date()
 
     # *****  CHANGE THIS!! *****
-    date_to_sell = date(2024, 6, 3)
+    date_to_sell = date(2025, 1, 13)
 
     price_paid = float(input_string_split[2])
 

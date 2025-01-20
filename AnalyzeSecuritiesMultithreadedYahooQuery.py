@@ -12,6 +12,21 @@ from datetime import datetime
 import requests
 #import sys
 
+def get_headers():
+    # Creating headers.
+    headers = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,'
+                '*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'accept-language': 'en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+      'dpr': '1',
+      'sec-fetch-dest': 'document',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-site': 'none',
+      'sec-fetch-user': '?1',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'}
+    return headers
+
 class Stock:
     ticker_symbol = ""
     EPS_TTM = ""
@@ -130,29 +145,44 @@ def process_stock():
         newStock = Stock(aaa_corporate_bond_yield)
         newStock.ticker_symbol = symbol
 
-        analysis_url = "https://www.gurufocus.com/term/earning_growth_5y_est/" + symbol
-        req = urllib.request.Request(url=analysis_url, headers=headers)
+        analysis_url = "https://finviz.com/quote.ashx?t=" + symbol
+        req = urllib.request.Request(url=analysis_url, headers=get_headers())
         newStock.GE_N5Y = "N/A"
 
         try:
             analysis_page = urlopen(req)
             parsed_html = BeautifulSoup(analysis_page, 'html.parser')
 
-            for tag in parsed_html.find_all('meta'):
-                if "EPS Growth Rate (Future 3Y To 5Y Estimate) as of today" in (tag.get("content", None)):
-                    my_string = tag.get("content", None)
-                    my_substring = my_string.partition(" is ")[2]
-                    my_value = my_substring.partition(". ")[0]
-                    newStock.GE_N5Y = str(my_value)
-                    break
-
+            for td in parsed_html.find_all('td'):
+                if td.text == "EPS next 5Y":
+                    tempString = td.nextSibling.text
+                    if (tempString != "-"):
+                        newStock.GE_N5Y = tempString.replace("%", "")
         except:
             newStock.GE_N5Y = "N/A"
             pass
 
         if (newStock.GE_N5Y == "N/A"):
+            try:
+                analysis_url = "https://www.gurufocus.com/term/earning_growth_5y_est/" + symbol
+                req = urllib.request.Request(url=analysis_url, headers=get_headers())
+                analysis_page = urlopen(req)
+                parsed_html = BeautifulSoup(analysis_page, 'html.parser')
+
+                for tag in parsed_html.find_all('meta'):
+                    if "EPS Growth Rate (Future 3Y To 5Y Estimate) as of today" in (tag.get("content", None)):
+                        my_string = tag.get("content", None)
+                        my_substring = my_string.partition(" is ")[2]
+                        my_value = my_substring.partition(". ")[0]
+                        newStock.GE_N5Y = str(my_value)
+                        break
+            except:
+                newStock.GE_N5Y = "N/A"
+                pass
+
+        if (newStock.GE_N5Y == "N/A"):
             analysis_url = "https://www.zacks.com/stock/quote/" + symbol + "/detailed-earning-estimates"
-            req = urllib.request.Request(url=analysis_url, headers=headers)
+            req = urllib.request.Request(url=analysis_url, headers=get_headers())
             try:
                 analysis_page = urlopen(req)
                 parsed_html = BeautifulSoup(analysis_page, 'html.parser')
@@ -168,24 +198,8 @@ def process_stock():
                 newStock.GE_N5Y = "N/A"
                 pass
 
-        if (newStock.GE_N5Y == "N/A"):
-            analysis_url = "https://finance.yahoo.com/quote/" + symbol + "/analysis"
-            req = urllib.request.Request(url=analysis_url, headers=headers)
-
-            try:
-                analysis_page = urlopen(req)
-                parsed_html = BeautifulSoup(analysis_page, 'html.parser')
-
-                for td in parsed_html.find_all('td'):
-                    if td.text == "Next 5 Years (per annum)":
-                        tempString = td.previous_element.contents[2].text
-                        newStock.GE_N5Y = tempString.replace("%", "")
-            except:
-                newStock.GE_N5Y = "N/A"
-                pass
-
         rsi_url = "https://www.gurufocus.com/term/rsi_14/" + symbol + "/14-Day-RSI/"
-        req = urllib.request.Request(url=rsi_url, headers=headers)
+        req = urllib.request.Request(url=rsi_url, headers=get_headers())
         newStock.RSI = "Not Found!"
 
         try:
@@ -377,7 +391,7 @@ def process_stock():
             pass
 
         altman_url = "https://www.gurufocus.com/term/zscore/" + symbol + "/Altman-Z-Score"
-        req = urllib.request.Request(url=altman_url, headers=headers)
+        req = urllib.request.Request(url=altman_url, headers=get_headers())
 
         newStock.altman_z_score = "Not Found!"
         try:
@@ -430,7 +444,7 @@ with open ('otherlisted.txt') as my_file:
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
-yield_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
+yield_headers = get_headers()
 aaa_corporate_bond_yield = 0
 aaa_corporate_bond_yield_url = "https://ycharts.com/indicators/moodys_seasoned_aaa_corporate_bond_yield"
 yield_req = urllib.request.Request(url=aaa_corporate_bond_yield_url, headers=yield_headers)
