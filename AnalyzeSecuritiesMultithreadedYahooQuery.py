@@ -30,7 +30,8 @@ def get_headers():
 class Stock:
     ticker_symbol = ""
     EPS_TTM = ""
-    EV_EBITDA2 = ""
+    EV_EBITDA = ""
+    EV_EBITDA_ratio = ""
     EV2 = ""
     GE_N5Y = ""
     free_cash_flow_yfinance = ""
@@ -122,6 +123,14 @@ class Stock:
                 self.price_to_cash_flow = "undefined"
         except:
             self.price_to_cash_flow = "undefined"
+
+    def calculate_ev_ebitda_ratio(self):
+        try:
+            ev_ebitda_average = float(EBITDA_map[self.industry])
+            ev_ebitda = float(self.EV_EBITDA)
+            self.EV_EBITDA_ratio = ev_ebitda/ev_ebitda_average
+        except:
+            self.EV_EBITDA_ratio = "undefined"
 
 def process_stock():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36'}
@@ -313,9 +322,9 @@ def process_stock():
                 pass
 
             try:
-                newStock.EV_EBITDA2 = str(temp_symbol.key_stats[symbol]['enterpriseToEbitda'])
+                newStock.EV_EBITDA = str(temp_symbol.key_stats[symbol]['enterpriseToEbitda'])
             except:
-                newStock.EV_EBITDA2 = "N/A"
+                newStock.EV_EBITDA = "N/A"
                 pass
 
             try:
@@ -376,6 +385,7 @@ def process_stock():
             newStock.calculate_cash_flow_per_share()
             newStock.calculate_intrinsic_value_with_cash_flow_per_share()
             newStock.calculate_price_to_cash_flow()
+            newStock.calculate_ev_ebitda_ratio()
 
         except IndexError:
             print(str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": Index Error")
@@ -422,7 +432,6 @@ def process_stock():
 
 start_time = time.time()
 
-
 #sys.stdout = open('./exe_out.txt', 'w')
 
 lock = threading.Lock()
@@ -430,14 +439,40 @@ all_ticker_symbols_lock = threading.Lock()
 allStocks = []
 all_ticker_symbols = []
 
-with open ('nasdaqlisted.txt') as my_file:
+nasdaqlisted_url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqlisted.txt"
+otherlisted_url = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+filename1 = "nasdaqlisted.txt"
+filename2 = "otherlisted.txt"
+
+
+response = requests.get(nasdaqlisted_url)
+html = response.content
+soup = BeautifulSoup(html, "html.parser")
+text = soup.get_text()
+lines = text.splitlines()
+non_empty_lines = [line for line in lines if line.strip()]
+result = "\n".join(non_empty_lines)
+with open("nasdaqlisted.txt", "w") as f:
+    f.write(result)
+
+response = requests.get(otherlisted_url)
+html = response.content
+soup = BeautifulSoup(html, "html.parser")
+text = soup.get_text()
+lines = text.splitlines()
+non_empty_lines = [line for line in lines if line.strip()]
+result = "\n".join(non_empty_lines)
+with open("otherlisted.txt", "w") as f:
+    f.write(result)
+
+with open ('nasdaqlisted_test.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
-with open ('otherlisted.txt') as my_file:
+with open ('otherlisted_test.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
@@ -455,6 +490,24 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = td.nextSibling.nextSibling.text
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
+EBITDA_multiples_url = "https://fullratio.com/ebitda-multiples-by-industry"
+EBITDA_multiples_req = urllib.request.Request(url=EBITDA_multiples_url, headers=yield_headers)
+EBITDA_multiples_page = urlopen(EBITDA_multiples_req)
+EBITDA_multiples_parsed_html = BeautifulSoup(EBITDA_multiples_page, 'html.parser')
+
+modCounter=0
+EBITDA_map = {}
+industry_name = ""
+EBITDA_value = ""
+for table in EBITDA_multiples_parsed_html.find_all('table', class_='table table-striped mt-3 mb-3 metric-by-industry'):
+    for td in table.find_all('td'):
+        if (modCounter % 3 == 0):
+            industry_name = td.text
+        if (modCounter % 3 == 1):
+            EBITDA_value = td.text
+            EBITDA_map[industry_name] = EBITDA_value
+        modCounter +=1
+
 threads = list()
 for i in range (4):
     x = threading.Thread(target=process_stock)
@@ -465,20 +518,24 @@ for thread in threads:
     thread.join()
     print(datetime.now().strftime("%H:%M:%S%f") + " Joined thread " + thread.name)
 
+
+date_str = time.strftime("%m_%d_%Y")
+out_file_name = "stock_selector_" + date_str + ".csv"
+
 try:
-    f = open("stock_selector.csv", "w", newline='')
+    f = open(out_file_name, "w", newline='')
     writer = csv.writer(f)
-    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
     for currentStock in allStocks:
-        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
     f.close()
 except:
     input("It is likely that you left stock_selector.csv open.  Please close, or rename it and press Enter to continue...")
-    f = open("stock_selector.csv", "w", newline='')
+    f = open(out_file_name, "w", newline='')
     writer = csv.writer(f)
-    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
     for currentStock in allStocks:
-        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
     f.close()
 
 exe_time = time.time() - start_time
