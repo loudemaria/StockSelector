@@ -465,14 +465,14 @@ result = "\n".join(non_empty_lines)
 with open("otherlisted.txt", "w") as f:
     f.write(result)
 
-with open ('nasdaqlisted_test.txt') as my_file:
+with open ('nasdaqlisted.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
-with open ('otherlisted_test.txt') as my_file:
+with open ('otherlisted.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
