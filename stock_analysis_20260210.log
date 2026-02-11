@@ -1,0 +1,905 @@
+2026-02-10 17:01:21,603 - MainThread - INFO - AAA Corporate Bond Yield: 5.36%
+2026-02-10 17:01:21,758 - MainThread - INFO - Loaded 0 industry EBITDA multiples
+2026-02-10 17:01:21,759 - MainThread - INFO - Fetching ticker lists from NASDAQ...
+2026-02-10 17:01:22,423 - MainThread - INFO - Found 12139 unique tickers
+2026-02-10 17:01:22,424 - MainThread - INFO - Starting analysis of 12139 stocks with 8 workers...
+2026-02-10 17:01:22,425 - MainThread - INFO - Created 122 batches of ~100 tickers each
+2026-02-10 17:01:22,430 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,431 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,434 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,446 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,459 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,476 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,519 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:22,551 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:01:30,434 - Thread-11 (_run_via_pool) - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: LZM-W"}}}
+2026-02-10 17:01:31,696 - Thread-21 (_run_via_pool) - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: GNT$A"}}}
+2026-02-10 17:01:38,049 - ThreadPoolExecutor-0_1 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_7 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_0 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_2 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_6 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_5 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,050 - ThreadPoolExecutor-0_4 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,053 - ThreadPoolExecutor-0_3 - ERROR - 
+3 Failed downloads:
+2026-02-10 17:01:38,053 - ThreadPoolExecutor-0_1 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,060 - ThreadPoolExecutor-0_7 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,092 - ThreadPoolExecutor-0_0 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,106 - ThreadPoolExecutor-0_2 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,114 - ThreadPoolExecutor-0_6 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,157 - ThreadPoolExecutor-0_4 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,173 - ThreadPoolExecutor-0_3 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:38,546 - ThreadPoolExecutor-0_5 - ERROR - ['LZM-W', 'GNT$A', 'EP$C']: YFPricesMissingError('possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")')
+2026-02-10 17:01:41,677 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: LZM-W"}}}
+2026-02-10 17:01:41,937 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ADC$A"}}}
+2026-02-10 17:02:05,683 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: EP$C"}}}
+2026-02-10 17:02:37,458 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ATH$D"}}}
+2026-02-10 17:02:59,002 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: SES-W"}}}
+2026-02-10 17:02:59,289 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: NEE$U"}}}
+2026-02-10 17:03:15,047 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: JPM$K"}}}
+2026-02-10 17:03:19,296 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,588 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,636 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,748 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,807 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,850 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:03:20,856 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,863 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:20,868 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:03:20,920 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:32,641 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:32,641 - MainThread - INFO - Completed batch 1/122 (35 stocks analyzed so far)
+2026-02-10 17:03:33,096 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:33,119 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:33,126 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:33,688 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:33,689 - MainThread - INFO - Completed batch 3/122 (68 stocks analyzed so far)
+2026-02-10 17:03:33,718 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:33,727 - MainThread - INFO - Completed batch 7/122 (104 stocks analyzed so far)
+2026-02-10 17:03:33,979 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:33,980 - MainThread - INFO - Completed batch 2/122 (139 stocks analyzed so far)
+2026-02-10 17:03:34,035 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:34,394 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:34,395 - MainThread - INFO - Completed batch 8/122 (169 stocks analyzed so far)
+2026-02-10 17:03:34,931 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:34,932 - MainThread - INFO - Completed batch 5/122 (201 stocks analyzed so far)
+2026-02-10 17:03:35,026 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:35,027 - MainThread - INFO - Completed batch 6/122 (234 stocks analyzed so far)
+2026-02-10 17:03:35,432 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:35,928 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:03:35,929 - MainThread - INFO - Completed batch 4/122 (268 stocks analyzed so far)
+2026-02-10 17:03:39,581 - ThreadPoolExecutor-0_3 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,581 - ThreadPoolExecutor-0_7 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,581 - ThreadPoolExecutor-0_5 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,581 - ThreadPoolExecutor-0_4 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,581 - ThreadPoolExecutor-0_2 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,582 - ThreadPoolExecutor-0_1 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,582 - ThreadPoolExecutor-0_0 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,584 - ThreadPoolExecutor-0_6 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:03:39,592 - ThreadPoolExecutor-0_3 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,594 - ThreadPoolExecutor-0_7 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,595 - ThreadPoolExecutor-0_5 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,596 - ThreadPoolExecutor-0_4 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,602 - ThreadPoolExecutor-0_2 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB', 'KMID']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,666 - ThreadPoolExecutor-0_0 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB', 'KMID']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,671 - ThreadPoolExecutor-0_6 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB', 'KMID']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:39,869 - ThreadPoolExecutor-0_1 - ERROR - ['ISCG', 'FMNY', 'TCAI', 'SFIX', 'THM', 'FBK', 'STEL', 'NFE', 'INCY', 'ZCBG', 'CPSM', 'MATW', 'AEVAW', 'XPEL', 'AFIX', 'APPS', 'FEBT', 'OUT', 'STXE', 'NPT', 'BIII', 'PANW', 'MCHPP', 'PRK', 'GAMB', 'ACNB', 'JFBR', 'SHC', 'NIXT', 'NNE', 'EXP', 'MPG', 'STRF', 'ATEX', 'BST', 'ITDI', 'GVH', 'INHD', 'IOBT', 'PLBC', 'EFA', 'SYF', 'GSBC', 'EVNT', 'OZKAP', 'SCDV', 'HOG', 'LYEL', 'TOV', 'YALL', 'NAKA', 'RIET', 'VGI', 'MMU', 'ORLY', 'OXBRW', 'NVDU', 'CELH', 'QBIG', 'WBD', 'BDVG', 'JUNW', 'RSPR', 'GQRE', 'RUNN', 'TMH', 'PSN', 'GLBE', 'H', 'PKG', 'DHI', 'VGZ', 'REK', 'RMME', 'ALZN', 'EWM', 'EWUS', 'OND', 'WH', 'BBUS', 'ANEW', 'HIG$G', 'EBC', 'VGRO', 'IDRV', 'GIPRW', 'XBB', 'CHOW', 'CPB', 'BIYA', 'MARU', 'ECCX', 'HFBL', 'CDLX', 'JMID', 'BNZIW', 'HUMN', 'NE-W', 'OLPX', 'EMAT', 'BITB', 'KMID', 'ISHP', 'BTBD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:03:43,154 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:45,306 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:49,221 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:49,622 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:50,998 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:51,224 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:51,449 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:03:51,654 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:53,316 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:53,451 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:53,496 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:03:54,387 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:01,211 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:02,013 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:03,495 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:03,695 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:03,784 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:04:03,785 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:03,787 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:06,640 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:06,822 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:11,030 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:12,694 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:15,972 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:15,972 - MainThread - INFO - Completed batch 13/122 (269 stocks analyzed so far)
+2026-02-10 17:04:16,243 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:16,254 - MainThread - INFO - Completed batch 14/122 (270 stocks analyzed so far)
+2026-02-10 17:04:16,257 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:16,836 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:16,840 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:16,886 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:17,144 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:17,146 - MainThread - INFO - Completed batch 15/122 (271 stocks analyzed so far)
+2026-02-10 17:04:17,315 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:17,318 - MainThread - INFO - Completed batch 16/122 (272 stocks analyzed so far)
+2026-02-10 17:04:17,367 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:17,369 - MainThread - INFO - Completed batch 12/122 (273 stocks analyzed so far)
+2026-02-10 17:04:17,932 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:17,938 - MainThread - INFO - Completed batch 9/122 (274 stocks analyzed so far)
+2026-02-10 17:04:18,439 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:18,878 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:18,879 - MainThread - INFO - Completed batch 11/122 (275 stocks analyzed so far)
+2026-02-10 17:04:19,001 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:04:19,002 - MainThread - INFO - Completed batch 10/122 (276 stocks analyzed so far)
+2026-02-10 17:04:49,317 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:49,584 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:50,627 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:50,748 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:50,765 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:50,795 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:04:50,807 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:55,791 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:55,915 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,193 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,264 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,490 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:04:56,490 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,621 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,650 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:04:56,711 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:02,157 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: JPM$L"}}}
+2026-02-10 17:05:09,075 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:09,531 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:09,534 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:16,787 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:19,424 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:20,904 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:20,995 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:30,075 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:30,180 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:32,714 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:32,715 - MainThread - INFO - Completed batch 23/122 (290 stocks analyzed so far)
+2026-02-10 17:05:32,864 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:32,869 - MainThread - INFO - Completed batch 18/122 (306 stocks analyzed so far)
+2026-02-10 17:05:32,951 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:33,119 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:33,119 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:33,150 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:33,581 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:33,582 - MainThread - INFO - Completed batch 21/122 (321 stocks analyzed so far)
+2026-02-10 17:05:33,697 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:33,741 - MainThread - INFO - Completed batch 20/122 (337 stocks analyzed so far)
+2026-02-10 17:05:33,837 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:33,854 - MainThread - INFO - Completed batch 24/122 (352 stocks analyzed so far)
+2026-02-10 17:05:34,153 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:34,161 - MainThread - INFO - Completed batch 22/122 (367 stocks analyzed so far)
+2026-02-10 17:05:34,291 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:34,293 - MainThread - INFO - Completed batch 19/122 (383 stocks analyzed so far)
+2026-02-10 17:05:34,676 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:35,190 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:05:35,191 - MainThread - INFO - Completed batch 17/122 (400 stocks analyzed so far)
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_2 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_7 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_5 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_4 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_1 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_0 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_6 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,595 - ThreadPoolExecutor-0_3 - ERROR - 
+78 Failed downloads:
+2026-02-10 17:05:39,596 - ThreadPoolExecutor-0_2 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,599 - ThreadPoolExecutor-0_7 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,604 - ThreadPoolExecutor-0_5 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,605 - ThreadPoolExecutor-0_4 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,608 - ThreadPoolExecutor-0_1 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,610 - ThreadPoolExecutor-0_0 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,611 - ThreadPoolExecutor-0_6 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:39,612 - ThreadPoolExecutor-0_3 - ERROR - ['WCN', 'VLUE', 'HBTA', 'SQFTW', 'NBET', 'MAA$I', 'FXNC', 'MCDS', 'SMR', 'OTLK', 'MYCL', 'NREF', 'VALN', 'WYFI', 'DYLG', 'TENX', 'HPP$C', 'IWDL', 'WFC$C', 'BOIL', 'HBTC', 'IH', 'MGR', 'BPI', 'AFBI', 'WTMU', 'SGRT', 'ATXG', 'VFF', 'FMAO', 'OPENZ', 'CBK', 'XBJL', 'JHAI', 'FUSI', 'PRA', 'SVCCU', 'MID', 'LRN', 'SPHB', 'ARKG', 'AGNG', 'CWBC', 'BEPJ', 'COF', 'TROX', 'UHG', 'FPS', 'RC', 'TRIO', 'IWMI', 'VTC', 'VCEB', 'CELUW', 'RAIL', 'BILI', 'SMAY', 'RSKD', 'JAGU', 'BFOR', 'SARK', 'GXDW', 'IRHOU', 'WISD', 'YBTY', 'LFAI', 'LAES', 'CODA', 'MLAC', 'MBSD', 'SLP', 'GERN', 'BIO-B', 'C', 'GAIN', 'FTI', 'KGEI', 'DTK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:05:41,598 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:41,838 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:42,887 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:44,033 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:44,390 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:45,272 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:52,019 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:52,020 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:53,505 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:05:55,893 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:00,087 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:00,104 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:00,182 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:01,944 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:03,848 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:04,504 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:05,414 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:05,474 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:05,538 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:06,346 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:06,567 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:07,754 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:12,823 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:14,541 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:14,589 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:15,619 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:15,620 - MainThread - INFO - Completed batch 29/122 (401 stocks analyzed so far)
+2026-02-10 17:06:16,670 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:16,671 - MainThread - INFO - Completed batch 25/122 (402 stocks analyzed so far)
+2026-02-10 17:06:16,683 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:16,695 - MainThread - INFO - Completed batch 28/122 (403 stocks analyzed so far)
+2026-02-10 17:06:16,699 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:16,700 - MainThread - INFO - Completed batch 27/122 (404 stocks analyzed so far)
+2026-02-10 17:06:17,508 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:17,509 - MainThread - INFO - Completed batch 26/122 (405 stocks analyzed so far)
+2026-02-10 17:06:17,623 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:17,730 - MainThread - INFO - Completed batch 32/122 (406 stocks analyzed so far)
+2026-02-10 17:06:17,824 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:17,827 - MainThread - INFO - Completed batch 30/122 (407 stocks analyzed so far)
+2026-02-10 17:06:18,146 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:18,150 - MainThread - INFO - Completed batch 31/122 (408 stocks analyzed so far)
+2026-02-10 17:06:24,354 - ThreadPoolExecutor-0_5 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,354 - ThreadPoolExecutor-0_0 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,355 - ThreadPoolExecutor-0_3 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,355 - ThreadPoolExecutor-0_1 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,355 - ThreadPoolExecutor-0_6 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,355 - ThreadPoolExecutor-0_4 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,356 - ThreadPoolExecutor-0_2 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,356 - ThreadPoolExecutor-0_7 - ERROR - 
+51 Failed downloads:
+2026-02-10 17:06:24,356 - ThreadPoolExecutor-0_5 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,357 - ThreadPoolExecutor-0_0 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,357 - ThreadPoolExecutor-0_3 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,358 - ThreadPoolExecutor-0_1 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,359 - ThreadPoolExecutor-0_6 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,360 - ThreadPoolExecutor-0_4 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,360 - ThreadPoolExecutor-0_2 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,361 - ThreadPoolExecutor-0_7 - ERROR - ['GDV$H', 'ETW', 'IEO', 'CTRN', 'HCAI', 'JANZ', 'ARCM', 'IPX', 'NAK', 'AXG', 'AGM$G', 'OPTT', 'FLEU', 'GCV', 'TSNF', 'CDNA', 'DMAAR', 'ULTA', 'GXO', 'ZJAN', 'BACCU', 'KMX', 'AIOO', 'SBRA', 'QSEAR', 'MPL', 'GBXA', 'PMMF', 'AHT$G', 'HCC', 'DCI', 'TWG', 'BLGR', 'V', 'AOTG', 'GMED', 'ANL', 'CMSD', 'BXMT', 'ABVE', 'WEEI', 'RHTX', 'DNOV', 'FPFD', 'RF', 'FLCG', 'ARR$C', 'EWU', 'PSCT', 'EGG', 'KMT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:06:24,377 - ThreadPoolExecutor-0_5 - ERROR - Batch processing error: dictionary changed size during iteration
+2026-02-10 17:06:30,235 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:30,582 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:30,585 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:30,812 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:30,834 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:32,458 - Thread-3301 (_run_via_pool) - ERROR - Failed to get ticker 'GM' reason: Failed to perform, curl: (28) Connection timed out after 10016 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-02-10 17:06:33,361 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:34,805 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:36,837 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:36,950 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:36,968 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:36,975 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,093 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,171 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:37,180 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:37,280 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,415 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:06:37,423 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,423 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,426 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,516 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,597 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,942 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,956 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:37,962 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:38,995 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:38,997 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:39,075 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:39,881 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:40,877 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:41,996 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:43,372 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:43,378 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:43,443 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:47,049 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,034 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,134 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,137 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,174 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,233 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:51,738 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:52,144 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:52,224 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:53,443 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:58,354 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:58,355 - MainThread - INFO - Completed batch 37/122 (408 stocks analyzed so far)
+2026-02-10 17:06:58,621 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:58,621 - MainThread - INFO - Completed batch 38/122 (408 stocks analyzed so far)
+2026-02-10 17:06:59,027 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:59,091 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:59,093 - MainThread - INFO - Completed batch 35/122 (408 stocks analyzed so far)
+2026-02-10 17:06:59,505 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:59,505 - MainThread - INFO - Completed batch 39/122 (408 stocks analyzed so far)
+2026-02-10 17:06:59,584 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:06:59,896 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:06:59,898 - MainThread - INFO - Completed batch 34/122 (408 stocks analyzed so far)
+2026-02-10 17:07:00,178 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:00,179 - MainThread - INFO - Completed batch 36/122 (408 stocks analyzed so far)
+2026-02-10 17:07:00,494 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:01,103 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:01,105 - MainThread - INFO - Completed batch 33/122 (408 stocks analyzed so far)
+2026-02-10 17:07:04,430 - ThreadPoolExecutor-0_4 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,431 - ThreadPoolExecutor-0_1 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,431 - ThreadPoolExecutor-0_7 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,431 - ThreadPoolExecutor-0_6 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,432 - ThreadPoolExecutor-0_2 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,433 - ThreadPoolExecutor-0_3 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,433 - ThreadPoolExecutor-0_0 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:07:04,436 - ThreadPoolExecutor-0_4 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,438 - ThreadPoolExecutor-0_1 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,439 - ThreadPoolExecutor-0_7 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,440 - ThreadPoolExecutor-0_6 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,441 - ThreadPoolExecutor-0_2 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,442 - ThreadPoolExecutor-0_3 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:04,442 - ThreadPoolExecutor-0_0 - ERROR - ['FUFUW', 'MHLA', 'FIVE', 'TLX', 'ALLO', 'NEUP', 'LDRI', 'TJUL', 'IZRL', 'WSTN', 'DYAI', 'HVIIR', 'OSIS', 'LYRA', 'UFO', 'OMCL', 'MFEM', 'PKBK', 'HUBS', 'KCHVR', 'BSCU', 'AIFF', 'JPMO', 'DFAE', 'ESPR', 'TDUP', 'MP', 'DZZ', 'ERTH', 'ACOG', 'MVLL', 'SNOY', 'AIRTP', 'TELO', 'STXG', 'FSK', 'ULVM', 'VICR', 'YGLD', 'EMOP', 'FNX', 'GSEP', 'AIBD', 'TACK', 'RBLX', 'AMLP', 'PEB$E', 'EVSM', 'MAYU', 'JNK', 'AESR', 'PAXS', 'XSPI', 'RSSL', 'DAPR', 'YMAX', 'BCTK', 'IFRA', 'OLED', 'JDIV', 'AN', 'CRVL', 'CEMB', 'VNM', 'PCRX', 'NODK', 'RNR$G', 'SOLR', 'ZWS', 'ECXWW', 'LOTI', 'QGRO', 'XNCR', 'ACVF', 'SUSL', 'ALDX', 'DDM', 'INVX', 'GURU', 'RWR', 'IHE', 'VTGN', 'EMPG', 'DDX', 'PL-W', 'HBNC', 'ARTW', 'NFXS', 'KNSL', 'POWW', 'BMED', 'WENNW', 'GWRS', 'DLHC', 'HIGH', 'XLSI', 'MSSS', 'GE', 'KVACW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:08,998 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:11,023 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:14,620 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:14,633 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:14,635 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:14,854 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:07:14,854 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:07:14,908 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:14,911 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:21,241 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:28,189 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:28,193 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:35,864 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:35,864 - MainThread - INFO - Completed batch 43/122 (408 stocks analyzed so far)
+2026-02-10 17:07:35,914 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:35,918 - MainThread - INFO - Completed batch 41/122 (408 stocks analyzed so far)
+2026-02-10 17:07:35,929 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:35,992 - MainThread - INFO - Completed batch 42/122 (408 stocks analyzed so far)
+2026-02-10 17:07:36,179 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:36,185 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:36,215 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:36,307 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:36,309 - MainThread - INFO - Completed batch 44/122 (408 stocks analyzed so far)
+2026-02-10 17:07:36,441 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:36,445 - MainThread - INFO - Completed batch 46/122 (408 stocks analyzed so far)
+2026-02-10 17:07:37,126 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:37,130 - MainThread - INFO - Completed batch 47/122 (408 stocks analyzed so far)
+2026-02-10 17:07:37,841 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:37,842 - MainThread - INFO - Completed batch 45/122 (408 stocks analyzed so far)
+2026-02-10 17:07:41,394 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:07:41,394 - MainThread - INFO - Completed batch 40/122 (408 stocks analyzed so far)
+2026-02-10 17:07:44,688 - ThreadPoolExecutor-0_1 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,688 - ThreadPoolExecutor-0_2 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,688 - ThreadPoolExecutor-0_5 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,689 - ThreadPoolExecutor-0_0 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,689 - ThreadPoolExecutor-0_3 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,689 - ThreadPoolExecutor-0_6 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,689 - ThreadPoolExecutor-0_7 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,691 - ThreadPoolExecutor-0_4 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:07:44,693 - ThreadPoolExecutor-0_1 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,695 - ThreadPoolExecutor-0_2 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,698 - ThreadPoolExecutor-0_5 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,699 - ThreadPoolExecutor-0_0 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,700 - ThreadPoolExecutor-0_3 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,701 - ThreadPoolExecutor-0_6 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,703 - ThreadPoolExecutor-0_7 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:44,704 - ThreadPoolExecutor-0_4 - ERROR - ['OTEX', 'CATH', 'NVIT', 'CMP', 'AFSM', 'DVS', 'USB$R', 'GLNK', 'OESX', 'INVH', 'GETY', 'DBVT', 'GIW', 'CIM$B', 'MLPX', 'IFLR', 'DHCNI', 'DDIV', 'MGEE', 'AACG', 'FBP', 'QBER', 'AMPY', 'LECO', 'AMLX', 'KIE', 'UBND', 'SIXS', 'RAIN', 'NJAN', 'ATOS', 'XHS', 'LFACW', 'ISCB', 'VCEL', 'MHH', 'ALH', 'HEI-A', 'XSHD', 'TBPH', 'TNGY', 'DJD', 'SOLT', 'INEO', 'PACB', 'UFEB', 'ZENA', 'MMID', 'NAN', 'CONX', 'FDTX', 'WWJD', 'ZEUS', 'YUM', 'MEVOU', 'PFX', 'DOMH', 'TEND', 'ATEN', 'ICON', 'FFIC', 'MOMO', 'ZEXIT', 'WMK', 'LFAO', 'MST', 'INACU', 'BGDV', 'CGXU', 'RILYP', 'TZOO', 'IAUX', 'CRVS', 'LGHL', 'KEY', 'QGEN', 'SMRT', 'SYF$A', 'BNC', 'LIAE', 'BNZI', 'FCVT', 'ONDL', 'HE', 'SPIN', 'KYMR', 'TIP', 'MIRA', 'HAO', 'FNLC', 'NRGU', 'BTOG', 'DLO', 'DHT', 'JULB', 'AMN', 'PRMB', 'IRET', 'NOMD', 'VTP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:07:46,935 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:51,753 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:52,104 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:52,110 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:07:52,114 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:52,601 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:53,585 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:07:58,025 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:00,041 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:01,456 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:02,263 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:02,433 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:10,155 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:10,589 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:16,626 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:16,627 - MainThread - INFO - Completed batch 51/122 (408 stocks analyzed so far)
+2026-02-10 17:08:16,886 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:16,916 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:17,236 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:17,237 - MainThread - INFO - Completed batch 53/122 (408 stocks analyzed so far)
+2026-02-10 17:08:17,434 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:17,434 - MainThread - INFO - Completed batch 55/122 (408 stocks analyzed so far)
+2026-02-10 17:08:17,513 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:17,616 - MainThread - INFO - Completed batch 52/122 (408 stocks analyzed so far)
+2026-02-10 17:08:17,869 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:18,045 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:18,046 - MainThread - INFO - Completed batch 50/122 (408 stocks analyzed so far)
+2026-02-10 17:08:18,202 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:18,204 - MainThread - INFO - Completed batch 49/122 (408 stocks analyzed so far)
+2026-02-10 17:08:18,449 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:18,451 - MainThread - INFO - Completed batch 54/122 (408 stocks analyzed so far)
+2026-02-10 17:08:19,778 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:19,779 - MainThread - INFO - Completed batch 48/122 (408 stocks analyzed so far)
+2026-02-10 17:08:23,346 - ThreadPoolExecutor-0_6 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,347 - ThreadPoolExecutor-0_0 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,347 - ThreadPoolExecutor-0_4 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,348 - ThreadPoolExecutor-0_3 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,349 - ThreadPoolExecutor-0_2 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,349 - ThreadPoolExecutor-0_5 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,349 - ThreadPoolExecutor-0_1 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,349 - ThreadPoolExecutor-0_7 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:08:23,350 - ThreadPoolExecutor-0_6 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,352 - ThreadPoolExecutor-0_0 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,353 - ThreadPoolExecutor-0_4 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,357 - ThreadPoolExecutor-0_3 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,358 - ThreadPoolExecutor-0_2 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,359 - ThreadPoolExecutor-0_5 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,359 - ThreadPoolExecutor-0_1 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:23,360 - ThreadPoolExecutor-0_7 - ERROR - ['SPFI', 'MYMK', 'GHRS', 'IMMP', 'QBY', 'FSBC', 'FTBI', 'EQT', 'FEZ', 'VFMF', 'BKR', 'PELI', 'DRUG', 'STIM', 'LOKVU', 'ECBK', 'HII', 'SMMT', 'PTF', 'JPY', 'APD', 'SPRB', 'RIV$A', 'FTXN', 'QMID', 'OPAD', 'JQC', 'FHLC', 'PUK', 'GSLC', 'GVIP', 'CCEL', 'ACTU', 'LAYS', 'BTGD', 'ANIP', 'MGRT', 'ESOA', 'COSW', 'RJMI', 'AXIL', 'VAMO', 'LAFAR', 'TLCI', 'PRLB', 'INTL', 'EMSF', 'TOGA', 'AWX', 'RNR$F', 'TNON', 'FIGG', 'ADAMH', 'CDIG', 'XOEF', 'ISEP', 'PSA$M', 'DTM', 'NSTS', 'JDZG', 'IWMY', 'CRPT', 'MRM', 'MNY', 'REKR', 'KEN', 'KLMN', 'MSI', 'TVE', 'SCHJ', 'SFWL', 'BULU', 'EPD', 'ISBA', 'CDZI', 'JNJ', 'PYXS', 'USCL', 'QS', 'MUD', 'DFIC', 'ETHO', 'ACLC', 'AQLT', 'GEGGL', 'IHAK', 'SMB', 'BFST', 'GGT$E', 'BIDD', 'XXRP', 'RYAN', 'GSIE', 'F$C', 'FLIN', 'SBSW', 'TDTT', 'WLDSW', 'DUOL', 'QHDG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:08:27,448 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:28,605 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:28,726 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:31,696 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:31,775 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:31,786 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:32,123 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:32,346 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:34,405 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:34,406 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:35,519 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:36,010 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:37,248 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:37,348 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:39,074 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:39,917 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:40,704 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:40,708 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:40,837 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:40,847 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:40,903 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:41,103 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:08:41,105 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:08:41,125 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:08:41,128 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:42,137 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:46,084 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:48,013 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:48,929 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:49,804 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:51,524 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:51,736 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:53,761 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:57,500 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:57,500 - MainThread - INFO - Completed batch 63/122 (408 stocks analyzed so far)
+2026-02-10 17:08:57,705 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:57,705 - MainThread - INFO - Completed batch 62/122 (408 stocks analyzed so far)
+2026-02-10 17:08:58,033 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:58,037 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:58,045 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:58,221 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:58,231 - MainThread - INFO - Completed batch 59/122 (408 stocks analyzed so far)
+2026-02-10 17:08:58,472 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:58,484 - MainThread - INFO - Completed batch 61/122 (408 stocks analyzed so far)
+2026-02-10 17:08:58,515 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:58,621 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:58,691 - MainThread - INFO - Completed batch 56/122 (408 stocks analyzed so far)
+2026-02-10 17:08:58,705 - MainThread - INFO - Completed batch 57/122 (408 stocks analyzed so far)
+2026-02-10 17:08:59,164 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:08:59,329 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:08:59,331 - MainThread - INFO - Completed batch 58/122 (408 stocks analyzed so far)
+2026-02-10 17:09:00,003 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:00,005 - MainThread - INFO - Completed batch 60/122 (408 stocks analyzed so far)
+2026-02-10 17:09:07,790 - ThreadPoolExecutor-0_4 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,791 - ThreadPoolExecutor-0_2 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,791 - ThreadPoolExecutor-0_1 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,791 - ThreadPoolExecutor-0_7 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,791 - ThreadPoolExecutor-0_3 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,791 - ThreadPoolExecutor-0_0 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,806 - ThreadPoolExecutor-0_6 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,806 - ThreadPoolExecutor-0_5 - ERROR - 
+4 Failed downloads:
+2026-02-10 17:09:07,825 - ThreadPoolExecutor-0_4 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,826 - ThreadPoolExecutor-0_2 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,827 - ThreadPoolExecutor-0_1 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,831 - ThreadPoolExecutor-0_7 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,835 - ThreadPoolExecutor-0_3 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,882 - ThreadPoolExecutor-0_0 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,891 - ThreadPoolExecutor-0_6 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:07,896 - ThreadPoolExecutor-0_5 - ERROR - ['GRABW', 'DJAN', 'HBIO', 'VNO$M']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:09,421 - ThreadPoolExecutor-0_2 - ERROR - Batch processing error: dictionary changed size during iteration
+2026-02-10 17:09:10,357 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:10,359 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:10,372 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:10,729 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:10,759 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:11,170 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:11,171 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:12,735 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:14,868 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:18,176 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:20,364 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:20,372 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:20,373 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:20,375 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:20,597 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:26,381 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:28,171 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:29,583 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:30,792 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:33,949 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,093 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:34,101 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,102 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,103 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,107 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,327 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:34,382 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:34,547 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,600 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,657 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,674 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:34,781 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:09:37,378 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:45,497 - Thread-6946 (_run_via_pool) - ERROR - Failed to get ticker 'GRNY' reason: Failed to perform, curl: (28) Operation timed out after 10003 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-02-10 17:09:49,913 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:49,913 - MainThread - INFO - Completed batch 68/122 (408 stocks analyzed so far)
+2026-02-10 17:09:50,003 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:50,192 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:50,673 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:50,673 - MainThread - INFO - Completed batch 70/122 (408 stocks analyzed so far)
+2026-02-10 17:09:50,734 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:51,049 - MainThread - INFO - Completed batch 65/122 (408 stocks analyzed so far)
+2026-02-10 17:09:51,157 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:52,037 - MainThread - INFO - Completed batch 71/122 (408 stocks analyzed so far)
+2026-02-10 17:09:52,301 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:52,435 - MainThread - INFO - Completed batch 67/122 (408 stocks analyzed so far)
+2026-02-10 17:09:52,720 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:52,724 - MainThread - INFO - Completed batch 64/122 (408 stocks analyzed so far)
+2026-02-10 17:09:52,896 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:09:53,581 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:09:53,582 - MainThread - INFO - Completed batch 66/122 (408 stocks analyzed so far)
+2026-02-10 17:09:58,841 - ThreadPoolExecutor-0_5 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,841 - ThreadPoolExecutor-0_6 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,842 - ThreadPoolExecutor-0_3 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,842 - ThreadPoolExecutor-0_4 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,843 - ThreadPoolExecutor-0_7 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,843 - ThreadPoolExecutor-0_1 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,843 - ThreadPoolExecutor-0_0 - ERROR - 
+95 Failed downloads:
+2026-02-10 17:09:58,868 - ThreadPoolExecutor-0_5 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,894 - ThreadPoolExecutor-0_6 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,904 - ThreadPoolExecutor-0_3 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,913 - ThreadPoolExecutor-0_4 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,927 - ThreadPoolExecutor-0_7 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT', 'LIAM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,961 - ThreadPoolExecutor-0_1 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT', 'LIAM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:09:58,963 - ThreadPoolExecutor-0_0 - ERROR - ['DMLP', 'DEEF', 'W', 'JPM$C', 'ODYS', 'SHAK', 'QBTS', 'BRLSW', 'SB$C', 'UOKA', 'HTB', 'CHAT', 'HTHT', 'HIBL', 'PPL', 'ORCS', 'RDAGU', 'QVOY', 'ACP$A', 'ROOT', 'GLAD', 'OILD', 'UBS', 'QVCGA', 'MRNO', 'ARBK', 'HYLS', 'RDWR', 'CRWL', 'CRACU', 'LCDS', 'AWRE', 'CCNR', 'DFSU', 'THYM', 'DNMXW', 'LUV', 'AMZE', 'TOLZ', 'QMCO', 'USA', 'XFLX', 'NPWR', 'DSWL', 'ALPS', 'CGCV', 'WWR', 'ETI$', 'ABR$D', 'MUST', 'GSBD', 'OCTZ', 'ITDC', 'CEPU', 'BCAB', 'OSW', 'OGEN', 'WCC', 'MDCX', 'IJK', 'RDI', 'GGN', 'CMC', 'RCAT', 'BDCIU', 'DECW', 'LENZ', 'FHI', 'RESM', 'CMGG', 'RSSE', 'VSTM', 'IDOG', 'MATX', 'LRMR', 'ELDN', 'RGS', 'NYC', 'BITU', 'ENGN', 'SBET', 'FDV', 'OMAH', 'DLR$K', 'AUGT', 'FVNNU', 'DUK$A', 'NKSH', 'MHK', 'AMZN', 'MLM', 'EUM', 'RZG', 'WGSWW', 'PPH', 'MPT', 'LIAM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:10:00,196 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:00,197 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:01,400 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:10:01,809 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:02,696 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:16,816 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:27,073 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:28,613 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:28,621 - ThreadPoolExecutor-0_3 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:10:50,056 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:10:50,057 - MainThread - INFO - Completed batch 69/122 (408 stocks analyzed so far)
+2026-02-10 17:10:55,783 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:10:56,750 - ThreadPoolExecutor-0_2 - ERROR - 
+96 Failed downloads:
+2026-02-10 17:10:57,136 - ThreadPoolExecutor-0_2 - ERROR - ['XJAN', 'PBOG', 'TXBC', 'BACQ', 'IBIF', 'AVBC', 'GDV', 'FROG', 'EMQQ', 'HYEM', 'BVAL', 'KEP', 'PASG', 'COLL', 'TAX', 'MSAIW', 'OWNB', 'EQLT', 'IDX', 'GLW', 'INCM', 'TER', 'USCI', 'GEMD', 'ICU', 'WENN', 'WEEL', 'NBIZ', 'RQI', 'JANT', 'IOSP', 'TNL', 'ZD', 'CLSX', 'C$N', 'BILZ', 'AIXC', 'ORCX', 'GSL', 'GGN$B', 'BIZD', 'NEXA', 'XCLR', 'MAAY', 'VRM', 'FTMU', 'SHFS', 'HEQQ', 'HCSG', 'EMLP', 'FITBP', 'TSLQ', 'BROS', 'GURE', 'MAPP', 'CURI', 'DOX', 'MINV', 'CLPT', 'PIPR', 'URAN', 'OVT', 'CBXO', 'UDOW', 'PRKS', 'OCGN', 'DINO', 'EWP', 'FUND', 'FNWD', 'FFAI', 'HCM', 'AUB', 'WYY', 'TINS', 'VEEE', 'SOBO', 'RLI', 'SPRC', 'TTMI', 'MSTB', 'SBTU', 'VSGX', 'WAT', 'SMC', 'RDY', 'GBTG', 'NLY$F', 'IAC', 'CRC', 'ENB', 'JULW', 'VCIG', 'IMCB', 'GSPY', 'HYI']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:00,903 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:00,904 - MainThread - INFO - Completed batch 74/122 (408 stocks analyzed so far)
+2026-02-10 17:11:00,918 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:01,007 - MainThread - INFO - Completed batch 76/122 (409 stocks analyzed so far)
+2026-02-10 17:11:01,350 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:01,354 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:01,355 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:01,788 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:01,791 - MainThread - INFO - Completed batch 78/122 (409 stocks analyzed so far)
+2026-02-10 17:11:02,593 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:02,595 - MainThread - INFO - Completed batch 73/122 (409 stocks analyzed so far)
+2026-02-10 17:11:03,042 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:03,043 - MainThread - INFO - Completed batch 72/122 (410 stocks analyzed so far)
+2026-02-10 17:11:03,519 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:03,520 - MainThread - INFO - Completed batch 77/122 (410 stocks analyzed so far)
+2026-02-10 17:11:04,814 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:04,820 - MainThread - INFO - Completed batch 75/122 (411 stocks analyzed so far)
+2026-02-10 17:11:11,245 - ThreadPoolExecutor-0_6 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,245 - ThreadPoolExecutor-0_7 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,246 - ThreadPoolExecutor-0_5 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,246 - ThreadPoolExecutor-0_3 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,246 - ThreadPoolExecutor-0_1 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,247 - ThreadPoolExecutor-0_4 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,247 - ThreadPoolExecutor-0_0 - ERROR - 
+97 Failed downloads:
+2026-02-10 17:11:11,313 - ThreadPoolExecutor-0_6 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,315 - ThreadPoolExecutor-0_7 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,316 - ThreadPoolExecutor-0_5 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,317 - ThreadPoolExecutor-0_3 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,318 - ThreadPoolExecutor-0_1 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,320 - ThreadPoolExecutor-0_4 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:11,321 - ThreadPoolExecutor-0_0 - ERROR - ['PHAR', 'CBTJ', 'UNTY', 'FHN$E', 'PMMR', 'SMSI', 'HLN', 'ATGE', 'KLC', 'OPK', 'TARK', 'RYLG', 'CLW', 'KIO', 'LRGE', 'KMDA', 'MANH', 'PCAPW', 'DVXP', 'RITR', 'EFAA', 'HIMX', 'JIRE', 'DVXE', 'COHU', 'DWX', 'MHO', 'EWS', 'RILYG', 'TBN', 'VWID', 'FRTY', 'EYLD', 'NLY$J', 'OCC', 'SEPI', 'LION', 'IBIE', 'VMAX', 'PSK', 'RPD', 'FBOT', 'COGT', 'EHY', 'GAA', 'ARW', 'NVS', 'TMUSI', 'TMB', 'CBXA', 'SOPA', 'KELYA', 'AAT', 'TXNM', 'BGX', 'EKSO', 'VIS', 'BRKW', 'TRIB', 'MEDX', 'AGM$D', 'CGMU', 'MGF', 'NDEC', 'APLX', 'JSPRW', 'BJ', 'BKCH', 'VRAI', 'MYND', 'QQQ', 'HCACR', 'BKH', 'CHIQ', 'SNA', 'BOX', 'VRP', 'NATR', 'CHRS', 'IMXI', 'GDHG', 'BETE', 'CUBI', 'VFLO', 'SOJC', 'KBWB', 'CCRP', 'FSBW', 'BIT', 'AMR', 'CNM', 'KOPN', 'WIX', 'RSBT', 'PRVS', 'RXL', 'AMD', 'MRNX', 'KIM$L']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:11:16,129 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:32,142 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:37,172 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:11:57,126 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:11:57,127 - MainThread - INFO - Completed batch 79/122 (411 stocks analyzed so far)
+2026-02-10 17:12:03,150 - ThreadPoolExecutor-0_2 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:03,317 - ThreadPoolExecutor-0_2 - ERROR - ['KEY$K', 'FMC', 'OC', 'USB$A', 'MENS', 'GNL$B', 'ILCB', 'BG', 'KTCC', 'UFIV', 'GAME', 'ISTB', 'DOV', 'MSTQ', 'MVFD', 'OUSA', 'DOGZ', 'GBHI', 'GGLS', 'MLAAU', 'MTR', 'SVRE', 'HOOD', 'GILT', 'PDYNW', 'BAMU', 'SGHC', 'ONTO', 'PSTV', 'CBIO', 'XLK', 'AARD', 'RWX', 'ATNM', 'TBMC', 'DNN', 'HIMS', 'DUKZ', 'BSJR', 'CUBE', 'BGC', 'CXSE', 'REMG', 'ARTNA', 'BQ', 'BFRZ', 'GMUN', 'IMRN', 'ICVT', 'ETHD', 'MDYV', 'BSVO', 'GOOP', 'CEW', 'GABF', 'FAF', 'CURX', 'PRM', 'SDSI', 'XONE', 'EAOM', 'ULBI', 'REET', 'CSTE', 'CDRO', 'SMMD', 'VIXY', 'SAGP', 'EZU', 'LARK', 'PLMKU', 'JETD', 'CVNY', 'KAT', 'LITL', 'SMG', 'BIP', 'PW', 'QQJG', 'YOU', 'GBUG', 'AMZW', 'GTO', 'AOSL', 'CMT', 'APRZ', 'AMWL', 'PZG', 'HDGE', 'EPR$C', 'MVRL', 'REGN', 'YAAS', 'IBTL', 'ETRL', 'RPV', 'FUTU', 'BATRA', 'SPEU', 'EMCB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:03,561 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:12:11,877 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:11,877 - MainThread - INFO - Completed batch 80/122 (411 stocks analyzed so far)
+2026-02-10 17:12:11,909 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:11,940 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:11,965 - MainThread - INFO - Completed batch 82/122 (411 stocks analyzed so far)
+2026-02-10 17:12:11,974 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:12,024 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:12,067 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:12,246 - MainThread - INFO - Completed batch 83/122 (411 stocks analyzed so far)
+2026-02-10 17:12:12,431 - MainThread - INFO - Completed batch 84/122 (411 stocks analyzed so far)
+2026-02-10 17:12:12,489 - MainThread - INFO - Completed batch 85/122 (411 stocks analyzed so far)
+2026-02-10 17:12:12,492 - MainThread - INFO - Completed batch 86/122 (411 stocks analyzed so far)
+2026-02-10 17:12:12,774 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:12:13,556 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:13,561 - MainThread - INFO - Completed batch 81/122 (411 stocks analyzed so far)
+2026-02-10 17:12:19,085 - ThreadPoolExecutor-0_6 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,085 - ThreadPoolExecutor-0_5 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,086 - ThreadPoolExecutor-0_1 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,086 - ThreadPoolExecutor-0_4 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,086 - ThreadPoolExecutor-0_3 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,086 - ThreadPoolExecutor-0_7 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,086 - ThreadPoolExecutor-0_0 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:12:19,162 - ThreadPoolExecutor-0_6 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,164 - ThreadPoolExecutor-0_5 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,166 - ThreadPoolExecutor-0_1 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,167 - ThreadPoolExecutor-0_4 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,169 - ThreadPoolExecutor-0_3 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,170 - ThreadPoolExecutor-0_7 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:19,171 - ThreadPoolExecutor-0_0 - ERROR - ['CCG', 'CPHY', 'KWM', 'IETC', 'SJB', 'NMG', 'DIV', 'EFOI', 'IGRO', 'SOLM', 'AVGE', 'CCNE', 'SUPN', 'BRT', 'RTAC', 'HNRG', 'SATL', 'WPAY', 'YDDL', 'CSM', 'QQQJ', 'VFL', 'FIAT', 'BETZ', 'GIND', 'ARTL', 'MPU', 'CTAS', 'ISRG', 'IP', 'FFOX', 'CCOI', 'IBDU', 'ILS', 'HOPE', 'HIYS', 'QALT', 'BNDD', 'RDVY', 'TYLD', 'ALAR', 'WCLD', 'SZZLR', 'PSFJ', 'NEE$N', 'TCHP', 'ONFO', 'TOP', 'ZFEB', 'MFA', 'Z', 'PFDE', 'OXY-W', 'HPI', 'DG', 'MUNX', 'RSPG', 'MIDE', 'IEDI', 'RLY', 'PICS', 'PODD', 'CLIR', 'SOR', 'NBIX', 'RTX', 'XLBI', 'AVPT', 'AFGE', 'GBTC', 'BGLC', 'SPXS', 'EGHA', 'USGOW', 'BDMD', 'DEED', 'PHGE', 'HON', 'CVKD', 'SGA', 'TRN', 'HUYA', 'CWEN', 'TIPD', 'BEATW', 'FUTY', 'RVSNW', 'ANNX', 'MBND', 'XBIT', 'VTRS', 'OPRT', 'GBX', 'PB', 'PALU', 'CHSCP', 'WAL$A', 'PARK', 'NTWK', 'ARDT', 'DGII']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:12:43,565 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:12:59,737 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:12:59,737 - MainThread - INFO - Completed batch 87/122 (411 stocks analyzed so far)
+2026-02-10 17:13:00,674 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:13:06,056 - ThreadPoolExecutor-0_2 - ERROR - 
+96 Failed downloads:
+2026-02-10 17:13:06,229 - ThreadPoolExecutor-0_2 - ERROR - ['ICFI', 'NCMI', 'DTSS', 'NDOW', 'ATI', 'BFS$E', 'ETON', 'MACIU', 'LPSN', 'SITE', 'TRND', 'NVIR', 'PLU', 'DEFI', 'FTGS', 'MMMA', 'EXE', 'MIRM', 'CLS', 'CTLP', 'NDVG', 'HIPO', 'VACH', 'COIA', 'SPLB', 'POAS', 'PEB$G', 'AHT$F', 'ASM', 'IONZ', 'TDTF', 'GLTR', 'SKRE', 'MUR', 'NEON', 'IBIT', 'COOTW', 'TLH', 'MS$P', 'ICMB', 'FVRR', 'SOUNW', 'GDXU', 'MESH', 'MMSC', 'TGHL', 'NFXL', 'AOMD', 'DPG', 'STBQ', 'SSD', 'DBMF', 'SGMT', 'AIIOW', 'CPRX', 'BBJP', 'PAR', 'DCO', 'ASB$E', 'CRCG', 'OFSSH', 'FMST', 'GILD', 'COYY', 'AMRN', 'NFRX', 'PFLT', 'JPM$D', 'OARK', 'GME-W', 'KBONU', 'OFAL', 'BNCWW', 'GCT', 'RVLV', 'MIMI', 'KIQQ', 'UHGWW', 'SPYQ', 'IESC', 'XEL', 'CAML', 'HTD', 'UVE', 'ONEY', 'BDEC', 'REFR', 'TSAT', 'DUKX', 'TIL', 'UZE', 'TFII', 'MREO', 'CLSKW', 'ETX', 'KMI']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:23,693 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:23,694 - MainThread - INFO - Completed batch 90/122 (411 stocks analyzed so far)
+2026-02-10 17:13:24,259 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:24,259 - MainThread - INFO - Completed batch 93/122 (411 stocks analyzed so far)
+2026-02-10 17:13:24,764 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:24,833 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:25,172 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:25,295 - MainThread - INFO - Completed batch 88/122 (411 stocks analyzed so far)
+2026-02-10 17:13:25,633 - MainThread - INFO - Completed batch 89/122 (411 stocks analyzed so far)
+2026-02-10 17:13:25,634 - MainThread - INFO - Completed batch 91/122 (411 stocks analyzed so far)
+2026-02-10 17:13:25,670 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:25,670 - MainThread - INFO - Completed batch 94/122 (411 stocks analyzed so far)
+2026-02-10 17:13:25,884 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:13:25,885 - MainThread - INFO - Completed batch 92/122 (411 stocks analyzed so far)
+2026-02-10 17:13:33,072 - ThreadPoolExecutor-0_6 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,080 - ThreadPoolExecutor-0_0 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,080 - ThreadPoolExecutor-0_3 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,080 - ThreadPoolExecutor-0_4 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,081 - ThreadPoolExecutor-0_7 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,081 - ThreadPoolExecutor-0_5 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,081 - ThreadPoolExecutor-0_1 - ERROR - 
+98 Failed downloads:
+2026-02-10 17:13:33,081 - ThreadPoolExecutor-0_6 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,101 - ThreadPoolExecutor-0_0 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,107 - ThreadPoolExecutor-0_3 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,110 - ThreadPoolExecutor-0_4 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,120 - ThreadPoolExecutor-0_7 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,124 - ThreadPoolExecutor-0_5 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:33,156 - ThreadPoolExecutor-0_1 - ERROR - ['STN', 'KVAC', 'WINN', 'AGIG', 'BBWI', 'CPT', 'WM', 'RILA', 'IBGB', 'FLEX', 'HYBI', 'RFIL', 'BCHI', 'GFR', 'BHC', 'GSJY', 'RXST', 'ZJYL', 'MAYT', 'BCS', 'FMAG', 'DXD', 'ALL$J', 'LVS', 'SPEGR', 'AA', 'PSDM', 'ESLG', 'BLRK', 'WCBR', 'FGSM', 'TII', 'AHL$E', 'APLY', 'BRKD', 'PBDC', 'IGME', 'SPKLW', 'NHPBP', 'TSCM', 'AMDD', 'CLNK', 'XRLV', 'FEBU', 'STEM', 'LUCY', 'BNRG', 'LZMH', 'RDVT', 'BRTR', 'CCIXW', 'OBDC', 'BFRE', 'PSI', 'XHYH', 'CLB', 'SPSM', 'BNL', 'HERO', 'NUMI', 'GH', 'EBIZ', 'SLGB', 'IMMX', 'GLV', 'BNJ', 'PIII', 'UPC', 'SEDG', 'SRLN', 'BFRI', 'GMMA', 'VOX', 'AVES', 'RSST', 'LOCL', 'DEMZ', 'SRTAW', 'WRD', 'CSGS', 'HCTI', 'CMPS', 'GROV', 'OWLT', 'SYK', 'IGACR', 'HTLD', 'AES', 'NMS', 'IYT', 'FACTU', 'AMZD', 'KBWR', 'AUSF', 'CARE', 'GTENW', 'XRAY', 'DJT', 'IBDY']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:13:34,174 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:13:34,244 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:13:57,323 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:14:11,374 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:11,375 - MainThread - INFO - Completed batch 95/122 (411 stocks analyzed so far)
+2026-02-10 17:14:17,418 - ThreadPoolExecutor-0_2 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:17,626 - ThreadPoolExecutor-0_2 - ERROR - ['CHPS', 'REGL', 'RZB', 'BJUL', 'RAYJ', 'ONFOW', 'IEP', 'NACP', 'CVGW', 'MCHI', 'FDNI', 'ARCIU', 'UPAR', 'TCOM', 'JIII', 'GSSC', 'FLAX', 'THW', 'FLCV', 'STZ', 'RANGU', 'CVLG', 'BCARW', 'RM', 'CSWC', 'QUSA', 'FTCI', 'NXL', 'CSCS', 'IXJ', 'DAMD', 'BGSF', 'NBB', 'KITTW', 'BITQ', 'COR', 'INTJ', 'FNDA', 'NBDS', 'FSCS', 'HBM', 'JCPI', 'OYSEU', 'SMIN', 'FMED', 'ONCY', 'TACT', 'ATLCP', 'SMUP', 'FYC', 'FIVA', 'ARWR', 'LPAA', 'BEEM', 'LEDS', 'FRI', 'KQQQ', 'RAVE', 'QTAC', 'CWVX', 'KRYP', 'DFSI', 'RANG', 'MCD', 'FGMCR', 'BGMS', 'BRN', 'CBOE', 'FELE', 'BOOM', 'PTLC', 'MEM', 'PEZ', 'ACVT', 'STRD', 'EICA', 'WENNU', 'EZM', 'SWAG', 'COOT', 'FMS', 'SNX', 'SLG$I', 'UOCT', 'VOC', 'TOK', 'SRPU', 'ACIC', 'UMDD', 'YMAR', 'CVI', 'ENGNW', 'YHNAR', 'UZF', 'QQQY', 'PBOC', 'OLOX', 'HOLOW', 'CAS']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:33,681 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:33,681 - MainThread - INFO - Completed batch 98/122 (411 stocks analyzed so far)
+2026-02-10 17:14:33,761 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:33,786 - MainThread - INFO - Completed batch 97/122 (411 stocks analyzed so far)
+2026-02-10 17:14:33,891 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:34,546 - MainThread - INFO - Completed batch 100/122 (411 stocks analyzed so far)
+2026-02-10 17:14:34,731 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:34,796 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:34,985 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:35,200 - MainThread - INFO - Completed batch 99/122 (411 stocks analyzed so far)
+2026-02-10 17:14:35,436 - MainThread - INFO - Completed batch 102/122 (411 stocks analyzed so far)
+2026-02-10 17:14:35,440 - MainThread - INFO - Completed batch 96/122 (411 stocks analyzed so far)
+2026-02-10 17:14:35,488 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:14:35,495 - MainThread - INFO - Completed batch 101/122 (411 stocks analyzed so far)
+2026-02-10 17:14:42,024 - ThreadPoolExecutor-0_4 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,025 - ThreadPoolExecutor-0_1 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,025 - ThreadPoolExecutor-0_3 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,025 - ThreadPoolExecutor-0_5 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,025 - ThreadPoolExecutor-0_6 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,025 - ThreadPoolExecutor-0_0 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,026 - ThreadPoolExecutor-0_7 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:14:42,091 - ThreadPoolExecutor-0_4 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,105 - ThreadPoolExecutor-0_1 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,129 - ThreadPoolExecutor-0_3 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV', 'CMCM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,271 - ThreadPoolExecutor-0_5 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV', 'CMCM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,367 - ThreadPoolExecutor-0_6 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV', 'CMCM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,501 - ThreadPoolExecutor-0_0 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV', 'CMCM', 'SION']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:42,523 - ThreadPoolExecutor-0_7 - ERROR - ['NHYM', 'EUAD', 'PWZ', 'OTTR', 'MBINM', 'YFFI', 'SMDD', 'PBHC', 'DVY', 'GSIG', 'BKF', 'RTYY', 'AVAH', 'CVIE', 'KMLI', 'CMS$B', 'LIXT', 'SQLV', 'VRRM', 'IQM', 'QSIAW', 'GFAI', 'IYG', 'NXJ', 'KNGZ', 'ELCV', 'ALCY', 'AOK', 'EXG', 'AMOM', 'IMPP', 'SAP', 'ESE', 'SILA', 'HG', 'BLUW', 'IBHJ', 'ERNAW', 'EVAC', 'PBFB', 'MPX', 'CAMP', 'LE', 'EDU', 'CODI', 'COF$L', 'FBND', 'SOXY', 'IVR$C', 'FCG', 'TTC', 'PHK', 'MRP', 'GOF', 'CRML', 'NEHI', 'INFU', 'ANV', 'FPH', 'OSCV', 'AGD', 'EQL', 'ANAB', 'LFT$A', 'PROK', 'ZNB', 'CNRG', 'AMZZ', 'EEIQ', 'BSMR', 'AAOI', 'AMPGW', 'CORP', 'IBN', 'ETFT', 'BBSC', 'DFNS', 'GAINN', 'VBND', 'OWL', 'RGT', 'RSPT', 'XCHG', 'NOMA', 'TOLL', 'JLQD', 'WEC', 'LHAI', 'XLYI', 'UTSI', 'AIZN', 'HR', 'DIVZ', 'TFC$R', 'XJH', 'KALA', 'TKC', 'INDB', 'EDIV', 'CMCM', 'SION']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:14:50,875 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:15:06,473 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:15:07,788 - ThreadPoolExecutor-0_7 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:15:08,112 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:15:19,364 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:15:19,365 - MainThread - INFO - Completed batch 103/122 (411 stocks analyzed so far)
+2026-02-10 17:15:19,680 - ThreadPoolExecutor-0_5 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:15:28,092 - ThreadPoolExecutor-0_2 - ERROR - 
+90 Failed downloads:
+2026-02-10 17:15:28,271 - ThreadPoolExecutor-0_2 - ERROR - ['FYEE', 'ZTEST', 'EVX', 'SSFI', 'FUL', 'PLTI', 'ATIIU', 'ALIL', 'PNRG', 'DSPY', 'SBFMW', 'PDEX', 'FEBZ', 'PLG', 'KRMD', 'CVGI', 'HEAL', 'BBLB', 'ELA', 'PNC', 'CRSP', 'TDG', 'SCHA', 'INTU', 'ADACW', 'MOFG', 'EES', 'GUNR', 'SAH', 'GLCR', 'DKS', 'UTEN', 'AVD', 'JUNZ', 'GEOA', 'DSY', 'JFIN', 'GGT', 'IVRS', 'WTW', 'FAMI', 'RFDI', 'BR', 'CRMG', 'LOCO', 'QCLR', 'NUMG', 'ALDF', 'CERT', 'WFC$A', 'BCDA', 'NDIA', 'UUUU', 'FE', 'BCML', 'ENPX', 'BIRK', 'REXR', 'RING', 'IMCR', 'ETY', 'RHRX', 'DMAR', 'HWH', 'HAVA', 'BFJL', 'AMZA', 'SBND', 'JBSS', 'GCC', 'GPCR', 'NTRA', 'FMB', 'VBR', 'MCRB', 'KIDZW', 'AGG', 'CBLS', 'LVROW', 'ITWO', 'OMEX', 'BWA', 'MHY', 'WASH', 'GREE', 'BATRK', 'FFBC', 'CRGOW', 'PTH', 'FDLO']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:08,857 - ThreadPoolExecutor-0_1 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:08,857 - MainThread - INFO - Completed batch 107/122 (411 stocks analyzed so far)
+2026-02-10 17:16:09,032 - ThreadPoolExecutor-0_4 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:09,492 - MainThread - INFO - Completed batch 110/122 (411 stocks analyzed so far)
+2026-02-10 17:16:09,608 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:09,739 - ThreadPoolExecutor-0_6 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:10,180 - MainThread - INFO - Completed batch 108/122 (411 stocks analyzed so far)
+2026-02-10 17:16:10,293 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:10,516 - ThreadPoolExecutor-0_7 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:10,666 - MainThread - INFO - Completed batch 104/122 (411 stocks analyzed so far)
+2026-02-10 17:16:10,795 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:16:10,994 - MainThread - INFO - Completed batch 106/122 (411 stocks analyzed so far)
+2026-02-10 17:16:10,995 - MainThread - INFO - Completed batch 105/122 (411 stocks analyzed so far)
+2026-02-10 17:16:10,996 - MainThread - INFO - Completed batch 109/122 (411 stocks analyzed so far)
+2026-02-10 17:16:17,688 - ThreadPoolExecutor-0_1 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:16:17,689 - ThreadPoolExecutor-0_5 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:16:17,695 - ThreadPoolExecutor-0_0 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:16:17,695 - ThreadPoolExecutor-0_3 - ERROR - 
+99 Failed downloads:
+2026-02-10 17:16:17,720 - ThreadPoolExecutor-0_7 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:16:17,720 - ThreadPoolExecutor-0_4 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:16:17,720 - ThreadPoolExecutor-0_6 - ERROR - 
+101 Failed downloads:
+2026-02-10 17:16:18,835 - ThreadPoolExecutor-0_1 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:18,838 - ThreadPoolExecutor-0_5 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:18,842 - ThreadPoolExecutor-0_0 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:18,890 - ThreadPoolExecutor-0_3 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:18,975 - ThreadPoolExecutor-0_7 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD', 'ATHE', 'GELS', 'RISN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:19,018 - ThreadPoolExecutor-0_4 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD', 'ATHE', 'GELS', 'RISN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:16:19,041 - ThreadPoolExecutor-0_6 - ERROR - ['RSMC', 'BBIO', 'ALX', 'IBOT', 'ORGNW', 'LINE', 'OCCIN', 'AOUT', 'ODD', 'VABK', 'LWAC', 'DUKQ', 'DIVE', 'DIVO', 'SNOA', 'FNGG', 'LPL', 'VGIT', 'BZAI', 'PBA', 'ONBPO', 'BBIN', 'FEX', 'NVBW', 'PAVE', 'BNBX', 'JUST', 'FIVY', 'MXI', 'GXPC', 'SWVLW', 'ENOV', 'VRME', 'HITI', 'SOMN', 'ICRC', 'DRDB', 'TCPC', 'GSEW', 'WHF', 'AWP', 'COMB', 'GPACU', 'CACI', 'DAK', 'SCHC', 'NANR', 'GOLY', 'VGT', 'FEGE', 'DYORW', 'ANGO', 'PRXV', 'ABLD', 'TNXP', 'NAMS', 'SIXP', 'TSSD', 'QVCGP', 'REFA', 'VGK', 'VERS', 'FBCV', 'STXI', 'KEUA', 'BKMS', 'BIVI', 'ALMU', 'CGEM', 'FR', 'SPCE', 'EP', 'TVGN', 'BCG', 'UGRO', 'TSEM', 'AIEQ', 'PAYC', 'MFG', 'NG', 'DAIO', 'MAC', 'JMSB', 'CB', 'ABP', 'FDFF', 'NABL', 'TNA', 'XPRO', 'FTCE', 'SDS', 'FSSL', 'ALOT', 'MBOX', 'DUOT', 'KTB', 'BYRN', 'ACP', 'EDRY', 'JTAI', 'ASUR', 'PIEL', 'SPTB', 'EDGU', 'SORNU', 'BTE', 'XPON', 'RNG', 'EVMO', 'DCTH', 'TLTD', 'ATHE', 'GELS', 'RISN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:17:03,347 - ThreadPoolExecutor-0_2 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:17:03,348 - MainThread - INFO - Completed batch 111/122 (411 stocks analyzed so far)
+2026-02-10 17:17:03,715 - ThreadPoolExecutor-0_6 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:13,186 - ThreadPoolExecutor-0_2 - ERROR - 
+100 Failed downloads:
+2026-02-10 17:17:13,589 - ThreadPoolExecutor-0_2 - ERROR - ['TWO$C', 'NTGR', 'PRTA', 'SDP', 'GWH', 'MGRC', 'KSPI', 'ASHR', 'XSLV', 'WVE', 'EEMS', 'MEAR', 'HVAC', 'DLR$L', 'BAERW', 'ERII', 'NEE$T', 'OPEX', 'UCON', 'EPEM', 'SIM', 'CAVA', 'VACI', 'SCNX', 'SPYG', 'FIGXU', 'BWLP', 'ZM', 'HCMT', 'PDI', 'GS$D', 'GLIBK', 'PEVC', 'KFEB', 'TVC', 'SMJF', 'RFAI', 'UONE', 'EC', 'VSEC', 'ZTS', 'ALBG', 'ECH', 'BTTC', 'GJS', 'ARQT', 'CWD', 'BMA', 'LFAW', 'KFFB', 'NUVL', 'MBS', 'NWBI', 'PVI', 'CNOBP', 'AVGU', 'BMNU', 'EHC', 'VKQ', 'BCD', 'STAA', 'BANXR', 'SST', 'YDEC', 'COIG', 'SXTP', 'KCSH', 'RFIX', 'EUDA', 'TDS', 'DUG', 'PONY', 'EYEG', 'TMUSL', 'CFG$I', 'BSCX', 'NBIL', 'TCHI', 'EXPO', 'BUFY', 'VEL', 'MS$E', 'CNMD', 'AZO', 'FURY', 'CAOS', 'TBT', 'SDCP', 'RUSHB', 'CBXL', 'NEXT', 'IYE', 'WAB', 'MORT', 'ZSC', 'LPBB', 'MTB$H', 'PLXS', 'XBP', 'GWH-W']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:17:21,698 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:21,764 - ThreadPoolExecutor-0_0 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:21,936 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:17:21,960 - ThreadPoolExecutor-0_1 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:22,071 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:49,309 - ThreadPoolExecutor-0_5 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:17:49,309 - MainThread - INFO - Completed batch 118/122 (411 stocks analyzed so far)
+2026-02-10 17:17:49,594 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 100 tickers...
+2026-02-10 17:17:49,594 - MainThread - INFO - Completed batch 116/122 (411 stocks analyzed so far)
+2026-02-10 17:17:49,743 - ThreadPoolExecutor-0_3 - INFO - Processing batch of 39 tickers...
+2026-02-10 17:17:49,904 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:17:50,648 - MainThread - INFO - Completed batch 114/122 (411 stocks analyzed so far)
+2026-02-10 17:17:50,796 - MainThread - INFO - Completed batch 112/122 (411 stocks analyzed so far)
+2026-02-10 17:17:50,948 - MainThread - INFO - Completed batch 117/122 (411 stocks analyzed so far)
+2026-02-10 17:17:51,057 - MainThread - INFO - Completed batch 115/122 (411 stocks analyzed so far)
+2026-02-10 17:17:51,142 - ThreadPoolExecutor-0_4 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
+2026-02-10 17:17:53,775 - MainThread - INFO - Completed batch 113/122 (411 stocks analyzed so far)
+2026-02-10 17:17:57,470 - ThreadPoolExecutor-0_3 - ERROR - 
+67 Failed downloads:
+2026-02-10 17:17:57,481 - ThreadPoolExecutor-0_3 - ERROR - ['CORT', 'QSPT', 'RDAGW', 'SAWS', 'IDVZ', 'AVSF', 'XCEM', 'WRLD', 'HYHG', 'CMCL', 'MED', 'BTAI', 'BFOC', 'GGB', 'INFL', 'UAUG', 'SCZ', 'EDEN', 'RIOX', 'TFIN', 'SCHP', 'PLUS', 'JPM$M', 'HEQ', 'BAI', 'KOID', 'THY', 'AIIO', 'UHT', 'AVBP', 'PPLT', 'QQLV', 'NUAIW', 'DEVS', 'AXS$E', 'BIB', 'SILC', 'NBR', 'CQP', 'CGEN', 'FDX', 'WORX', 'PSWD', 'XBJA', 'BENF', 'CCZ', 'PELIR', 'USAC', 'ARDC', 'WEAT', 'EVOX', 'BDRX', 'ELE', 'QQXL', 'HUBC', 'TARA', 'QID', 'ETO', 'SUNE', 'GWAV', 'ABVC', 'VACHU', 'BTMWW', 'GENW', 'LMAT', 'NITE', 'PAY', 'VOYG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:18:00,631 - ThreadPoolExecutor-0_5 - ERROR - 
+111 Failed downloads:
+2026-02-10 17:18:01,400 - ThreadPoolExecutor-0_5 - ERROR - ['CORT', 'QSPT', 'RDAGW', 'SAWS', 'IDVZ', 'AVSF', 'XCEM', 'WRLD', 'HYHG', 'CMCL', 'MED', 'BTAI', 'BFOC', 'GGB', 'INFL', 'UAUG', 'SCZ', 'EDEN', 'RIOX', 'TFIN', 'SCHP', 'PLUS', 'JPM$M', 'HEQ', 'BAI', 'KOID', 'THY', 'AIIO', 'UHT', 'AVBP', 'PPLT', 'QQLV', 'NUAIW', 'DEVS', 'AXS$E', 'BIB', 'SILC', 'NBR', 'CQP', 'CGEN', 'FDX', 'WORX', 'PSWD', 'XBJA', 'BENF', 'CCZ', 'PELIR', 'USAC', 'ARDC', 'WEAT', 'EVOX', 'BDRX', 'ELE', 'QQXL', 'HUBC', 'TARA', 'QID', 'ETO', 'SUNE', 'GWAV', 'ABVC', 'VACHU', 'BTMWW', 'GENW', 'LMAT', 'NITE', 'PAY', 'VOYG', 'JPSV', 'HLIO', 'TAC', 'SKLZ', 'IIGD', 'ARKX', 'QDEL', 'VTWO', 'DH', 'KMPR', 'EQH$C', 'BWNB', 'WPM', 'TDVI', 'CART', 'BATT', 'CAPN', 'XYLG', 'WCME', 'CUBWU', 'AIA', 'PSA$P', 'HCHL', 'CORN', 'ROSC', 'TSOL', 'INMD', 'IEX', 'TLRY', 'HRB', 'HSTM', 'WING', 'PLCE', 'DCOY', 'WAFU', 'KAUG', 'NWS', 'PPTA', 'BOTZ', 'AUGZ', 'ADIL', 'MOH', 'HAFN', 'FXG', 'MTNB', 'SND', 'HESM', 'ZCZZT', 'SOXX', 'AVMC', 'ROCK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:18:02,176 - ThreadPoolExecutor-0_0 - ERROR - 
+132 Failed downloads:
+2026-02-10 17:18:02,258 - ThreadPoolExecutor-0_0 - ERROR - ['CORT', 'QSPT', 'RDAGW', 'SAWS', 'IDVZ', 'AVSF', 'XCEM', 'WRLD', 'HYHG', 'CMCL', 'MED', 'BTAI', 'BFOC', 'GGB', 'INFL', 'UAUG', 'SCZ', 'EDEN', 'RIOX', 'TFIN', 'SCHP', 'PLUS', 'JPM$M', 'HEQ', 'BAI', 'KOID', 'THY', 'AIIO', 'UHT', 'AVBP', 'PPLT', 'QQLV', 'NUAIW', 'DEVS', 'AXS$E', 'BIB', 'SILC', 'NBR', 'CQP', 'CGEN', 'FDX', 'WORX', 'PSWD', 'XBJA', 'BENF', 'CCZ', 'PELIR', 'USAC', 'ARDC', 'WEAT', 'EVOX', 'BDRX', 'ELE', 'QQXL', 'HUBC', 'TARA', 'QID', 'ETO', 'SUNE', 'GWAV', 'ABVC', 'VACHU', 'BTMWW', 'GENW', 'LMAT', 'NITE', 'PAY', 'VOYG', 'JPSV', 'HLIO', 'TAC', 'SKLZ', 'IIGD', 'ARKX', 'QDEL', 'VTWO', 'DH', 'KMPR', 'EQH$C', 'BWNB', 'WPM', 'TDVI', 'CART', 'BATT', 'CAPN', 'XYLG', 'WCME', 'CUBWU', 'AIA', 'PSA$P', 'HCHL', 'CORN', 'ROSC', 'TSOL', 'INMD', 'IEX', 'TLRY', 'HRB', 'HSTM', 'WING', 'PLCE', 'DCOY', 'WAFU', 'KAUG', 'NWS', 'PPTA', 'BOTZ', 'AUGZ', 'ADIL', 'MOH', 'HAFN', 'FXG', 'MTNB', 'SND', 'HESM', 'ZCZZT', 'SOXX', 'AVMC', 'ROCK', 'GRPZ', 'PFS', 'DC-W', 'CSMD', 'KNX', 'AVXX', 'SPB', 'ASTH', 'AP', 'FISK', 'DDFJ', 'IVR', 'SDOG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-02-10 17:18:11,500 - ThreadPoolExecutor-0_2 - ERROR - HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-10 17:18:15,580 - MainThread - INFO - Completed batch 119/122 (411 stocks analyzed so far)
+2026-02-10 17:18:17,852 - MainThread - INFO - Completed batch 122/122 (411 stocks analyzed so far)
+2026-02-10 17:18:33,495 - MainThread - INFO - Completed batch 120/122 (411 stocks analyzed so far)
+2026-02-10 17:18:34,164 - MainThread - INFO - Completed batch 121/122 (411 stocks analyzed so far)
+2026-02-10 17:18:34,183 - MainThread - INFO - Analysis complete! Processed 411 stocks in 1031.8 seconds
+2026-02-10 17:18:34,190 - MainThread - INFO - Failed: 11713 tickers
+2026-02-10 17:18:34,268 - MainThread - INFO - Results saved to stock_analysis_20260210.csv
+2026-02-10 18:07:56,412 - MainThread - INFO - AAA Corporate Bond Yield: 5.36%
+2026-02-10 18:07:58,933 - MainThread - INFO - Loaded 0 industry EBITDA multiples
+2026-02-10 18:07:58,939 - MainThread - INFO - Starting analysis of 10 stocks
+2026-02-10 18:07:58,939 - MainThread - INFO - Settings: 2 workers, batch size 10, 20 req/min
+2026-02-10 18:07:58,957 - MainThread - INFO - Created 1 batches of ~10 tickers each
+2026-02-10 18:07:59,062 - ThreadPoolExecutor-0_0 - INFO - Processing batch of 10 tickers sequentially...
+2026-02-10 18:08:55,010 - MainThread - INFO - Analysis complete! Processed 10 stocks in 56.1 seconds
+2026-02-10 18:08:55,012 - MainThread - INFO - Failed: 0 tickers
+2026-02-10 18:08:55,013 - MainThread - INFO - Average time per stock: 5.61s
+2026-02-10 18:08:55,041 - MainThread - INFO - Results saved to stock_analysis_20260210_180855.csv
