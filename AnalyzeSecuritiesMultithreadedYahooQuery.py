@@ -10,6 +10,11 @@ import time
 import threading
 from datetime import datetime
 import requests
+import git
+import ssl
+import pandas as pd
+import numpy as np
+
 #import sys
 
 def get_headers():
@@ -63,6 +68,9 @@ class Stock:
     price_to_cash_flow = ""
     RSI = ""
     insider_ownership = ""
+    present_value = ""
+    dilluted_present_value = ""
+    price_difference_since_september = ""
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -207,6 +215,8 @@ def process_stock():
                 newStock.GE_N5Y = "N/A"
                 pass
 
+            
+
         rsi_url = "https://www.gurufocus.com/term/rsi_14/" + symbol + "/14-Day-RSI/"
         req = urllib.request.Request(url=rsi_url, headers=get_headers())
         newStock.RSI = "Not Found!"
@@ -216,10 +226,10 @@ def process_stock():
             rsi_html = BeautifulSoup(rsi_page, 'html.parser')
 
             for tag in rsi_html.find_all('meta'):
-                if "14-Day RSI as of today" in (tag.get("content", None)):
+                if "14-Day RSI:" in (tag.get("content", None)):
                     my_string = tag.get("content", None)
-                    my_substring = my_string.partition(" is ")[2]
-                    my_value = my_substring.partition(". ")[0]
+                    my_substring = my_string.partition("RSI: ")[2]
+                    my_value = my_substring.partition(" |")[0]
                     newStock.RSI = my_value
         except:
                 newStock.RSI = "N/A"
@@ -229,6 +239,38 @@ def process_stock():
             temp_symbol = Ticker(symbol)
         except:
             continue
+        
+        try:
+            yf_ticker = yf.Ticker(symbol)
+            cashflow_df = yf_ticker.cash_flow
+            d = 0.262
+            free_cash_flow = cashflow_df.loc['Free Cash Flow']
+            free_cash_flow = free_cash_flow.dropna()
+            free_cash_flow = free_cash_flow.sort_index()
+            x=[1,2,3,4]
+            y=free_cash_flow.values
+            m, c = np.polyfit(x,y,1)
+            slope = m
+            last_fcf = free_cash_flow.values[3]
+            g=slope/last_fcf
+            shares_outstanding = yf_ticker.info['sharesOutstanding']
+            cash_flow_per_share = last_fcf/shares_outstanding
+            present_value = ((cash_flow_per_share) / (d - g))
+            newStock.present_value = present_value
+            basic_average_shares = yf_ticker.financials.loc['Basic Average Shares']
+            basic_average_shares = basic_average_shares.dropna()
+            basic_average_shares = basic_average_shares.sort_index()
+            y=basic_average_shares.values
+            m, c = np.polyfit(x,y,1)
+            slope = m
+            last_shares=basic_average_shares.values[3]
+            dillution=slope/last_shares
+            burry_present_value = ((cash_flow_per_share) / (((1+d)*(1+dillution))-(1+g)))
+            newStock.dilluted_present_value = burry_present_value
+        except:
+            newStock.present_value = "N/A"
+            newStock.dilluted_present_value = "N/A"
+            pass
         
         try:
             try:
@@ -241,6 +283,24 @@ def process_stock():
                 newStock.list_price = str(temp_symbol.summary_detail[symbol]['previousClose'])
             except:
                 newStock.list_price = "N/A"
+                pass
+
+            try:
+                start_date='2026-3-25'
+                end_date='2026-3-26'
+                historical_data = temp_symbol.history(start=start_date, end=end_date)
+                historical_data = historical_data.reset_index()
+                if not historical_data.empty:
+                    close_price = historical_data['close'][0]
+                    difference = float(close_price) - float(newStock.list_price)
+                    difference_percentage = float(difference)/float(close_price)
+                    difference_percentage = float(difference_percentage) * -100
+                    newStock.price_difference_since_september = difference_percentage
+                else:
+                    newStock.price_difference_since_september = "N/A"
+                    pass
+            except:
+                newStock.price_difference_since_september = "N/A"
                 pass
 
             try:
@@ -409,10 +469,10 @@ def process_stock():
             parsed_html = BeautifulSoup(altman_page, 'html.parser')
             
             for tag in parsed_html.find_all('meta'):
-                if "Altman Z-Score as of today" in (tag.get("content", None)):
+                if "Altman Z-Score:" in (tag.get("content", None)):
                     my_string = tag.get("content", None)
-                    my_substring = my_string.partition(" is ")[2]
-                    my_value = my_substring.partition(". ")[0]
+                    my_substring = my_string.partition(": ")[2]
+                    my_value = my_substring.partition(" ")[0]
                     newStock.altman_z_score = my_value
 
         except Exception:
@@ -430,6 +490,8 @@ def process_stock():
         print("* " + threading.current_thread().name + " " + current_time + ": " + str(i+len(allStocks)) + " *: " + str(i) + ": " + str((time.time() - stock_start_time))[:5] + ": "+ symbol + ": " + str(newStock.EPS_TTM) + ": " + str(newStock.GE_N5Y) + ": " + str(aaa_corporate_bond_yield) + ": " + str(newStock.list_price) + ": " + str(newStock.altman_z_score))
         del newStock
 
+        time.sleep(6)
+
 start_time = time.time()
 
 #sys.stdout = open('./exe_out.txt', 'w')
@@ -443,7 +505,6 @@ nasdaqlisted_url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqlisted.txt
 otherlisted_url = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
 filename1 = "nasdaqlisted.txt"
 filename2 = "otherlisted.txt"
-
 
 response = requests.get(nasdaqlisted_url)
 html = response.content
@@ -479,6 +540,7 @@ with open ('otherlisted.txt') as my_file:
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
+ssl._create_default_https_context = ssl._create_unverified_context
 yield_headers = get_headers()
 aaa_corporate_bond_yield = 0
 aaa_corporate_bond_yield_url = "https://ycharts.com/indicators/moodys_seasoned_aaa_corporate_bond_yield"
@@ -525,18 +587,28 @@ out_file_name = "stock_selector_" + date_str + ".csv"
 try:
     f = open(out_file_name, "w", newline='')
     writer = csv.writer(f)
-    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP', 'PRESENT VALUE', 'DILLUTED PRESENT VALUE', 'PERCENT_DROP_SINCE_SEPTEMBER'])
     for currentStock in allStocks:
-        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership, currentStock.present_value, currentStock.dilluted_present_value, currentStock.price_difference_since_september])
     f.close()
 except:
     input("It is likely that you left stock_selector.csv open.  Please close, or rename it and press Enter to continue...")
     f = open(out_file_name, "w", newline='')
     writer = csv.writer(f)
-    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP', 'PRESENT VALUE', 'DILLUTED PRESENT VALUE', 'PERCENT_DROP_SINCE_SEPTEMBER'])
     for currentStock in allStocks:
-        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership, currentStock.present_value, currentStock.dilluted_present_value, currentStock.price_difference_since_september])
     f.close()
+
+try:
+    repo = git.Repo('.')
+    repo.index.add(repo.untracked_files)
+    commit_message = "Adding Stock Selector for day " + date_str
+    repo.index.commit(commit_message)
+    origin = repo.remote(name='origin')
+    origin.push()
+except:
+    pass
 
 exe_time = time.time() - start_time
 print("-------- Analyze Securities program took %s seconds to complete --------" % exe_time)

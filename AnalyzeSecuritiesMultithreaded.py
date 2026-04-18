@@ -8,6 +8,24 @@ import csv
 import time
 import threading
 from datetime import datetime
+import requests
+import git
+import ssl
+
+def get_headers():
+    # Creating headers.
+    headers = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,'
+                '*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'accept-language': 'en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+      'dpr': '1',
+      'sec-fetch-dest': 'document',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-site': 'none',
+      'sec-fetch-user': '?1',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'}
+    return headers
 
 class Stock:
     ticker_symbol = ""
@@ -43,6 +61,8 @@ class Stock:
     industry = ""
     price_to_cash_flow = ""
     RSI = ""
+    insider_ownership = ""
+
 
     def __init__(self, aaa_corporate_bond_yield):
         self.corporate_bond_yield = aaa_corporate_bond_yield
@@ -115,19 +135,59 @@ def process_stock():
 
         newStock = Stock(aaa_corporate_bond_yield)
         newStock.ticker_symbol = symbol
-        analysis_url = "https://finance.yahoo.com/quote/" + symbol + "/analysis"
-        req = urllib.request.Request(url=analysis_url, headers=headers)
+
+        analysis_url = "https://finviz.com/quote.ashx?t=" + symbol
+        req = urllib.request.Request(url=analysis_url, headers=get_headers())
+        newStock.GE_N5Y = "N/A"
 
         try:
             analysis_page = urlopen(req)
             parsed_html = BeautifulSoup(analysis_page, 'html.parser')
 
             for td in parsed_html.find_all('td'):
-                if td.text == "Next 5 Years (per annum)":
+                if td.text == "EPS next 5Y":
                     tempString = td.nextSibling.text
-                    newStock.GE_N5Y = tempString.replace("%", "")
+                    if (tempString != "-"):
+                        newStock.GE_N5Y = tempString.replace("%", "")
         except:
+            newStock.GE_N5Y = "N/A"
             pass
+
+        if (newStock.GE_N5Y == "N/A"):
+            try:
+                analysis_url = "https://www.gurufocus.com/term/earning_growth_5y_est/" + symbol
+                req = urllib.request.Request(url=analysis_url, headers=get_headers())
+                analysis_page = urlopen(req)
+                parsed_html = BeautifulSoup(analysis_page, 'html.parser')
+
+                for tag in parsed_html.find_all('meta'):
+                    if "EPS Growth Rate (Future 3Y To 5Y Estimate) as of today" in (tag.get("content", None)):
+                        my_string = tag.get("content", None)
+                        my_substring = my_string.partition(" is ")[2]
+                        my_value = my_substring.partition(". ")[0]
+                        newStock.GE_N5Y = str(my_value)
+                        break
+            except:
+                newStock.GE_N5Y = "N/A"
+                pass
+
+        if (newStock.GE_N5Y == "N/A"):
+            analysis_url = "https://www.zacks.com/stock/quote/" + symbol + "/detailed-earning-estimates"
+            req = urllib.request.Request(url=analysis_url, headers=get_headers())
+            try:
+                analysis_page = urlopen(req)
+                parsed_html = BeautifulSoup(analysis_page, 'html.parser')
+
+                for td in parsed_html.find_all('td'):
+                    if td.text == "Next 5 Years":
+                        newStock.GE_N5Y = str(td.nextSibling.nextSibling.text)
+                        if (td.nextSibling.nextSibling.text == "NA"):
+                            newStock.GE_N5Y = "N/A"
+                        break
+
+            except:
+                newStock.GE_N5Y = "N/A"
+                pass
 
         rsi_url = "https://www.gurufocus.com/term/rsi_14/" + symbol + "/14-Day-RSI/"
         newStock.RSI = "Not Found!"
@@ -181,6 +241,13 @@ def process_stock():
             print("JUST before sector and industry for  " + symbol)
             newStock.sector = str(temp_info['sector'])
             newStock.industry = str(temp_info['industry'])
+
+            try:    
+                newStock.insider_ownership = str(temp_symbol.key_stats[symbol]['heldPercentInsiders'])
+            except:
+                newStock.insider_ownership = "N/A"
+                pass
+
             newStock.calculate_cash_flow_per_share()
             newStock.calculate_intrinsic_value()
             newStock.calculate_intrinsic_value_with_cash_flow_per_share()
@@ -235,21 +302,47 @@ all_ticker_symbols_lock = threading.Lock()
 allStocks = []
 all_ticker_symbols = []
 
-with open ('nasdaqlisted_test.txt') as my_file:
+nasdaqlisted_url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqlisted.txt"
+otherlisted_url = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+filename1 = "nasdaqlisted.txt"
+filename2 = "otherlisted.txt"
+
+response = requests.get(nasdaqlisted_url)
+html = response.content
+soup = BeautifulSoup(html, "html.parser")
+text = soup.get_text()
+lines = text.splitlines()
+non_empty_lines = [line for line in lines if line.strip()]
+result = "\n".join(non_empty_lines)
+with open("nasdaqlisted.txt", "w") as f:
+    f.write(result)
+
+response = requests.get(otherlisted_url)
+html = response.content
+soup = BeautifulSoup(html, "html.parser")
+text = soup.get_text()
+lines = text.splitlines()
+non_empty_lines = [line for line in lines if line.strip()]
+result = "\n".join(non_empty_lines)
+with open("otherlisted.txt", "w") as f:
+    f.write(result)
+
+with open ('nasdaqlisted.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
-with open ('otherlisted_test.txt') as my_file:
+with open ('otherlisted.txt') as my_file:
     for my_line in my_file:
         my_line = my_line.split("|")
         if (len(my_line[0]) < 6):
             my_line[0] = my_line[0].replace(".","-")
             all_ticker_symbols.append(my_line[0])
 
-yield_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'}
+ssl._create_default_https_context = ssl._create_unverified_context
+yield_headers = get_headers()
 aaa_corporate_bond_yield = 0
 aaa_corporate_bond_yield_url = "https://ycharts.com/indicators/moodys_seasoned_aaa_corporate_bond_yield"
 yield_req = urllib.request.Request(url=aaa_corporate_bond_yield_url, headers=yield_headers)
@@ -260,22 +353,63 @@ for td in aaa_corporate_bond_yield_parsed_html.find_all('td'):
         aaa_corporate_bond_yield = td.nextSibling.nextSibling.text
         aaa_corporate_bond_yield = float(aaa_corporate_bond_yield.replace("%", ""))
 
+EBITDA_multiples_url = "https://fullratio.com/ebitda-multiples-by-industry"
+EBITDA_multiples_req = urllib.request.Request(url=EBITDA_multiples_url, headers=yield_headers)
+EBITDA_multiples_page = urlopen(EBITDA_multiples_req)
+EBITDA_multiples_parsed_html = BeautifulSoup(EBITDA_multiples_page, 'html.parser')
+
+modCounter=0
+EBITDA_map = {}
+industry_name = ""
+EBITDA_value = ""
+for table in EBITDA_multiples_parsed_html.find_all('table', class_='table table-striped mt-3 mb-3 metric-by-industry'):
+    for td in table.find_all('td'):
+        if (modCounter % 3 == 0):
+            industry_name = td.text
+        if (modCounter % 3 == 1):
+            EBITDA_value = td.text
+            EBITDA_map[industry_name] = EBITDA_value
+        modCounter +=1
+
 threads = list()
-for i in range (5):
+for i in range (4):
     x = threading.Thread(target=process_stock)
     threads.append(x)
     x.start()
 
-for i, thread in enumerate(threads):
-    print("Joining thread " + str(i))
+for thread in threads:
     thread.join()
+    print(datetime.now().strftime("%H:%M:%S%f") + " Joined thread " + thread.name)
 
-f = open("stock_selector.csv", "w", newline='')
-writer = csv.writer(f)
-writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI'])
-for currentStock in allStocks:
-    writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA2, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI])
-f.close()
+
+date_str = time.strftime("%m_%d_%Y")
+out_file_name = "stock_selector_" + date_str + ".csv"
+
+try:
+    f = open(out_file_name, "w", newline='')
+    writer = csv.writer(f)
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    for currentStock in allStocks:
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+    f.close()
+except:
+    input("It is likely that you left stock_selector.csv open.  Please close, or rename it and press Enter to continue...")
+    f = open(out_file_name, "w", newline='')
+    writer = csv.writer(f)
+    writer.writerow(['TICKER SYMBOL', 'NAME', 'LIST PRICE', 'INTRINSIC VALUE', 'EPS TTM', 'GROWTH ESTIMATES NEXT 5 YEARS', 'MARGIN OF SAFETY', 'PRICE TO BOOK', 'PRICE TO CASH FLOW', 'ALTMAN Z-SCORE', 'ENTERPRISE VALUE', 'FREE CASH_FLOW', 'TOTAL CASH', 'TOTAL CASH MINUS MARKET CAP', 'TOTAL CASH PER SHARE', 'TOTAL LIABILITIES', 'PRICE/52 WEEK LOW', 'DAY LOW/52 WEEK LOW', 'DAY LOW', '52 WEEK LOW', 'PERCENT SHORT OF FLOAT', 'CASH FLOW PER SHARE', 'SHARES OUTSTANDING', 'CURRENCY', 'COUNTRY', 'MARKET CAP', 'RECOMMENDATION KEY', 'ENTERPRISE VALUE/EBITDA', 'EV/EBITDA RATIO', 'INTRINSIC_VALUE_BY_CASH_FLOW', 'MARGIN_OF_SAFETY_BY_CASH_FLOW', 'SECTOR', 'INDUSTRY', 'RSI', 'INSIDER OWNERSHIP'])
+    for currentStock in allStocks:
+        writer.writerow([currentStock.ticker_symbol, currentStock.name, currentStock.list_price, currentStock.intrinsic_value, currentStock.EPS_TTM, currentStock.GE_N5Y, currentStock.margin_of_safety, currentStock.price_to_book, currentStock.price_to_cash_flow, currentStock.altman_z_score, currentStock.EV2, currentStock.free_cash_flow_yfinance, currentStock.totalCash, currentStock.total_cash_minus_market_cap, currentStock.total_cash_per_share, currentStock.debt_yfinance, currentStock.current_price_over_fifty_two_week_low, currentStock.day_low_over_fifty_two_week_low, currentStock.day_low, currentStock.fifty_two_week_low, currentStock.short_of_float, currentStock.cash_flow_per_share, currentStock.shares_outstanding, currentStock.currency, currentStock.country, currentStock.market_cap, currentStock.recommendation_key ,currentStock.EV_EBITDA, currentStock.EV_EBITDA_ratio, currentStock.intrinsic_value_cash_flow, currentStock.margin_of_safety_cash_flow, currentStock.sector, currentStock.industry, currentStock.RSI, currentStock.insider_ownership])
+    f.close()
+
+try:
+    repo = git.Repo('.')
+    repo.index.add(repo.untracked_files)
+    commit_message = "Adding Stock Selector for day " + date_str
+    repo.index.commit(commit_message)
+    origin = repo.remote(name='origin')
+    origin.push()
+except:
+    pass
 
 exe_time = time.time() - start_time
 print("-------- Analyze Securities program took %s seconds to complete --------" % exe_time)
