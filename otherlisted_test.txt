@@ -1,4 +1,13 @@
-ZEUS|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
-CCRN|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
-GEO|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
 GME|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+LULU|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+MOH|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+TSLA|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+PLTR|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+GOOGL|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+FMCC|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+FNMA|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+GD|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+SPCX|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+LCID|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+SNDK|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
+AXTI|Vanda Pharmaceuticals Inc. - Common Stock|G|N|N|100|N|N
